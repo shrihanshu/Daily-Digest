@@ -28,6 +28,7 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GMAIL_LABEL: ${{ secrets.GMAIL_LABEL }}
+          GMAIL_FROM: ${{ secrets.GMAIL_FROM }}
         run: node scripts/fetch-news.mjs
 
       - name: Commit updated news
