@@ -181,6 +181,42 @@ export async function fetchEmailArticles() {
           publishedAt: parsed.date ? parsed.date.toISOString() : new Date().toISOString(),
         });
       }
+
+      // Dedicated LinkedIn sweep: grab ALL LinkedIn mail (news, newsletters, posts)
+      // over a wider window, independent of the general email cap. Junk-gated only.
+      const liMax = Number(process.env.LINKEDIN_MAX || 20);
+      const liDays = Number(process.env.LINKEDIN_DAYS || 7);
+      const liSince = new Date(Date.now() - liDays * 24 * 60 * 60 * 1000);
+      let liUids = await client.search({ since: liSince, from: "linkedin.com" }, { uid: true });
+      liUids = (liUids || []).slice(-liMax).reverse();
+      const seenIds = new Set(out.map((o) => o.id));
+
+      for await (const msg of client.fetch(liUids, { uid: true, envelope: true, source: true }, { uid: true })) {
+        const id = `linkedin-${msg.uid}`;
+        if (seenIds.has(id)) continue;
+        const parsed = await simpleParser(msg.source);
+        const subject = parsed.subject || "(no subject)";
+        const fromName = parsed.from?.value?.[0]?.name || parsed.from?.text || "LinkedIn";
+        const textBody = parsed.text || "";
+        const htmlText = parsed.html ? parsed.html.replace(/<[^>]*>/g, " ") : "";
+        const body = textBody || htmlText;
+        if (!body || isJunk(subject, fromName, body)) continue;
+        const url = firstLink(textBody) || firstLink(parsed.html || "");
+        if (!url) continue;
+        const topic = classify(`${subject} ${textBody} ${htmlText}`);
+        out.push({
+          id,
+          title: subject,
+          description: snippet(body) || "LinkedIn update.",
+          url,
+          source: fromName,
+          topic,
+          topicLabel: topic === "ai" ? "AI" : "Tech",
+          channel: "linkedin",
+          publishedAt: parsed.date ? parsed.date.toISOString() : new Date().toISOString(),
+        });
+        seenIds.add(id);
+      }
     } finally {
       lock.release();
     }
