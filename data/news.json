@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-05-27T09:26:31.182Z",
+  "updatedAt": "2026-05-27T09:43:29.512Z",
   "articles": [
+    {
+      "id": "tech-https://www.wired.com/story/a-new-species-of-tiny-octopus-was-discovered-in-the-galapagos-islands/",
+      "title": "A New Species of Tiny Octopus Was Discovered in the Galápagos Islands",
+      "description": "An octopus about the size of a golf ball was first spotted in 2015 near Darwin Island. A new study gives it both a formal description and a name.",
+      "url": "https://www.wired.com/story/a-new-species-of-tiny-octopus-was-discovered-in-the-galapagos-islands/",
+      "source": "Wired",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T09:30:00.000Z"
+    },
     {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMibkFVX3lxTFA3SFd4MWNUNTFPdFVyYlp6Mlk0N3ZVOXJGZTFHelk0TkRfT0lUZEtmV1NWSldUenI5NU4weXd5UjNtenpIbkF3MmxrVGh0WTNjQ1BOODVTUGp4TVJBT0doRXh0T0otN2ZjdVhEUVl3?oc=5",
       "title": "Current Affairs for 27 May 2026 - Sanskriti IAS",
@@ -26,7 +37,7 @@
     {
       "id": "tech-https://www.phoronix.com/review/nvidia-vera-benchmarks",
       "title": "Nvidia Vera CPU Benchmarks: Olympus Cores Delivering Great Performance",
-      "description": "Article URL: https://www.phoronix.com/review/nvidia-vera-benchmarks\nComments URL: https://news.ycombinator.com/item?id=48291230\nPoints: 16\n# Comments: 2",
+      "description": "Article URL: https://www.phoronix.com/review/nvidia-vera-benchmarks\nComments URL: https://news.ycombinator.com/item?id=48291230\nPoints: 17\n# Comments: 4",
       "url": "https://www.phoronix.com/review/nvidia-vera-benchmarks",
       "source": "Hacker News",
       "topic": "tech",
@@ -37,7 +48,7 @@
     {
       "id": "tech-https://www.unicode.org/versions/Unicode18.0.0/",
       "title": "Unicode 18.0.0 Beta",
-      "description": "Article URL: https://www.unicode.org/versions/Unicode18.0.0/\nComments URL: https://news.ycombinator.com/item?id=48290881\nPoints: 14\n# Comments: 4",
+      "description": "Article URL: https://www.unicode.org/versions/Unicode18.0.0/\nComments URL: https://news.ycombinator.com/item?id=48290881\nPoints: 14\n# Comments: 7",
       "url": "https://www.unicode.org/versions/Unicode18.0.0/",
       "source": "Hacker News",
       "topic": "tech",
@@ -70,7 +81,7 @@
     {
       "id": "tech-https://arps18.github.io/posts/claude-code-mastery/",
       "title": "Claude Code as a Daily Driver: Claude.md, Skills, Subagents, Plugins, and MCPs",
-      "description": "Article URL: https://arps18.github.io/posts/claude-code-mastery/\nComments URL: https://news.ycombinator.com/item?id=48289950\nPoints: 42\n# Comments: 7",
+      "description": "Article URL: https://arps18.github.io/posts/claude-code-mastery/\nComments URL: https://news.ycombinator.com/item?id=48289950\nPoints: 49\n# Comments: 11",
       "url": "https://arps18.github.io/posts/claude-code-mastery/",
       "source": "Hacker News",
       "topic": "tech",
@@ -88,6 +99,17 @@
       "topicLabel": "AI",
       "channel": "rss",
       "publishedAt": "2026-05-27T05:02:57.000Z"
+    },
+    {
+      "id": "tech-https://www.wired.com/story/paramount-plus-coupon-code/",
+      "title": "Paramount+ Coupon Codes and Deals for June 2026",
+      "description": "Save on streaming with the latest Paramount+ promo codes and deals, including 50% off subscriptions, free trials, and more.",
+      "url": "https://www.wired.com/story/paramount-plus-coupon-code/",
+      "source": "Wired",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T05:00:00.000Z"
     },
     {
       "id": "tech-https://www.wired.com/story/home-depot-promo-code/",
@@ -123,28 +145,6 @@
       "publishedAt": "2026-05-27T05:00:00.000Z"
     },
     {
-      "id": "tech-https://www.wired.com/story/rover-promo-code/",
-      "title": "Rover Promo Codes and Referral Deals for June 2026",
-      "description": "Score your Rover promo code for 2026.",
-      "url": "https://www.wired.com/story/rover-promo-code/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T05:00:00.000Z"
-    },
-    {
-      "id": "tech-https://www.wired.com/story/dell-coupon-code/",
-      "title": "Dell Coupon Codes: 20% Off for June 2026",
-      "description": "Get 20% off with verified Dell promo code, plus today’s coupons for up to $600 off laptops, Alienware monitors, and all things tech.",
-      "url": "https://www.wired.com/story/dell-coupon-code/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T05:00:00.000Z"
-    },
-    {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUFVTcHJHY3BNY3ExbkRSbkJUczZfcTM3SWdYN1FBcEtleWFuTjJ0alFLdG9PQTdwYWF4NUI2VjVIU0x4STF0dmpIZmZhaWo3eGRhWjk0RUlMeEVYb0RQWTF2eGl0Q1Bnb0RIY0RzSElIOHl5cDhna05OdHd1ZjczblVfZk9BSjBxbzBBM01uTENHZDlFVWJFT2VHY0tqMTZkNUw4Tndsd3E0WURUMUlwSW9PbkRDcTFoT1VZUG54ZmNIMmVGdGdRXzVyTE5UMUtSMXYxUXI2RdIB3gFBVV95cUxNU21uWFpUUDVxZzRoTmYzSTBrX2p6cENnLWdpeFhmZ252X2lrTTFEa2N1RGk0ZGFMZV9iWDY3Ml8xaFpoVDdVS1pyVVJwRDNOUHlKaTM0U2NoU3ozMC15Z011ZjE5MTdHWDNoWVVSNnQtVUtxNUFjclJNblhOUmlCNXFoRHlsUENHcUExNnNyM21MdW1aOHVrUEdqVUhBRm51MUR2RkNDRHZUUF9aaE5qQ0lPaFdtT2JGTF9EeWRMMEFzdjhCMm13UWVReElQV1hDMTk1bENmcFhoZUtSSVE?oc=5",
       "title": "Top 20 UPSC Current Affairs Pointers of the past week | May 18 to May 24, 2026 - The Indian Express",
       "description": "Top 20 UPSC Current Affairs Pointers of the past week | May 18 to May 24, 2026&nbsp;&nbsp;The Indian Express",
@@ -169,7 +169,7 @@
     {
       "id": "tech-https://github.com/craigmccaskill/posthorn",
       "title": "Show HN: Posthorn, self-hosted mail without the mail server",
-      "description": "Introducing Posthorn, a self hosted email gateway. One docker container (or Go binary) between every self hosted app on your VPS and your transactional email provider. Set up Posthorn once, point your apps to it, done.I was trying to deploy Ghost on a DigitalOcean droplet and found that DO and many different VPS services have started to block the default SMTP ports to try to combat the various types of abuse they get. To actually configure my app, I had to hack together a Postfix relay.In another project, I had a static site which had a contact form, but my free Formspree account was occasionally hitting usage limits and I desperately wanted some of the anti-spam features they had gated behind their paid accounts so I put together a caddy module to catch HTTP POSTs and bounce them to my provider.I kept bumping into these same email issues. Many of the services I wanted to host (Gitea, Mastodon, Umami, Comentario) ran into the same limitations. This felt like a really common issue that had no good solution.Posthorn is what I built to solve this. It's a small Go binary (or 10 MB docker image) that sits between your self hosted apps and your transactional email provider of choice (shipping with support for Postmark, Resend, Mailgun, Amazon SES or an outbound SMTP relay). It also accepts POSTs from HTML forms to support static site needs while adding security layers such as honeypot fields, origin checks and IP rate limiting. There's also a JSON HTTP API that supports Bearer auth for backend scripts or cron jobs that just want a /send endpoint.I now use this personally in multiple scenarios and I've spent a lot of time beating this up and testing against what I can validate. I'd love to hear how this might be useful for you, what breaks and any feedback you might have. It's open source under Apache 2.0 and I'd love contributions. I'm planning to support and grow this for the long haul.Code: https://github.com/craigmccaskill/posthornDocs: https://posthorn.dev/Longer write up: https://craigmccaskill.com/introducing-posthorn/Previous HN discussion on the exact issue I'm trying to solve: https://news.ycombinator.com/item?id=43620318\n\nComments URL: https://news.ycombinator.com/item?id=48289624\nPoints: 23\n# Comments: 21",
+      "description": "Introducing Posthorn, a self hosted email gateway. One docker container (or Go binary) between every self hosted app on your VPS and your transactional email provider. Set up Posthorn once, point your apps to it, done.I was trying to deploy Ghost on a DigitalOcean droplet and found that DO and many different VPS services have started to block the default SMTP ports to try to combat the various types of abuse they get. To actually configure my app, I had to hack together a Postfix relay.In another project, I had a static site which had a contact form, but my free Formspree account was occasionally hitting usage limits and I desperately wanted some of the anti-spam features they had gated behind their paid accounts so I put together a caddy module to catch HTTP POSTs and bounce them to my provider.I kept bumping into these same email issues. Many of the services I wanted to host (Gitea, Mastodon, Umami, Comentario) ran into the same limitations. This felt like a really common issue that had no good solution.Posthorn is what I built to solve this. It's a small Go binary (or 10 MB docker image) that sits between your self hosted apps and your transactional email provider of choice (shipping with support for Postmark, Resend, Mailgun, Amazon SES or an outbound SMTP relay). It also accepts POSTs from HTML forms to support static site needs while adding security layers such as honeypot fields, origin checks and IP rate limiting. There's also a JSON HTTP API that supports Bearer auth for backend scripts or cron jobs that just want a /send endpoint.I now use this personally in multiple scenarios and I've spent a lot of time beating this up and testing against what I can validate. I'd love to hear how this might be useful for you, what breaks and any feedback you might have. It's open source under Apache 2.0 and I'd love contributions. I'm planning to support and grow this for the long haul.Code: https://github.com/craigmccaskill/posthornDocs: https://posthorn.dev/Longer write up: https://craigmccaskill.com/introducing-posthorn/Previous HN discussion on the exact issue I'm trying to solve: https://news.ycombinator.com/item?id=43620318\n\nComments URL: https://news.ycombinator.com/item?id=48289624\nPoints: 26\n# Comments: 24",
       "url": "https://github.com/craigmccaskill/posthorn",
       "source": "Hacker News",
       "topic": "tech",
@@ -191,7 +191,7 @@
     {
       "id": "tech-https://tsduck.io/",
       "title": "TSDuck: Open-source toolkit for MPEG-TS analysis and manipulation",
-      "description": "Article URL: https://tsduck.io/\nComments URL: https://news.ycombinator.com/item?id=48288709\nPoints: 29\n# Comments: 1",
+      "description": "Article URL: https://tsduck.io/\nComments URL: https://news.ycombinator.com/item?id=48288709\nPoints: 31\n# Comments: 1",
       "url": "https://tsduck.io/",
       "source": "Hacker News",
       "topic": "tech",
