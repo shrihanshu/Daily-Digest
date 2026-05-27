@@ -1,6 +1,9 @@
 import { writeFile, mkdir } from "node:fs/promises";
+import { fetchEmailArticles } from "./fetch-email.mjs";
+import { writeArchive } from "./archive.mjs";
 
 const SOURCES = [
+  // AI
   {
     topic: "ai",
     topicLabel: "AI",
@@ -8,11 +11,55 @@ const SOURCES = [
     url: "https://news.google.com/rss/search?q=artificial%20intelligence%20OR%20machine%20learning%20when:1d&hl=en-IN&gl=IN&ceid=IN:en",
   },
   {
+    topic: "ai",
+    topicLabel: "AI",
+    source: "TechCrunch AI",
+    url: "https://techcrunch.com/category/artificial-intelligence/feed/",
+  },
+  {
+    topic: "ai",
+    topicLabel: "AI",
+    source: "VentureBeat AI",
+    url: "https://venturebeat.com/category/ai/feed/",
+  },
+  {
+    topic: "ai",
+    topicLabel: "AI",
+    source: "MIT Technology Review",
+    url: "https://www.technologyreview.com/feed/",
+  },
+  {
+    topic: "ai",
+    topicLabel: "AI",
+    source: "Hugging Face",
+    url: "https://huggingface.co/blog/feed.xml",
+  },
+  // Tech
+  {
     topic: "tech",
     topicLabel: "Tech",
     source: "Hacker News",
     url: "https://hnrss.org/frontpage",
   },
+  {
+    topic: "tech",
+    topicLabel: "Tech",
+    source: "The Verge",
+    url: "https://www.theverge.com/rss/index.xml",
+  },
+  {
+    topic: "tech",
+    topicLabel: "Tech",
+    source: "Ars Technica",
+    url: "https://feeds.arstechnica.com/arstechnica/index",
+  },
+  {
+    topic: "tech",
+    topicLabel: "Tech",
+    source: "Wired",
+    url: "https://www.wired.com/feed/rss",
+  },
+  // Current affairs
   {
     topic: "current-affairs",
     topicLabel: "Current Affairs",
@@ -21,7 +68,7 @@ const SOURCES = [
   },
 ];
 
-const MAX_PER_TOPIC = 8;
+const MAX_PER_SOURCE = 6;
 
 function decodeEntities(text = "") {
   return text
@@ -32,6 +79,7 @@ function decodeEntities(text = "") {
     .replaceAll("&gt;", ">")
     .replaceAll("&quot;", '"')
     .replaceAll("&#39;", "'")
+    .replaceAll("&#x27;", "'")
     .replace(/<[^>]*>/g, "")
     .trim();
 }
@@ -41,14 +89,29 @@ function getTag(item, tag) {
   return decodeEntities(match?.[1] || "");
 }
 
-function parseRss(xml, sourceConfig) {
-  const items = [...xml.matchAll(/<item[\s\S]*?<\/item>/gi)].map((match) => match[0]);
+// Atom <link href="..."/> support, with rel="alternate" preference.
+function getLink(item) {
+  const text = getTag(item, "link");
+  if (text) return text;
+  const alt = item.match(/<link[^>]*rel=["']alternate["'][^>]*href=["']([^"']+)["']/i);
+  if (alt?.[1]) return decodeEntities(alt[1]);
+  const any = item.match(/<link[^>]*href=["']([^"']+)["']/i);
+  return any?.[1] ? decodeEntities(any[1]) : "";
+}
 
-  return items.slice(0, MAX_PER_TOPIC).map((item) => {
+function parseFeed(xml, sourceConfig) {
+  const blocks = [...xml.matchAll(/<(item|entry)[\s\S]*?<\/\1>/gi)].map((match) => match[0]);
+
+  return blocks.slice(0, MAX_PER_SOURCE).map((item) => {
     const title = getTag(item, "title");
-    const url = getTag(item, "link");
-    const publishedAt = getTag(item, "pubDate");
-    const description = getTag(item, "description");
+    const url = getLink(item);
+    const publishedAt =
+      getTag(item, "pubDate") ||
+      getTag(item, "published") ||
+      getTag(item, "updated") ||
+      getTag(item, "dc:date");
+    const description =
+      getTag(item, "description") || getTag(item, "summary") || getTag(item, "content");
 
     return {
       id: `${sourceConfig.topic}-${url || title}`,
@@ -58,6 +121,7 @@ function parseRss(xml, sourceConfig) {
       source: sourceConfig.source,
       topic: sourceConfig.topic,
       topicLabel: sourceConfig.topicLabel,
+      channel: "rss",
       publishedAt: publishedAt ? new Date(publishedAt).toISOString() : new Date().toISOString(),
     };
   });
@@ -75,14 +139,57 @@ async function fetchSource(sourceConfig) {
   }
 
   const xml = await response.text();
-  return parseRss(xml, sourceConfig);
+  return parseFeed(xml, sourceConfig);
 }
 
-const results = await Promise.allSettled(SOURCES.map(fetchSource));
-const articles = results.flatMap((result) => (result.status === "fulfilled" ? result.value : []));
+// Normalize a headline so the same story from different feeds collides:
+// drop the trailing " - Publisher" Google News appends, strip punctuation.
+function normalizeTitle(title = "") {
+  return title
+    .toLowerCase()
+    .replace(/\s+[-–—|]\s+[^-–—|]+$/, "")
+    .replace(/[^a-z0-9 ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function dedupe(articles) {
+  const seen = new Set();
+  return articles.filter((article) => {
+    const norm = normalizeTitle(article.title);
+    // Cluster on normalized title when it is distinctive; else fall back to url.
+    const key = norm.length > 12 ? `t:${norm}` : `u:${(article.url || article.title || "").toLowerCase()}`;
+    if (!key || key === "u:" || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+const rssResults = await Promise.allSettled(SOURCES.map(fetchSource));
+for (const result of rssResults) {
+  if (result.status === "rejected") {
+    console.warn(`Source failed: ${result.reason}`);
+  }
+}
+const rssArticles = rssResults.flatMap((result) => (result.status === "fulfilled" ? result.value : []));
+
+// Email newsletters (optional, only runs when Gmail creds are present).
+let emailArticles = [];
+try {
+  emailArticles = await fetchEmailArticles();
+  if (emailArticles.length) {
+    console.log(`Fetched ${emailArticles.length} email newsletter items`);
+  }
+} catch (error) {
+  console.warn(`Email fetch skipped: ${error.message}`);
+}
+
+const articles = dedupe([...rssArticles, ...emailArticles]).sort(
+  (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt),
+);
 
 if (articles.length === 0) {
-  throw new Error("No articles fetched. Check RSS sources.");
+  throw new Error("No articles fetched. Check sources.");
 }
 
 await mkdir("data", { recursive: true });
@@ -99,3 +206,11 @@ await writeFile(
 );
 
 console.log(`Saved ${articles.length} articles to data/news.json`);
+
+// Archive today + rebuild trends (history → trends).
+try {
+  const result = await writeArchive(articles);
+  console.log(`Archived ${result.dates.length} day(s); trends over ${result.days} day(s).`);
+} catch (error) {
+  console.warn(`Archive/trends skipped: ${error.message}`);
+}

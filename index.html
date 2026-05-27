@@ -46,10 +46,16 @@
           <button class="filter-button" data-topic="ai">AI</button>
           <button class="filter-button" data-topic="tech">Tech</button>
           <button class="filter-button" data-topic="current-affairs">Current Affairs</button>
+          <button class="filter-button" data-topic="email">Email</button>
+          <button class="filter-button" data-topic="linkedin">LinkedIn</button>
           <button class="filter-button" data-topic="saved">Saved</button>
           <button class="filter-button" data-topic="unread">Unread</button>
+          <button class="filter-button" data-topic="trends">Trends</button>
         </div>
-        <input id="searchInput" class="search-input" type="search" placeholder="Search today..." />
+        <div class="toolbar-inputs">
+          <select id="archiveDate" class="search-input archive-select" aria-label="View a past day"></select>
+          <input id="searchInput" class="search-input" type="search" placeholder="Search today..." />
+        </div>
       </section>
 
       <section class="summary-grid" aria-label="Reading summary">
@@ -62,7 +68,7 @@
           <strong id="savedCount">0</strong>
         </article>
         <article>
-          <span class="summary-label">Updated</span>
+          <span class="summary-label">Updated</span> 
           <strong id="updatedAt">Today</strong>
         </article>
       </section>

@@ -1,0 +1,14 @@
+{
+  "name": "daily-signal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal daily AI/tech/current-affairs reading dashboard.",
+  "scripts": {
+    "fetch": "node scripts/fetch-news.mjs"
+  },
+  "dependencies": {
+    "imapflow": "^1.0.171",
+    "mailparser": "^3.7.1"
+  }
+}

@@ -398,6 +398,21 @@ h2 {
   transition: color 0.3s;
 }
 
+.article-new {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  transition: background 0.3s, color 0.3s;
+}
+
 .article-card h3 {
   margin: 0;
   font-family: var(--font-display);
@@ -462,6 +477,88 @@ h2 {
   color: var(--muted);
   text-align: center;
   transition: border-color 0.3s, color 0.3s;
+}
+
+.toolbar-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.archive-select {
+  cursor: pointer;
+}
+
+.trend-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trend-heading {
+  margin: 8px 0 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.trend-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trend-label {
+  flex: 0 0 116px;
+  font-weight: 500;
+}
+
+.trend-bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-soft);
+  border-radius: 999px;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.trend-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.3s, background 0.3s;
+}
+
+.trend-val {
+  flex: 0 0 36px;
+  text-align: right;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.trend-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.trend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  transition: border-color 0.3s;
+}
+
+.trend-chip-n {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 @keyframes rowFadeIn {

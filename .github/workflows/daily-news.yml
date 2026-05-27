@@ -20,13 +20,20 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
       - name: Fetch latest news
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_LABEL: ${{ secrets.GMAIL_LABEL }}
         run: node scripts/fetch-news.mjs
 
       - name: Commit updated news
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json
+          git add data/news.json data/trends.json data/archive
           git diff --cached --quiet || git commit -m "Update daily news"
           git push
