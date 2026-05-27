@@ -147,7 +147,13 @@ export async function fetchEmailArticles() {
         const body = textBody || htmlText;
         if (!body) continue;
 
-        if (allow.length) {
+        const isLinkedIn = fromAddr.includes("linkedin.com") || /linkedin/i.test(fromName);
+
+        if (isLinkedIn) {
+          // LinkedIn is its own channel — never gated by the newsletter allowlist,
+          // only the junk gate (drops connection/impression spam).
+          if (isJunk(subject, fromName, body)) continue;
+        } else if (allow.length) {
           const senderHay = `${fromAddr} ${fromName}`.toLowerCase();
           if (!allow.some((token) => senderHay.includes(token))) continue;
         } else {
@@ -161,7 +167,6 @@ export async function fetchEmailArticles() {
 
         const description = snippet(body) || "Newsletter email.";
         const topic = classify(`${subject} ${textBody} ${htmlText}`);
-        const isLinkedIn = fromAddr.includes("linkedin.com") || /linkedin/i.test(fromName);
         const channel = isLinkedIn ? "linkedin" : "email";
 
         out.push({
