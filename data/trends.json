@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-05-27T09:43:29.523Z",
+  "updatedAt": "2026-05-27T09:49:25.519Z",
   "windowDays": 7,
   "days": [
     {
       "date": "2026-05-27",
-      "total": 60,
-      "ai": 30,
-      "tech": 24,
+      "total": 70,
+      "ai": 36,
+      "tech": 28,
       "current-affairs": 6,
-      "email": 0,
-      "linkedin": 0
+      "email": 9,
+      "linkedin": 1
     }
   ],
   "topEntities": [
@@ -20,6 +20,10 @@
     {
       "name": "Claude",
       "count": 3
+    },
+    {
+      "name": "AWS",
+      "count": 2
     },
     {
       "name": "Nvidia",
@@ -35,10 +39,6 @@
     },
     {
       "name": "TikTok",
-      "count": 1
-    },
-    {
-      "name": "AWS",
       "count": 1
     },
     {

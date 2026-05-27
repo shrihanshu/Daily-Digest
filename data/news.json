@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T09:43:29.512Z",
+  "updatedAt": "2026-05-27T09:49:25.507Z",
   "articles": [
     {
       "id": "tech-https://www.wired.com/story/a-new-species-of-tiny-octopus-was-discovered-in-the-galapagos-islands/",
@@ -101,17 +101,6 @@
       "publishedAt": "2026-05-27T05:02:57.000Z"
     },
     {
-      "id": "tech-https://www.wired.com/story/paramount-plus-coupon-code/",
-      "title": "Paramount+ Coupon Codes and Deals for June 2026",
-      "description": "Save on streaming with the latest Paramount+ promo codes and deals, including 50% off subscriptions, free trials, and more.",
-      "url": "https://www.wired.com/story/paramount-plus-coupon-code/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T05:00:00.000Z"
-    },
-    {
       "id": "tech-https://www.wired.com/story/home-depot-promo-code/",
       "title": "Home Depot Promo Codes: 50% Off in June 2026",
       "description": "Save up to 50% today with the latest Home Depot promo codes for appliances, power tools, and more this June.",
@@ -138,6 +127,17 @@
       "title": "50% Off DoorDash Promo Code | June 2026",
       "description": "Explore today’s top DoorDash promo codes for $25 off your first order, free delivery, and 50% off DashPass for students and select users.",
       "url": "https://www.wired.com/story/doordash-promo-code/",
+      "source": "Wired",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T05:00:00.000Z"
+    },
+    {
+      "id": "tech-https://www.wired.com/story/rover-promo-code/",
+      "title": "Rover Promo Codes and Referral Deals for June 2026",
+      "description": "Score your Rover promo code for 2026.",
+      "url": "https://www.wired.com/story/rover-promo-code/",
       "source": "Wired",
       "topic": "tech",
       "topicLabel": "Tech",
@@ -211,17 +211,6 @@
       "publishedAt": "2026-05-27T01:08:16.000Z"
     },
     {
-      "id": "ai-https://news.google.com/rss/articles/CBMif0FVX3lxTE1XWTB4bG5xYzRNc1NvVUJtcEo0Wm91SVJDckY4RzNNV3NMTWZUeUVBVFljUURMTGtsWEtLMVVadEo3V295Qm8wbHpfR2hvdkVON1hoS3QxM3ZUVnNvNGpTSjJ1dVlwdVAyS0U0b2tab1pIVXZvUnN5SmVSVm9XWnPSAYQBQVVfeXFMUDlpcWFXcXFuT3M1R055OXVBMUhwTUtFM1loUTU5Z21lQTRfdlVlNUQ4cFdfMHEtOHNrWlg3aDVuaVdFQVktOEw4LXAyQ2FFVDV0TGJOOGFaYm1XZi03UlFiVFlTd2U5cDlnNHl4ZWtHLUtOa3hVVGJQV3FnNjVnN2xfeVVr?oc=5",
-      "title": "From Algorithms To Zero-Shot Learning: An A-Z Guide To AI Language For You - AugustMan Singapore",
-      "description": "From Algorithms To Zero-Shot Learning: An A-Z Guide To AI Language For You&nbsp;&nbsp;AugustMan Singapore",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XWTB4bG5xYzRNc1NvVUJtcEo0Wm91SVJDckY4RzNNV3NMTWZUeUVBVFljUURMTGtsWEtLMVVadEo3V295Qm8wbHpfR2hvdkVON1hoS3QxM3ZUVnNvNGpTSjJ1dVlwdVAyS0U0b2tab1pIVXZvUnN5SmVSVm9XWnPSAYQBQVVfeXFMUDlpcWFXcXFuT3M1R055OXVBMUhwTUtFM1loUTU5Z21lQTRfdlVlNUQ4cFdfMHEtOHNrWlg3aDVuaVdFQVktOEw4LXAyQ2FFVDV0TGJOOGFaYm1XZi03UlFiVFlTd2U5cDlnNHl4ZWtHLUtOa3hVVGJQV3FnNjVnN2xfeVVr?oc=5",
-      "source": "Google News",
-      "topic": "ai",
-      "topicLabel": "AI",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T01:03:21.000Z"
-    },
-    {
       "id": "tech-https://www.theverge.com/ai-artificial-intelligence/937801/pope-leo-xiv-magnifica-humanitas-ai-pangram",
       "title": "Did the Pope use AI to write about the dangers of AI?",
       "description": "It's possible that AI was used to write parts of Pope Leo XIV's latest encyclical about AI's impact on humanity. An analysis by Linch Zhang posted on the forum LessWrong found certain paragraphs of Magnifica Humanitas to be between 40 percent and 100 percent written by AI, according to the popular AI detector Pangram. The [&#8230;]",
@@ -264,6 +253,17 @@
       "topicLabel": "Tech",
       "channel": "rss",
       "publishedAt": "2026-05-26T22:24:53.000Z"
+    },
+    {
+      "id": "ai-https://news.google.com/rss/articles/CBMimwFBVV95cUxQVXV0bHA0bzFiRzBvQ1ZOMWNnMTJnaEVFbFJiZmx4VzhGN1lkcGZBRjkzdmVpcnNjMjBSMi1lSDA2WXlEYnZMN3FlSWdFZWVaTF9NOXlYOEFrajMyVE1Kak1ZMWtGWVBkY0hHeDNQcEY4el9LbW9fOTVjeXFTci04NUNOYXh5Rk1yWDEtLU5jZmFlc2tYd2x0X3FVcw?oc=5",
+      "title": "China Restricts AI Talent Travel - StartupHub.ai",
+      "description": "China Restricts AI Talent Travel&nbsp;&nbsp;StartupHub.ai",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVXV0bHA0bzFiRzBvQ1ZOMWNnMTJnaEVFbFJiZmx4VzhGN1lkcGZBRjkzdmVpcnNjMjBSMi1lSDA2WXlEYnZMN3FlSWdFZWVaTF9NOXlYOEFrajMyVE1Kak1ZMWtGWVBkY0hHeDNQcEY4el9LbW9fOTVjeXFTci04NUNOYXh5Rk1yWDEtLU5jZmFlc2tYd2x0X3FVcw?oc=5",
+      "source": "Google News",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "rss",
+      "publishedAt": "2026-05-26T22:02:34.000Z"
     },
     {
       "id": "tech-https://arstechnica.com/tech-policy/2026/05/musk-says-us-military-suicide-drones-used-starlink-in-violation-of-spacex-rules/",
@@ -352,6 +352,17 @@
       "topicLabel": "AI",
       "channel": "rss",
       "publishedAt": "2026-05-26T18:40:03.000Z"
+    },
+    {
+      "id": "email-19792",
+      "title": "Make your video vision a reality",
+      "description": "You’ve got premium access to animations, stock footage, and more. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ …",
+      "url": "https://data.e.adobe.com/ee/v1/click?params=v1.cakDG8IQgxZlSO12Fj8vhD2OzWV2XNpp153Bh1O_r9znc40Mm5AaCQ2grcdyEUCaNn6UIakKBI7b61n-Rd4H2EZq6fm2LalUSLx_paiaNWPQbhAwGBCyZdovyvUMYpSz5ihY__aPlqCo3icReyX63335ZIWauMjL7BSeBt4dx01WYqGq5D5_XBt69v-E3_F9bOmQmWW34wqvueoLk3gkOVk5oKSnSXkMPuL-m5vSkjOor0ESL_QjHfGXsOEmi7v3PrcHorVgOH3O2rM4t5gy3uKepAuGPgZy-_0QgV4RaU9FsRQizD_wR-mNAiYsHnvC3tIBa8AxvXHvfzbFA17SSEaMcvy_GYmQhCRZYqaNekGmHKLRU_V_92RQQKOkFa1gIMczBI0_6UOyNOoQ0nWVF826gjdjlus4BeOFMRq1gg9eXKRPWqgxIJn2UDd9OgWzyZ8VKXcORFggNk6rY8HeYw6ghYQZf1164XYGHjvtYveWF_W0CoBaYpEZYopGoJxMybbi4j4BuiTryx8QBsDVMSSnlc94fvV30r8ueXkSIRLirQLbWnFLIpIjV3Mpk0XRvHZlHL81xyo160HU0vtGNe6zddJJjUPon8Hu-ba2iEUZXF21balbY42bgsg&pid=v1.Bxh2dRPZuxpsGczVEysiaQo1T7iSaZYqZOU1-EVovtpXdqs8m5RPM3r52XN60BECx3UMLcTW882AqKftMbnBOyZqVlopCc_6Cl58XJjHOJO9mBTI7Ibazg&tuid=696f9217db7dbd75e9c0b20e&configId=ed15b8fa-e766-4f72-b020-b9edf160be20",
+      "source": "Adobe Express",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "email",
+      "publishedAt": "2026-05-26T18:34:28.000Z"
     },
     {
       "id": "ai-https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
@@ -453,6 +464,17 @@
       "publishedAt": "2026-05-26T14:00:00.000Z"
     },
     {
+      "id": "linkedin-19790",
+      "title": "May 2026",
+      "description": "The Monthly Tech-In By Microsoft By Microsoft Read this article on LinkedIn to join the conversation Read on LinkedIn https://www.linkedin.com/comm/pulse/may-2026-microsoft-sge3e?lipi=urn%3Ali%3Apage%3Aemail_email_series…",
+      "url": "https://www.linkedin.com/comm/pulse/may-2026-microsoft-sge3e?lipi=urn%3Ali%3Apage%3Aemail_email_series_follow_newsletter_02%3BmFe%2B2aa6Q0etbal%2FFYxV4A%3D%3D&midToken=AQHqputkDXSXqA&midSig=0KCZZRrQyDEcg1&trk=eml-email_series_follow_newsletter_02-null-0-read_more_banner_cta_&trkEmail=eml-email_series_follow_newsletter_02-null-0-read_more_banner_cta_-null-k0fmqf~mpmp6b1z~rf-null-null&eid=k0fmqf-mpmp6b1z-rf",
+      "source": "Microsoft via LinkedIn",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "linkedin",
+      "publishedAt": "2026-05-26T13:59:19.000Z"
+    },
+    {
       "id": "ai-https://www.technologyreview.com/2026/05/26/1138028/the-download-ai-jobs-data/",
       "title": "The Download: puncturing the AI jobs panic",
       "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. A reality check on the AI jobs hysteria Despite the growing hysteria over AI’s threat to white-collar jobs, there’s still scant evidence that the technology has had a large-scale impact on&#8230;",
@@ -497,6 +519,61 @@
       "publishedAt": "2026-05-26T09:00:00.000Z"
     },
     {
+      "id": "email-19783",
+      "title": "The AI Industry Changed This Week - Most People Missed Why",
+      "description": "Let's Simplify AI — Weekly @media (prefers-color-scheme: dark) { body { background: #0b0b0b !important; color: #ffffff !important; } } @media screen and (max-width: 620px) { .container { width: 100% !important; } .px { p…",
+      "url": "https://s3-sjs-illustrations.s3.ap-south-1.amazonaws.com/ChatGPT+Image+Feb+16%2C+2026%2C+05_34_28+PM.png",
+      "source": "Simplify AI Tools",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "email",
+      "publishedAt": "2026-05-26T06:27:10.000Z"
+    },
+    {
+      "id": "email-19782",
+      "title": "5 reasons to attend AWS Summit India Online",
+      "description": "Last chance to register for this free event that's helping tech teams be more productive. https://email.awscloud.com/MTEyLVRaTS03NjYAAAGiAdhtH2KQDTmW2Nv9eBUssQ_Oze8oHVxNrBBj_t7bKcisNR_s4enU_Doln02mKasw3aPSUlw= Your final…",
+      "url": "https://email.awscloud.com/MTEyLVRaTS03NjYAAAGiAdhtH2KQDTmW2Nv9eBUssQ_Oze8oHVxNrBBj_t7bKcisNR_s4enU_Doln02mKasw3aPSUlw=",
+      "source": "Amazon Web Services",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "email",
+      "publishedAt": "2026-05-26T06:01:33.000Z"
+    },
+    {
+      "id": "email-19777",
+      "title": "New jobs posted from careers.hcltech.com",
+      "description": "You are receiving this email because you joined the HCLTech Talent Community on 12/20/25. You will receive these messages every Developer day(s). Your Job Alert matched the following jobs at careers.hcltech.com [http://c…",
+      "url": "http://careers.hcltech.com/?from=email&refid=27759377055&utm_source=J2WEmail&source=2&eid=89755-202604251004-33412433455&locale=en_US].",
+      "source": "hclp2-jobnotification@noreply55.jobs2web.com",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "email",
+      "publishedAt": "2026-05-25T22:04:17.000Z"
+    },
+    {
+      "id": "email-19771",
+      "title": "Order confirmation",
+      "description": "------------------------------------------------------------------ ADOBE ------------------------------------------------------------------ Thank you for your order! Your redemption code was accepted. Your Adobe Express …",
+      "url": "https://www.adobe.com/go/cc_getstarted",
+      "source": "Adobe",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "email",
+      "publishedAt": "2026-05-25T18:23:42.000Z"
+    },
+    {
+      "id": "email-19776",
+      "title": "Modern CSS Centering, Retro Pipes, and Action Movies",
+      "description": "[https://go.sparkpostmail2.com/q/qqwTMgsdhR11lqC3akJiVQ~~/AABEfhA~/mBI9U2E0iHTBw7XACmoW0gbtQLmX_6_4XtRYsxA3DLVvBuoew0V-mmsA14VYTVO5jV_m8rfdHjPaC6J4zh8UAA~~] [https://production-codepen-email-assets.codepenassets.com/cdn-…",
+      "url": "https://go.sparkpostmail2.com/q/qqwTMgsdhR11lqC3akJiVQ~~/AABEfhA~/mBI9U2E0iHTBw7XACmoW0gbtQLmX_6_4XtRYsxA3DLVvBuoew0V-mmsA14VYTVO5jV_m8rfdHjPaC6J4zh8UAA~~]",
+      "source": "CodePen",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "email",
+      "publishedAt": "2026-05-25T16:46:44.000Z"
+    },
+    {
       "id": "ai-https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/",
       "title": "What ClickUp&#8217;s mass layoff tells us about the future of work",
       "description": "The nine-year-old startup is replacing hundreds of employees with thousands of AI agents.",
@@ -506,6 +583,39 @@
       "topicLabel": "AI",
       "channel": "rss",
       "publishedAt": "2026-05-25T16:00:00.000Z"
+    },
+    {
+      "id": "email-19757",
+      "title": "Dream Internships & Jobs near you!",
+      "description": "Your profile is a perfect match!&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#81…",
+      "url": "https://moe_p34i.api-03.moengage.com/v1/emailclick?q=xIxPUvG52qjlKocpGSTAO8Sw3DZAMjYMRt6G0CguY6LuPeeYQA-tVH_N3MzF5dvj0csCgYxxpR.tw5E9onTc_1iAB4VSYsdZOqL8zdCBn0PCUcAbwHBepnEAsPzR1pk9YGcZQX5.UxUGinBY06zZLMLFYV7VLJBb9FXjEIm0Dbix9mWwZOuK7JLNIFFlovToTU-RHhjvz1p.POto8QJc3zlp9m13_4Fu68re.idif_HlkVYz2ykU_hJmu9.MrbXUI7yRIhGOpNGmw-qV_QRkZwxZjNF2RXisW505QPGiwOOQNvDlA7nsBylkex0.IxmnuMFnK6h_eWSS2ygHroVw-RfXnoRNZedxzYE5R1_AaLvhwrKKKcz8B3kTRb7ZGoWsGWA-RD2Qd.V9.2tAWlL3e0flzaiPjwNRHsHDGOeS2PFQPA0JnsRS7vs0psFCy3Coq8zI9_FHV0JqsTAAeO6_Mja0cML.59xEhQDxaa_Snk72Y7Gc5nsiWQHk1mxqEo3A_migjyly1anoEfJ6fJpjoY8qdR0RWGXRm4y5EhmWjCyvm4wctLHyyQKIeMoTOLIXUzj10rUCBe4E_qzQIG2sMABekC6cEBA3j..vIlNVQmMMj2B_",
+      "source": "Jia from Unstop",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "email",
+      "publishedAt": "2026-05-25T06:20:18.000Z"
+    },
+    {
+      "id": "email-19756",
+      "title": "Dream Jobs & Hackathons near you!",
+      "description": "Your profile is a perfect match!&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#81…",
+      "url": "https://moe_p34i.api-03.moengage.com/v1/emailclick?q=uJyVGQ6Zta8Os8Jgmy_lH4wKUs1WmX3VMzEcBH6BFcn6Q7UPXg-rlScWPafgpWv2ODF8.HHKOgVfFwJ.t99KNNxYdV.XcOt8Z0zTcrMov18xD8yFLMciyjYjlMi61czQ9s_OrtAWzMWO2f40_Ru6jwtxpjkUlEl1TwaW1NBpACUMWfd4KFN8H7y1V.MxTeIw3g-fL7_SbYxgnnQad9CmUIRFpg0XM1A2CJaTm.Dy_zb5m1rVoMOKlZ_AxNUWcRIXZtCg_q2qP.pjw-R5VAUGKkyFFqZCSImnQy0bI8kqbgULyBm_YqIMkydClOBRSKAPr7Mc6_.S98PR4C2SACbA-XzJCreoJFFPe8qFgHLo9bxzdTE6ovb1k7Vjm064I0Kd4UA-7S7tkLbVbxlMzl8PlNXfE0ltA1un7.mya7qvTVZ6t6xFlB.mM9StxnOKTAEvMn.uadVVziv2wR7Romi0ixKA4sleuMPBv5HeOUScIqSaOfF9LUxwP5Jlrdfq7VZQfEyeAmfHpTe3CQsr50Rrrnn0y.cVx__fn_A6q5R77u5mO0Aj_v2PC_Su_ePzxHNQscWLycW7SeG7vHzR6fJ2tLQWnRjhwe_4IAJdbxk",
+      "source": "Jia from Unstop",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "email",
+      "publishedAt": "2026-05-25T06:17:26.000Z"
+    },
+    {
+      "id": "email-19753",
+      "title": "Turn PDFs into editable InDesign files 📄",
+      "description": "View web version: https://t3.mail.adobe.com/r/?id=tac64b1a9-ae0d-4862-b37a-ef6f72e28d6a,15b284d0,3cf0de&e=cDE9JTQwZEIxV2V2WkIlMkJnVVlrMXUyWWtLRVQ0MzMyTWFJbExRbmRyMzlFNFhSM0pHaG9tMnZVYmVFaFBBYnc0NjhVNk9zNXRwazlBcjhVN0FoS3…",
+      "url": "https://t3.mail.adobe.com/r/?id=tac64b1a9-ae0d-4862-b37a-ef6f72e28d6a,15b284d0,3cf0de&e=cDE9JTQwZEIxV2V2WkIlMkJnVVlrMXUyWWtLRVQ0MzMyTWFJbExRbmRyMzlFNFhSM0pHaG9tMnZVYmVFaFBBYnc0NjhVNk9zNXRwazlBcjhVN0FoS3Awck44b3pzSlIxUHF3QUtJWURsekduTnpTV2FBTSUzRA&s=bTdPe4imp2jgbyH3lhOENNMMSSux09f-LDup8aMZNP4",
+      "source": "Adobe Creative Cloud",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "email",
+      "publishedAt": "2026-05-25T05:28:41.000Z"
     },
     {
       "id": "ai-https://huggingface.co/blog/agent-glossary",
