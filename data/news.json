@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T09:49:25.507Z",
+  "updatedAt": "2026-05-27T09:53:34.301Z",
   "articles": [
     {
       "id": "tech-https://www.wired.com/story/a-new-species-of-tiny-octopus-was-discovered-in-the-galapagos-islands/",
@@ -79,6 +79,17 @@
       "publishedAt": "2026-05-27T06:10:15.000Z"
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaWpGZXE3LVpLQUJOTGNNZ2p5REJRZzRKaHlhcmEwOFFBbWEtaXd1MHAxcnV2WWo4djU0SV9hZHZQaHJ3VHBEWEdIcl9RWHpTVkZWd1lhYU4ySTU1bHJRaUIyN0Z6alUwTmgxelFIM0VZbGZsUUFQZlVIVXRLZ05kNUVjTGNhRERX?oc=5",
+      "title": "UPSC Mains Current Affairs for 27 May 2026 - Vajiram & Ravi",
+      "description": "UPSC Mains Current Affairs for 27 May 2026&nbsp;&nbsp;Vajiram & Ravi",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaWpGZXE3LVpLQUJOTGNNZ2p5REJRZzRKaHlhcmEwOFFBbWEtaXd1MHAxcnV2WWo4djU0SV9hZHZQaHJ3VHBEWEdIcl9RWHpTVkZWd1lhYU4ySTU1bHJRaUIyN0Z6alUwTmgxelFIM0VZbGZsUUFQZlVIVXRLZ05kNUVjTGNhRERX?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T05:50:02.000Z"
+    },
+    {
       "id": "tech-https://arps18.github.io/posts/claude-code-mastery/",
       "title": "Claude Code as a Daily Driver: Claude.md, Skills, Subagents, Plugins, and MCPs",
       "description": "Article URL: https://arps18.github.io/posts/claude-code-mastery/\nComments URL: https://news.ycombinator.com/item?id=48289950\nPoints: 49\n# Comments: 11",
@@ -154,17 +165,6 @@
       "topicLabel": "Current Affairs",
       "channel": "rss",
       "publishedAt": "2026-05-27T04:50:00.000Z"
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMihwFBVV95cUxNX2xkX3hwVDZ2Zng5Wl9JbHhtT29zbGtTMUdGOFloRDk0TUNKbFRxcXRqTHZ6MFZLdDd2eXpxN2x4QkFGdzVsa1NGQlR5S1RtM0g1Y05odXpKTEd4VTY2akRvTzFDTDVEcXpMSEZHSVlzSzA2TDNsTk9WOS1vYld2T044RnBtQXc?oc=5",
-      "title": "Daily Editorial Analysis 27 May 2026 - Vajiram & Ravi",
-      "description": "Daily Editorial Analysis 27 May 2026&nbsp;&nbsp;Vajiram & Ravi",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNX2xkX3hwVDZ2Zng5Wl9JbHhtT29zbGtTMUdGOFloRDk0TUNKbFRxcXRqTHZ6MFZLdDd2eXpxN2x4QkFGdzVsa1NGQlR5S1RtM0g1Y05odXpKTEd4VTY2akRvTzFDTDVEcXpMSEZHSVlzSzA2TDNsTk9WOS1vYld2T044RnBtQXc?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T04:30:46.000Z"
     },
     {
       "id": "tech-https://github.com/craigmccaskill/posthorn",
