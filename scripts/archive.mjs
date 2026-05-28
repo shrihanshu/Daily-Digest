@@ -29,6 +29,15 @@ function countTopics(articles) {
   return bucket;
 }
 
+function countSources(articles) {
+  const counts = {};
+  for (const a of articles) {
+    const key = a.source || "Unknown";
+    counts[key] = (counts[key] || 0) + 1;
+  }
+  return counts;
+}
+
 function countEntities(articles) {
   const counts = {};
   for (const a of articles) {
@@ -67,9 +76,12 @@ export async function writeArchive(articles) {
   // Build trends across kept days.
   const days = [];
   const entityTotals = {};
+  const sourceCounts = {}; // name -> count in window
+  const sourceLastSeen = {}; // name -> date string
   const cutoff = new Date(Date.now() - ENTITY_WINDOW_DAYS * 24 * 60 * 60 * 1000)
     .toISOString()
     .slice(0, 10);
+  const latestDay = dates[dates.length - 1] || todayStamp();
 
   for (const f of files) {
     try {
@@ -79,6 +91,11 @@ export async function writeArchive(articles) {
       if (day >= cutoff) {
         const ec = countEntities(payload.articles || []);
         for (const [name, n] of Object.entries(ec)) entityTotals[name] = (entityTotals[name] || 0) + n;
+        const sc = countSources(payload.articles || []);
+        for (const [name, n] of Object.entries(sc)) {
+          sourceCounts[name] = (sourceCounts[name] || 0) + n;
+          if (!sourceLastSeen[name] || day > sourceLastSeen[name]) sourceLastSeen[name] = day;
+        }
       }
     } catch {
       // skip unreadable file
@@ -90,10 +107,26 @@ export async function writeArchive(articles) {
     .sort((a, b) => b.count - a.count)
     .slice(0, 12);
 
+  // Source health: days silent = days since last seen, vs the latest archived day.
+  const latestMs = new Date(`${latestDay}T00:00:00Z`).getTime();
+  const sources = Object.entries(sourceCounts)
+    .map(([name, count]) => {
+      const lastSeen = sourceLastSeen[name];
+      const daysSilent = lastSeen
+        ? Math.round((latestMs - new Date(`${lastSeen}T00:00:00Z`).getTime()) / (24 * 60 * 60 * 1000))
+        : ENTITY_WINDOW_DAYS;
+      return { name, count, lastSeen, daysSilent };
+    })
+    .sort((a, b) => b.count - a.count);
+
   await writeFile(
     "data/trends.json",
-    `${JSON.stringify({ updatedAt: new Date().toISOString(), windowDays: ENTITY_WINDOW_DAYS, days, topEntities }, null, 2)}\n`,
+    `${JSON.stringify(
+      { updatedAt: new Date().toISOString(), windowDays: ENTITY_WINDOW_DAYS, days, topEntities, sources },
+      null,
+      2,
+    )}\n`,
   );
 
-  return { dates, days: days.length, topEntities: topEntities.length };
+  return { dates, days: days.length, topEntities: topEntities.length, sources: sources.length };
 }

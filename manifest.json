@@ -1,0 +1,14 @@
+{
+  "name": "Daily Signal",
+  "short_name": "Daily Signal",
+  "description": "A quiet daily briefing for AI, technology, and current affairs.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#111010",
+  "theme_color": "#7baf96",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -70,6 +70,26 @@ const SOURCES = [
 
 const MAX_PER_SOURCE = 6;
 
+// Drop RSS items whose titles are clearly promo/coupon content (e.g. Wired coupons).
+const TITLE_DROP = [
+  /\bpromo code/i,
+  /\bcoupon code/i,
+  /\bcoupons?\b/i,
+  /\bdiscount code/i,
+  /%\s*off\b/i,
+  /\bbest deals\b/i,
+  /\btop deals\b/i,
+  /\bdeals? for\b/i,
+  /\bsale ends\b/i,
+  /\bgift cards?\b/i,
+  /\bblack friday\b/i,
+  /\bcyber monday\b/i,
+];
+
+function isPromoTitle(title = "") {
+  return TITLE_DROP.some((rx) => rx.test(title));
+}
+
 function decodeEntities(text = "") {
   return text
     .replaceAll("<![CDATA[", "")
@@ -102,7 +122,8 @@ function getLink(item) {
 function parseFeed(xml, sourceConfig) {
   const blocks = [...xml.matchAll(/<(item|entry)[\s\S]*?<\/\1>/gi)].map((match) => match[0]);
 
-  return blocks.slice(0, MAX_PER_SOURCE).map((item) => {
+  // Take a wider window because de-noise drops promo items.
+  return blocks.slice(0, MAX_PER_SOURCE * 2).map((item) => {
     const title = getTag(item, "title");
     const url = getLink(item);
     const publishedAt =
@@ -124,7 +145,9 @@ function parseFeed(xml, sourceConfig) {
       channel: "rss",
       publishedAt: publishedAt ? new Date(publishedAt).toISOString() : new Date().toISOString(),
     };
-  });
+  })
+    .filter((article) => article.title && !isPromoTitle(article.title))
+    .slice(0, MAX_PER_SOURCE);
 }
 
 async function fetchSource(sourceConfig) {

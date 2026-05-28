@@ -561,6 +561,44 @@ h2 {
   font-weight: 700;
 }
 
+button.trend-chip {
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.trend-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.trend-warn {
+  margin-left: 6px;
+}
+
+.trend-sources {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trend-srow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+}
+
+.trend-slabel {
+  flex: 1;
+}
+
+.trend-sval {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
 @keyframes rowFadeIn {
   from {
     opacity: 0;

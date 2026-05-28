@@ -175,16 +175,39 @@ async function renderTrends() {
     .join("");
   const chips =
     (trends.topEntities || [])
-      .map((entity) => `<span class="trend-chip">${entity.name}<span class="trend-chip-n">${entity.count}</span></span>`)
+      .map(
+        (entity) =>
+          `<button class="trend-chip" data-entity="${entity.name}" type="button" title="Filter feed by ${entity.name}">${entity.name}<span class="trend-chip-n">${entity.count}</span></button>`,
+      )
       .join("") || '<span class="empty-state">No entities yet.</span>';
+
+  const sourceRows =
+    (trends.sources || [])
+      .map((source) => {
+        const silent = (source.daysSilent || 0) >= 3 ? `<span class="trend-warn" title="Silent ${source.daysSilent}d">⚠️</span>` : "";
+        return `<div class="trend-srow"><span class="trend-slabel">${source.name}</span><span class="trend-sval">${source.count}</span>${silent}</div>`;
+      })
+      .join("") || '<span class="empty-state">No source data yet.</span>';
 
   articleList.innerHTML = `
     <div class="trend-panel">
       <p class="trend-heading">Coverage over ${days.length} day${days.length === 1 ? "" : "s"} · ${sum.total || 0} stories</p>
       ${bars}
-      <p class="trend-heading">Most-mentioned · last ${trends.windowDays || 7} days</p>
+      <p class="trend-heading">Most-mentioned · last ${trends.windowDays || 7} days · click chip to filter</p>
       <div class="trend-tags">${chips}</div>
+      <p class="trend-heading">Sources · health (⚠️ = silent ≥3d)</p>
+      <div class="trend-sources">${sourceRows}</div>
     </div>`;
+
+  // Wire entity chip clicks → switch to All, set search to entity name.
+  articleList.querySelectorAll(".trend-chip[data-entity]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const name = chip.dataset.entity;
+      searchInput.value = name;
+      document.querySelector('button[data-topic="all"]').click();
+      searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 }
 
 async function loadArchiveIndex() {
@@ -293,3 +316,10 @@ todayDate.textContent = new Intl.DateTimeFormat("en-IN", {
 applyTheme(currentTheme);
 loadArchiveIndex();
 loadArticles();
+
+// Register PWA service worker (silent if unsupported / blocked).
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  });
+}
