@@ -31,6 +31,8 @@ jobs:
           GMAIL_FROM: ${{ secrets.GMAIL_FROM }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_MODEL: ${{ secrets.CLAUDE_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
           TLDR_MAX: ${{ secrets.TLDR_MAX }}
         run: node scripts/fetch-news.mjs
 
