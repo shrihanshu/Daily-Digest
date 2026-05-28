@@ -1,6 +1,18 @@
 {
-  "updatedAt": "2026-05-28T05:13:14.619Z",
+  "updatedAt": "2026-05-28T06:32:20.810Z",
   "articles": [
+    {
+      "id": "tech-https://www.theverge.com/games/938451/steam-deck-price-hike-end-of-handheld-gaming-era",
+      "title": "The golden age of handheld gaming is already over",
+      "description": "For a few glorious years, a $399 portable gadget could run almost anything you'd want to play. In 2022, the Steam Deck finally made PC gaming portable and affordable. I played through the vast majority of Elden Ring on a Steam Deck, agape that such a rich world could comfortably fit between my two hands. [&#8230;]",
+      "url": "https://www.theverge.com/games/938451/steam-deck-price-hike-end-of-handheld-gaming-era",
+      "source": "The Verge",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T06:30:23.000Z",
+      "tldr": "Rising prices and changing markets signal the end of the affordable golden age of handheld PC gaming."
+    },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMiU0FVX3lxTE9KRDNmX1ZnMXAydl9yVmM5Sm5QUWNSTmtJVlN0eldjWWF6UWZKci1LTThKV1NvOUVqYWhKN0QtdnhqN1BhNFUwbFhxd1k4cWNfbTdZ?oc=5",
       "title": "Yungu, a Place Where Jack Ma Rarely Appears, Launches Hangzhou's First High School AI Specialty Class - eu.36kr.com",
@@ -16,7 +28,7 @@
     {
       "id": "tech-https://hallucinate.site",
       "title": "Hallucinate – Massively Multiplayer Online Rave",
-      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 53\n# Comments: 18",
+      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 102\n# Comments: 40",
       "url": "https://hallucinate.site",
       "source": "Hacker News",
       "topic": "tech",
@@ -64,7 +76,7 @@
     {
       "id": "tech-https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "title": "Google employee charged with $1M Polymarket insider trading bet on search term",
-      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 92\n# Comments: 43",
+      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 129\n# Comments: 66",
       "url": "https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "source": "Hacker News",
       "topic": "tech",
@@ -76,7 +88,7 @@
     {
       "id": "tech-https://mlsu.io/posts/day-off/",
       "title": "Can we have the day off?",
-      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 811\n# Comments: 473",
+      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 900\n# Comments: 534",
       "url": "https://mlsu.io/posts/day-off/",
       "source": "Hacker News",
       "topic": "tech",
@@ -110,21 +122,9 @@
       "tldr": "Illinois lawmakers passed a strict AI safety bill requiring third-party audits of major tech companies like OpenAI and Google."
     },
     {
-      "id": "ai-https://news.google.com/rss/articles/CBMib0FVX3lxTFBCOEdSNkFoSndkOE5EVElYRmxwUVhYeC1uQ2g3UFdCODhUcjUwWnA2NkFMZncwS2ktRU9SUl9kOHV2SXE1eGFTMS1XMFNMSUU2M1djVFhCRlgyZEt3UDN1c19xak9DS0JWMlN1UnRrQQ?oc=5",
-      "title": "How Deep Learning Works - IEEE Spectrum",
-      "description": "How Deep Learning Works&nbsp;&nbsp;IEEE Spectrum",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCOEdSNkFoSndkOE5EVElYRmxwUVhYeC1uQ2g3UFdCODhUcjUwWnA2NkFMZncwS2ktRU9SUl9kOHV2SXE1eGFTMS1XMFNMSUU2M1djVFhCRlgyZEt3UDN1c19xak9DS0JWMlN1UnRrQQ?oc=5",
-      "source": "Google News",
-      "topic": "ai",
-      "topicLabel": "AI",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T23:40:32.000Z",
-      "tldr": "An educational overview explaining the fundamental mechanics and principles behind how deep learning algorithms function."
-    },
-    {
       "id": "tech-https://drobinin.com/posts/am-i-a-bad-friend/",
       "title": "I analysed 20 years of my chats",
-      "description": "Article URL: https://drobinin.com/posts/am-i-a-bad-friend/\nComments URL: https://news.ycombinator.com/item?id=48302220\nPoints: 6\n# Comments: 0",
+      "description": "Article URL: https://drobinin.com/posts/am-i-a-bad-friend/\nComments URL: https://news.ycombinator.com/item?id=48302220\nPoints: 36\n# Comments: 6",
       "url": "https://drobinin.com/posts/am-i-a-bad-friend/",
       "source": "Hacker News",
       "topic": "tech",
@@ -136,7 +136,7 @@
     {
       "id": "tech-https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "title": "FBI Arrests CIA Official with $40M in Gold Bars in His Home",
-      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 206\n# Comments: 115",
+      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 255\n# Comments: 140",
       "url": "https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "source": "Hacker News",
       "topic": "tech",
@@ -326,18 +326,6 @@
       "tldr": "Roku has updated its smart TV operating system to include a large, permanent advertisement on the home screen."
     },
     {
-      "id": "tech-https://www.theverge.com/features/937620/enhanced-games-performance-enhancing-drugs-science-health-sports",
-      "title": "Roids were all the rage at the Enhanced Games",
-      "description": "In Las Vegas, the blazing sun beats down on a makeshift Olympic-length pool. Cody Miller stands on the starting block of lane one. His arms are raised in victory. MC Hammer's \"U Can't Touch This\" thumps over the loudspeakers as he rips off his swimming cap, throwing it to the ground. Miller lets out a [&#8230;]",
-      "url": "https://www.theverge.com/features/937620/enhanced-games-performance-enhancing-drugs-science-health-sports",
-      "source": "The Verge",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T19:08:31.000Z",
-      "tldr": "The Enhanced Games in Las Vegas showcased athletes openly using performance-enhancing drugs in a controversial alternative to the Olympics."
-    },
-    {
       "id": "ai-https://techcrunch.com/podcast/your-seo-strategy-is-optimized-for-a-search-engine-that-no-longer-exists/",
       "title": "Your SEO strategy is optimized for a search engine that no longer exists.",
       "description": "Google I/O made it official: AI-generated answers are now front and&#160;center&#160;in search, and most brands have almost no visibility into how AI is describing them to their customers.&#160;For anyone who has spent years building a strategy around 10 blue links, the rules just changed in a pretty significant way.&#160; On this episode of TechCrunch&#8217;s Equity podcast, Rebecca [&#8230;]",
@@ -358,7 +346,20 @@
       "topic": "current-affairs",
       "topicLabel": "Current Affairs",
       "channel": "rss",
-      "publishedAt": "2026-05-27T18:31:20.000Z"
+      "publishedAt": "2026-05-27T18:31:20.000Z",
+      "tldr": "Drishti IAS provides daily current affairs updates for the Jammu and Kashmir Administrative Service exam on May 28, 2026."
+    },
+    {
+      "id": "ai-https://news.google.com/rss/articles/CBMisAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZ9IBsAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZw?oc=5",
+      "title": "Machine Learning helps scientists study Martian dust devils - Labroots",
+      "description": "Machine Learning helps scientists study Martian dust devils&nbsp;&nbsp;Labroots",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZ9IBsAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZw?oc=5",
+      "source": "Google News",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T18:15:00.000Z",
+      "tldr": "Scientists are using machine learning technology to better analyze and study dust devils on Mars."
     },
     {
       "id": "ai-https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
@@ -457,6 +458,18 @@
       "tldr": "A reflection on the Spring SciX conference, highlighting recent advancements combining Raman spectroscopy with artificial intelligence."
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYWJpMFZKZkV3TUNTczZKeGJzNGE4aWRYTkR5QW9YaUdsOVgxUUcyYlNMMDZ3emczbThNU1FQNkJXMXlYRXBnRE8tSnItdEZUTjJ0M0g0OHotQkRQczJkcXp0VjZBaDZpY1NfNVVaNVd5NEdlQkRhOE41TjFIT09zWDZOX1Npd2owa0NwdkNiQmxKeEd5N2d6RDJNR2hSVVF5ZFhMckRfR0VLWlNKQUU0aXJNRDRLTFRjYVFoR181YlAxdm9HVG5qZnUwTnVaWHZiTWsycnFKNmd6a045bnE5UlhjOEk0S05idGfSAeoBQVVfeXFMT2FiaTBWSmZFd01DU3M2SnhiczRhOGlkWE5EeUFvWGlHbDlYMVFHMmJTTDA2d3pnM204TVNRUDZCVzF5WEVwZ0RPLUpyLXRGVE4ydDNINDh6LUJEUHMyZHF6dFY2QWg2aWNTXzVVWjVXeTRHZUJEYThONU4xSE9Pc1g2Tl9TaXdqMGtDcHZDYkJsSnhHeTdnekQyTUdoUlVReWRYTHJEX0dFS1pTSkFFNGlyTUQ0S0xUY2FRaEdfNWJQMXZvR1RuamZ1ME51Wlh2Yk1rMnJxSjZnemtOOW5xOVJYYzhJNEtOYnRn?oc=5",
+      "title": "Why defence, security dimensions become increasingly central to India-UAE ties - The Indian Express",
+      "description": "Why defence, security dimensions become increasingly central to India-UAE ties&nbsp;&nbsp;The Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYWJpMFZKZkV3TUNTczZKeGJzNGE4aWRYTkR5QW9YaUdsOVgxUUcyYlNMMDZ3emczbThNU1FQNkJXMXlYRXBnRE8tSnItdEZUTjJ0M0g0OHotQkRQczJkcXp0VjZBaDZpY1NfNVVaNVd5NEdlQkRhOE41TjFIT09zWDZOX1Npd2owa0NwdkNiQmxKeEd5N2d6RDJNR2hSVVF5ZFhMckRfR0VLWlNKQUU0aXJNRDRLTFRjYVFoR181YlAxdm9HVG5qZnUwTnVaWHZiTWsycnFKNmd6a045bnE5UlhjOEk0S05idGfSAeoBQVVfeXFMT2FiaTBWSmZFd01DU3M2SnhiczRhOGlkWE5EeUFvWGlHbDlYMVFHMmJTTDA2d3pnM204TVNRUDZCVzF5WEVwZ0RPLUpyLXRGVE4ydDNINDh6LUJEUHMyZHF6dFY2QWg2aWNTXzVVWjVXeTRHZUJEYThONU4xSE9Pc1g2Tl9TaXdqMGtDcHZDYkJsSnhHeTdnekQyTUdoUlVReWRYTHJEX0dFS1pTSkFFNGlyTUQ0S0xUY2FRaEdfNWJQMXZvR1RuamZ1ME51Wlh2Yk1rMnJxSjZnemtOOW5xOVJYYzhJNEtOYnRn?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T13:35:22.000Z",
+      "tldr": "Defence and security cooperation have become increasingly vital components of the bilateral relationship between India and the UAE."
+    },
+    {
       "id": "ai-https://www.technologyreview.com/2026/05/27/1138048/the-download-ai-future-ivf-technology/",
       "title": "The Download: keeping up with AI, and the future of IVF",
       "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Stay on top of what’s going on in AI this summer Here at MIT Technology Review, we understand exactly how relentless the pace of news from the world of artificial intelligence&#8230;",
@@ -481,17 +494,6 @@
       "tldr": "MIT Sloan Executive Education is expanding its offerings with new courses and professional certifications focused on artificial intelligence."
     },
     {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMi4AFBVV95cUxObjZEV0VxNXk4YkE1Qk9TcWJha1ZUSzFSWmxhWVhuY2U0NmF6WFd6SUVVY2lIYUF6LUFXSnNuS09YNTlHNDNWYXF3QUhmdjgtTW81cHBDTV9Bbk40VXBJRjRyTFpqY3h4R0Q2T2otY3pjbVNVN3NJUFAwV1ZiRERINVZmdFp1azlZZkJMWlNnYm9RdDZEZXlFcDNuUTRjR1dmNlliYXFaZE5YT1VvR05HMzFSMHdxWElraGI2OEhPckhKZFRnRFpWSTlLTmJ5M09PN3J2bjdqMVFSejFOWFladNIB5wFBVV95cUxNUjcyUDVQd2xCQjI5RXdLSmU2eTVfd0JYMHlmcFBiQ2p0N3VaZ1hBN3FObWRNcnhKVGdLYkpwWXQyaHo3ellILXg2dlduV2E0WXRUczRONTJXOFFZTlhDTldFZm9NRjlQVnNUX05Lc2VGeXhPZkdTZlIyVWsxUzZLd0cwTTJtSm1MUXdrNlNQeklZMWRCa21reG1mbHZ3TXpLaHV2RjIxUkxtVlVhY1F5R1BLZkVHOVlTUDdjaDVVZ0s5bVhNemw0YWRSeUNDZ0lhUFBmcFhxWTQxc3M2TUQyRXloRGdMVnM?oc=5",
-      "title": "Reproductive rights in India: Inequality, access, and bodily autonomy - The Indian Express",
-      "description": "Reproductive rights in India: Inequality, access, and bodily autonomy&nbsp;&nbsp;The Indian Express",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObjZEV0VxNXk4YkE1Qk9TcWJha1ZUSzFSWmxhWVhuY2U0NmF6WFd6SUVVY2lIYUF6LUFXSnNuS09YNTlHNDNWYXF3QUhmdjgtTW81cHBDTV9Bbk40VXBJRjRyTFpqY3h4R0Q2T2otY3pjbVNVN3NJUFAwV1ZiRERINVZmdFp1azlZZkJMWlNnYm9RdDZEZXlFcDNuUTRjR1dmNlliYXFaZE5YT1VvR05HMzFSMHdxWElraGI2OEhPckhKZFRnRFpWSTlLTmJ5M09PN3J2bjdqMVFSejFOWFladNIB5wFBVV95cUxNUjcyUDVQd2xCQjI5RXdLSmU2eTVfd0JYMHlmcFBiQ2p0N3VaZ1hBN3FObWRNcnhKVGdLYkpwWXQyaHo3ellILXg2dlduV2E0WXRUczRONTJXOFFZTlhDTldFZm9NRjlQVnNUX05Lc2VGeXhPZkdTZlIyVWsxUzZLd0cwTTJtSm1MUXdrNlNQeklZMWRCa21reG1mbHZ3TXpLaHV2RjIxUkxtVlVhY1F5R1BLZkVHOVlTUDdjaDVVZ0s5bVhNemw0YWRSeUNDZ0lhUFBmcFhxWTQxc3M2TUQyRXloRGdMVnM?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T07:04:00.000Z"
-    },
-    {
       "id": "linkedin-19801",
       "title": "Your feed is not lying. Appinventiv really is everywhere right now!",
       "description": "Appinventiv Weekly By Appinventiv By Appinventiv Read this article on LinkedIn to join the conversation Read on LinkedIn https://www.linkedin.com/comm/pulse/your-feed-lying-appinventiv-really-everywhere-right-now-appinve…",
@@ -503,6 +505,17 @@
       "publishedAt": "2026-05-27T06:59:50.000Z"
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
+      "title": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise - Goa Chronicle",
+      "description": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise&nbsp;&nbsp;Goa Chronicle",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T06:48:13.000Z"
+    },
+    {
       "id": "email-19800",
       "title": "Annual reminder of our terms of service under the Information Technology Rules 2021",
       "description": "To view this email as a web page, go to the following address: https://pages.awscloud.com/index.php/email/emailWebview?mkt_tok=MTEyLVRaTS03NjYAAAGiBvOMTVtgaRc7V8AEh0ElSBt2fvdhcGdqG1n64hRg6M4vozV8ylykXfEhOpiMxtvT9mhCz9VmD…",
@@ -512,17 +525,6 @@
       "topicLabel": "Tech",
       "channel": "email",
       "publishedAt": "2026-05-27T06:08:43.000Z"
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaWpGZXE3LVpLQUJOTGNNZ2p5REJRZzRKaHlhcmEwOFFBbWEtaXd1MHAxcnV2WWo4djU0SV9hZHZQaHJ3VHBEWEdIcl9RWHpTVkZWd1lhYU4ySTU1bHJRaUIyN0Z6alUwTmgxelFIM0VZbGZsUUFQZlVIVXRLZ05kNUVjTGNhRERX?oc=5",
-      "title": "UPSC Mains Current Affairs for 27 May 2026 - Vajiram & Ravi",
-      "description": "UPSC Mains Current Affairs for 27 May 2026&nbsp;&nbsp;Vajiram & Ravi",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaWpGZXE3LVpLQUJOTGNNZ2p5REJRZzRKaHlhcmEwOFFBbWEtaXd1MHAxcnV2WWo4djU0SV9hZHZQaHJ3VHBEWEdIcl9RWHpTVkZWd1lhYU4ySTU1bHJRaUIyN0Z6alUwTmgxelFIM0VZbGZsUUFQZlVIVXRLZ05kNUVjTGNhRERX?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T05:50:02.000Z"
     },
     {
       "id": "linkedin-19795",
@@ -799,5 +801,15 @@
       "channel": "rss",
       "publishedAt": "2026-01-12T11:30:00.000Z"
     }
-  ]
+  ],
+  "execSummary": {
+    "bullets": [
+      "A Google security engineer was arrested for allegedly using confidential search data to win over one million dollars on Polymarket.",
+      "Illinois lawmakers passed a strict AI safety bill requiring third-party audits of major tech companies like OpenAI and Google.",
+      "Researchers discovered that websites can track user activity by analyzing SSD write patterns through simple browser-based JavaScript.",
+      "The FBI arrested a CIA official after discovering forty million dollars worth of gold bars in his home.",
+      "California blocked Tesla's attempt to dismiss a major racial discrimination lawsuit, clearing the way for a July trial."
+    ],
+    "generatedAt": "2026-05-28T06:32:20.810Z"
+  }
 }
