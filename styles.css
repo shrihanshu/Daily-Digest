@@ -482,6 +482,10 @@ h2 {
   animation: previewFadeIn 180ms ease;
 }
 
+.preview-modal[hidden] {
+  display: none;
+}
+
 .preview-card {
   position: relative;
   width: min(620px, 100%);
