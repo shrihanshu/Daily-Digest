@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T09:53:34.313Z",
+  "updatedAt": "2026-05-28T04:42:52.132Z",
   "windowDays": 7,
   "days": [
     {
@@ -10,28 +10,49 @@
       "current-affairs": 6,
       "email": 9,
       "linkedin": 1
+    },
+    {
+      "date": "2026-05-28",
+      "total": 71,
+      "ai": 38,
+      "tech": 27,
+      "current-affairs": 6,
+      "email": 8,
+      "linkedin": 3
     }
   ],
   "topEntities": [
     {
       "name": "Google",
-      "count": 6
+      "count": 12
     },
     {
       "name": "Claude",
-      "count": 3
+      "count": 5
     },
     {
       "name": "AWS",
-      "count": 2
+      "count": 5
     },
     {
       "name": "Nvidia",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Apple",
-      "count": 1
+      "count": 2
+    },
+    {
+      "name": "Microsoft",
+      "count": 2
+    },
+    {
+      "name": "Salesforce",
+      "count": 2
+    },
+    {
+      "name": "Anthropic",
+      "count": 2
     },
     {
       "name": "Sony",
@@ -42,16 +63,140 @@
       "count": 1
     },
     {
-      "name": "Microsoft",
+      "name": "Tesla",
       "count": 1
     },
     {
-      "name": "Salesforce",
+      "name": "Amazon",
       "count": 1
+    }
+  ],
+  "sources": [
+    {
+      "name": "Google News",
+      "count": 24,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
     },
     {
-      "name": "Anthropic",
-      "count": 1
+      "name": "Wired",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Hacker News",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "The Verge",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "TechCrunch AI",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Ars Technica",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "MIT Technology Review",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Hugging Face",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "VentureBeat AI",
+      "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Jia from Unstop",
+      "count": 4,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Adobe Express",
+      "count": 2,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Microsoft via LinkedIn",
+      "count": 2,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Simplify AI Tools",
+      "count": 2,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Amazon Web Services",
+      "count": 2,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "hclp2-jobnotification@noreply55.jobs2web.com",
+      "count": 2,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "CodePen",
+      "count": 2,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Adobe",
+      "count": 1,
+      "lastSeen": "2026-05-27",
+      "daysSilent": 1
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "count": 1,
+      "lastSeen": "2026-05-27",
+      "daysSilent": 1
+    },
+    {
+      "name": "Appinventiv via LinkedIn",
+      "count": 1,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "AWS India",
+      "count": 1,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Frugal Testing via LinkedIn",
+      "count": 1,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
     }
   ]
 }
