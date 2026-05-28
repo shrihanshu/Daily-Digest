@@ -471,19 +471,19 @@ h2 {
 }
 
 .preview-modal {
+  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
   z-index: 50;
-  animation: previewFadeIn 180ms ease;
 }
 
-.preview-modal[hidden] {
-  display: none;
+.preview-modal.is-open {
+  display: flex;
+  animation: previewFadeIn 180ms ease;
 }
 
 .preview-card {
