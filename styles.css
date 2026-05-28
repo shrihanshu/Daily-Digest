@@ -470,6 +470,51 @@ h2 {
   opacity: 0.4;
 }
 
+.read-streak {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.read-streak:empty {
+  display: none;
+}
+
+.exec-card {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: rowFadeIn 420ms ease forwards;
+  transition: border-color 0.3s;
+}
+
+.exec-bullets {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.exec-bullets li::marker {
+  color: var(--accent);
+}
+
+.exec-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
 .empty-state {
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
@@ -544,6 +589,12 @@ h2 {
   text-align: right;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
+}
+
+.trend-spark {
+  flex: 0 0 64px;
+  color: var(--accent);
+  opacity: 0.85;
 }
 
 .trend-tags {

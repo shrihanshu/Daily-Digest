@@ -2,7 +2,7 @@ import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { fetchEmailArticles } from "./fetch-email.mjs";
 import { writeArchive } from "./archive.mjs";
-import { summarizeArticles } from "./summarize.mjs";
+import { summarizeArticles, summarizeDay } from "./summarize.mjs";
 
 const SOURCES = [
   // AI
@@ -244,8 +244,20 @@ function contentHash(list) {
 }
 const newHash = contentHash(articles);
 const priorHash = priorPayload?.articles ? contentHash(priorPayload.articles) : null;
+const articlesSame = priorHash === newHash;
+let execSummary = priorPayload?.execSummary || null;
+let needWrite = !articlesSame;
 
-if (priorHash === newHash) {
+// Generate exec summary when articles changed, or when none exists yet.
+if (!articlesSame || !execSummary) {
+  const fresh = await summarizeDay(articles);
+  if (fresh) {
+    execSummary = fresh;
+    needWrite = true;
+  }
+}
+
+if (!needWrite) {
   console.log(`No content change (${articles.length} articles); skipping writes.`);
 } else {
   await mkdir("data", { recursive: true });
@@ -255,6 +267,7 @@ if (priorHash === newHash) {
       {
         updatedAt: new Date().toISOString(),
         articles,
+        execSummary,
       },
       null,
       2,
@@ -264,7 +277,7 @@ if (priorHash === newHash) {
 
   // Archive today + rebuild trends (history → trends).
   try {
-    const result = await writeArchive(articles);
+    const result = await writeArchive(articles, { execSummary });
     console.log(`Archived ${result.dates.length} day(s); trends over ${result.days} day(s).`);
   } catch (error) {
     console.warn(`Archive/trends skipped: ${error.message}`);

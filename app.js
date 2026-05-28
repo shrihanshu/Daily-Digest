@@ -13,6 +13,7 @@ const themeToggle = document.querySelector("#themeToggle");
 const searchInput = document.querySelector("#searchInput");
 const topicFilters = document.querySelector("#topicFilters");
 const archiveDate = document.querySelector("#archiveDate");
+const readStreak = document.querySelector("#readStreak");
 
 let articles = [];
 let activeTopic = "all";
@@ -21,6 +22,7 @@ let currentTheme = localStorage.getItem("daily-signal-theme") || "dark";
 let latestDate = null; // value used by the date picker for "today"
 let trends = null; // lazy-loaded trends.json
 let archiveArticles = null; // lazy-loaded full archive (for cross-day search)
+let payloadExec = null; // execSummary from the currently loaded day
 
 function loadState() {
   try {
@@ -127,6 +129,19 @@ function render() {
   const filtered = dataset.filter(matchesFilters);
   articleList.innerHTML = "";
 
+  // Exec summary card — only when viewing the whole feed for a given day.
+  if (activeTopic === "all" && !query && payloadExec?.bullets?.length) {
+    const bullets = payloadExec.bullets.map((b) => `<li>${b}</li>`).join("");
+    const card = document.createElement("article");
+    card.className = "exec-card";
+    card.innerHTML = `
+      <span class="article-topic">Today’s Briefing</span>
+      <ul class="exec-bullets">${bullets}</ul>
+      <p class="exec-meta">Generated ${formatDate(payloadExec.generatedAt)}</p>
+    `;
+    articleList.appendChild(card);
+  }
+
   filtered.forEach((article) => {
     const id = articleId(article);
     const isRead = Boolean(state.read[id]);
@@ -154,7 +169,11 @@ function render() {
     `;
 
     card.querySelector(".read-check").addEventListener("change", (event) => {
-      state.read[id] = event.target.checked;
+      if (event.target.checked) {
+        state.read[id] = new Date().toISOString();
+      } else {
+        delete state.read[id];
+      }
       saveState();
       render();
     });
@@ -172,6 +191,37 @@ function render() {
   updateSummary();
 }
 
+function readsByDay() {
+  const map = {};
+  for (const value of Object.values(state.read || {})) {
+    if (typeof value !== "string") continue;
+    const day = value.slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
+    map[day] = (map[day] || 0) + 1;
+  }
+  return map;
+}
+
+function computeReadStats() {
+  const byDay = readsByDay();
+  const today = new Date().toISOString().slice(0, 10);
+  // 7-day rolling count.
+  let weekCount = 0;
+  const sevenAgo = new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  for (const [day, n] of Object.entries(byDay)) {
+    if (day >= sevenAgo && day <= today) weekCount += n;
+  }
+  // Streak — walk back from today while each day has ≥1 read.
+  let streak = 0;
+  for (let i = 0; i < 90; i += 1) {
+    const day = new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+    if (byDay[day]) streak += 1;
+    else if (i > 0) break; // today may be 0 — still count yesterday's streak
+    else break;
+  }
+  return { weekCount, streak };
+}
+
 function updateSummary() {
   const readTotal = articles.filter((article) => state.read[articleId(article)]).length;
   const savedTotal = articles.filter((article) => state.saved[articleId(article)]).length;
@@ -182,6 +232,28 @@ function updateSummary() {
   progressBar.style.width = `${percent}%`;
   unreadCount.textContent = String(Math.max(articles.length - readTotal, 0));
   savedCount.textContent = String(savedTotal);
+
+  const stats = computeReadStats();
+  if (readStreak) {
+    const parts = [];
+    if (stats.streak > 0) parts.push(`🔥 ${stats.streak}-day streak`);
+    if (stats.weekCount > 0) parts.push(`${stats.weekCount} read this week`);
+    readStreak.textContent = parts.join(" · ");
+  }
+}
+
+function sparkline(values, width = 64, height = 16) {
+  if (!values || !values.length) return "";
+  const max = Math.max(1, ...values);
+  const step = values.length > 1 ? width / (values.length - 1) : 0;
+  const points = values
+    .map((v, i) => {
+      const x = i * step;
+      const y = height - (v / max) * height;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(" ");
+  return `<svg class="trend-spark" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${points}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
 }
 
 async function renderTrends() {
@@ -212,11 +284,13 @@ async function renderTrends() {
     ["LinkedIn", "linkedin"],
   ];
   const max = Math.max(1, ...rows.map(([, key]) => sum[key] || 0));
+  const recent = days.slice(-7);
   const bars = rows
     .map(([label, key]) => {
       const value = sum[key] || 0;
       const pct = Math.round((value / max) * 100);
-      return `<div class="trend-row"><span class="trend-label">${label}</span><div class="trend-bar-track"><div class="trend-bar" style="width:${pct}%"></div></div><span class="trend-val">${value}</span></div>`;
+      const spark = sparkline(recent.map((day) => day[key] || 0));
+      return `<div class="trend-row"><span class="trend-label">${label}</span><div class="trend-bar-track"><div class="trend-bar" style="width:${pct}%"></div></div><span class="trend-val">${value}</span>${spark}</div>`;
     })
     .join("");
   const chips =
@@ -277,8 +351,10 @@ async function loadArchiveDay(date) {
   try {
     const payload = await (await fetch(`data/archive/${date}.json`, { cache: "no-store" })).json();
     articles = payload.articles || [];
+    payloadExec = payload.execSummary || null;
   } catch {
     articles = [];
+    payloadExec = null;
   }
   articles.forEach((article) => {
     article.__isNew = false;
@@ -293,9 +369,11 @@ async function loadArticles() {
     const response = await fetch("data/news.json", { cache: "no-store" });
     const payload = await response.json();
     articles = payload.articles || [];
+    payloadExec = payload.execSummary || null;
     updatedAt.textContent = payload.updatedAt ? formatDate(payload.updatedAt) : "Today";
   } catch {
     articles = [];
+    payloadExec = null;
     updatedAt.textContent = "Not yet";
   }
 

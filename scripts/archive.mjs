@@ -51,13 +51,17 @@ function countEntities(articles) {
 }
 
 // Persist today's snapshot, prune old days, rebuild index + trends.
-export async function writeArchive(articles) {
+export async function writeArchive(articles, extras = {}) {
   await mkdir(ARCHIVE_DIR, { recursive: true });
   const date = todayStamp();
 
   await writeFile(
     `${ARCHIVE_DIR}/${date}.json`,
-    `${JSON.stringify({ date, updatedAt: new Date().toISOString(), articles }, null, 2)}\n`,
+    `${JSON.stringify(
+      { date, updatedAt: new Date().toISOString(), articles, execSummary: extras.execSummary || null },
+      null,
+      2,
+    )}\n`,
   );
 
   // Discover archived days.

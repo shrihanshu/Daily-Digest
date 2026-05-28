@@ -49,6 +49,75 @@ export async function summarizeArticles(articles) {
   return articles;
 }
 
+// Produces a 5-bullet "what happened today" summary for the top articles.
+// Returns { bullets: [string,...], generatedAt } or null on failure / no key.
+export async function summarizeDay(articles) {
+  const sample = articles
+    .slice(0, 20)
+    .map((article) => ({
+      title: article.title,
+      source: article.source,
+      topic: article.topicLabel || article.topic,
+      tldr: article.tldr || (article.description || "").slice(0, 200),
+    }));
+  if (!sample.length) return null;
+
+  const prompt =
+    "Read these top headlines and write a 5-bullet executive summary of the day in AI / tech / current affairs. " +
+    "Each bullet ≤22 words, plain prose, no markdown, no emojis, no preamble. " +
+    "Respond ONLY with a JSON array of 5 strings.\n\n" +
+    `Headlines:\n${JSON.stringify(sample)}`;
+
+  try {
+    let bullets = [];
+    if (process.env.ANTHROPIC_API_KEY) {
+      bullets = await dayWithClaude(prompt);
+    } else if (process.env.GEMINI_API_KEY) {
+      bullets = await dayWithGemini(prompt);
+    } else {
+      return null;
+    }
+    bullets = (bullets || []).map((b) => String(b).trim()).filter(Boolean).slice(0, 5);
+    if (!bullets.length) return null;
+    console.log(`Exec summary: ${bullets.length} bullets`);
+    return { bullets, generatedAt: new Date().toISOString() };
+  } catch (error) {
+    console.warn(`Exec summary skipped: ${error.message}`);
+    return null;
+  }
+}
+
+async function dayWithClaude(prompt) {
+  const client = new Anthropic();
+  const model = process.env.CLAUDE_MODEL || "claude-haiku-4-5";
+  const response = await client.messages.create({
+    model,
+    max_tokens: 1000,
+    messages: [{ role: "user", content: prompt }],
+  });
+  const text = response.content?.find?.((b) => b.type === "text")?.text || "[]";
+  return parseJsonArray(text);
+}
+
+async function dayWithGemini(prompt) {
+  const model = process.env.GEMINI_MODEL || "gemini-flash-latest";
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(process.env.GEMINI_API_KEY)}`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      generationConfig: { temperature: 0.3, response_mime_type: "application/json" },
+    }),
+  });
+  if (!res.ok) {
+    throw new Error(`Gemini ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  }
+  const data = await res.json();
+  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || "[]";
+  return parseJsonArray(text);
+}
+
 async function summarizeWithClaude(todo) {
   const client = new Anthropic();
   const model = process.env.CLAUDE_MODEL || "claude-haiku-4-5";
