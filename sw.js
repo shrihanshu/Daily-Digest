@@ -2,7 +2,7 @@
 // Strategy:
 //   - shell (HTML/CSS/JS, icon, manifest): cache-first (instant, offline-ok).
 //   - data/*.json: network-first with cache fallback (always show freshest).
-const VERSION = "ds-v6"; // bumped: description truncation + escaping + read-state UI fixes
+const VERSION = "ds-v7"; // bumped: clickable masthead title resets to home
 const SHELL = ["./", "./index.html", "./app.js", "./styles.css", "./manifest.json", "./icon.svg"];
 
 self.addEventListener("install", (event) => {

@@ -15,6 +15,7 @@ const topicFilters = document.querySelector("#topicFilters");
 const archiveDate = document.querySelector("#archiveDate");
 const readStreak = document.querySelector("#readStreak");
 const notifyToggle = document.querySelector("#notifyToggle");
+const brandTitle = document.querySelector("#brandTitle");
 const previewModal = document.querySelector("#previewModal");
 const previewTopic = document.querySelector("#previewTopic");
 const previewTitle = document.querySelector("#previewTitle");
@@ -505,6 +506,43 @@ topicFilters.addEventListener("click", (event) => {
 });
 
 searchInput.addEventListener("input", render);
+
+// Brand title → "home": reset to today, All filter, no search, scrolled to top.
+// We don't reload the page — that would lose the SW cache and the saved/read
+// state UI without giving the user anything extra.
+function goHome() {
+  // Reset filter chips
+  activeTopic = "all";
+  document.querySelectorAll(".filter-button").forEach((item) => item.classList.remove("active"));
+  document.querySelector('button[data-topic="all"]')?.classList.add("active");
+
+  // Clear search
+  if (searchInput.value) searchInput.value = "";
+
+  // If the user is on an archive day, jump back to today and reload data.
+  // archiveDate.value is "" or the latest date when on today; otherwise an older day.
+  const onArchive = archiveDate.value && archiveDate.value !== latestDate;
+  if (onArchive) {
+    archiveDate.value = latestDate || "";
+    loadArticles(); // will render
+  } else {
+    render();
+  }
+
+  // Close any open preview modal so we land on a clean feed.
+  if (previewModal?.classList.contains("is-open")) closePreview();
+
+  // Scroll to the top of the feed (smooth so the transition feels deliberate).
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+brandTitle?.addEventListener("click", goHome);
+brandTitle?.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    goHome();
+  }
+});
 
 function openPreview(article) {
   if (!previewModal) return;
