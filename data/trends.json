@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T06:49:23.323Z",
+  "updatedAt": "2026-05-28T09:51:10.229Z",
   "windowDays": 7,
   "days": [
     {
@@ -24,7 +24,7 @@
   "topEntities": [
     {
       "name": "Google",
-      "count": 12
+      "count": 11
     },
     {
       "name": "Claude",

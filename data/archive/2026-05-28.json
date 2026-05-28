@@ -1,7 +1,149 @@
 {
   "date": "2026-05-28",
-  "updatedAt": "2026-05-28T06:49:23.308Z",
+  "updatedAt": "2026-05-28T09:51:10.211Z",
   "articles": [
+    {
+      "id": "tech-https://www.wired.com/story/why-its-almost-too-hot-to-play-tennis-at-the-french-open-2026/",
+      "title": "How Are French Open Players Dealing With the Paris Heat Wave?",
+      "description": "Meet the wet bulb globe temperature, the ominous measure that shows when it's too hot to go outside.",
+      "url": "https://www.wired.com/story/why-its-almost-too-hot-to-play-tennis-at-the-french-open-2026/",
+      "source": "Wired",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T09:03:32.000Z",
+      "tldr": "French Open players face extreme heat, highlighting the wet bulb globe temperature as a measure of dangerous outdoor conditions."
+    },
+    {
+      "id": "ai-https://news.google.com/rss/articles/CBMiugFBVV95cUxNN0JidEJDOUVYRDF0UWhvbGcxbFhoT1lFNjAtbXdiQzFxME5mU283S3BKVTRNd1Q3THd6M2t2a2p6VG4wZ0JzbDhRMmlxUVlwYUtzY1pQckZ5THVWU29UTS1wZ3pBN3JHRk1CcWtURFlJSlV0dThqb2VabXdJWmhQTXcxZkc0S1N6dVY5cnBNcGlWamZMb0NlS3RpN2hTSlNTb2wzb3RjWDBmaWJtdjVOdV9zLTd0MzAtMkE?oc=5",
+      "title": "Plots, love letters and remedies: The medieval secrets being revealed by AI - BBC",
+      "description": "Plots, love letters and remedies: The medieval secrets being revealed by AI&nbsp;&nbsp;BBC",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNN0JidEJDOUVYRDF0UWhvbGcxbFhoT1lFNjAtbXdiQzFxME5mU283S3BKVTRNd1Q3THd6M2t2a2p6VG4wZ0JzbDhRMmlxUVlwYUtzY1pQckZ5THVWU29UTS1wZ3pBN3JHRk1CcWtURFlJSlV0dThqb2VabXdJWmhQTXcxZkc0S1N6dVY5cnBNcGlWamZMb0NlS3RpN2hTSlNTb2wzb3RjWDBmaWJtdjVOdV9zLTd0MzAtMkE?oc=5",
+      "source": "Google News",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T09:00:58.000Z"
+    },
+    {
+      "id": "tech-https://www.wired.com/story/ballots-have-been-seized-across-the-us-no-one-knows-what-will-happen-next/",
+      "title": "Ballots Have Been Seized Across the US. No One Knows What Will Happen Next",
+      "description": "So far this year, authorities have seized or demanded ballots from elections in four states. Experts fear the trend could throw the midterms into chaos unless courts draw a line.",
+      "url": "https://www.wired.com/story/ballots-have-been-seized-across-the-us-no-one-knows-what-will-happen-next/",
+      "source": "Wired",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T09:00:00.000Z",
+      "tldr": "Authorities have seized ballots in four US states, raising expert fears of potential chaos in upcoming midterm elections."
+    },
+    {
+      "id": "tech-https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability",
+      "title": "YouTube will let you ask AI to make a custom video feed",
+      "description": "YouTube is launching a new AI feature that creates a personalized video feed based on descriptions of what you want to watch. In its announcement, YouTube says custom content feeds can be built around your specific interests, moods, or favorite topics, which you can then pin to the top of your YouTube homepage - making [&#8230;]",
+      "url": "https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability",
+      "source": "The Verge",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T08:49:07.000Z",
+      "tldr": "YouTube is launching an AI feature that generates personalized video feeds based on user-provided descriptions of their interests."
+    },
+    {
+      "id": "ai-https://news.google.com/rss/articles/CBMib0FVX3lxTE1jYkJDU05qSExKbVdwTkdWN29qbHJ2TjVxQVdKRFdleVh2MW1Bd1BzSklnM082QTVaTWZBOW1hQVBBTTRGVnY3aEpWc1NqUzZST1Z0V29xWDh0aG96VTRKaHdQM0tnalBoVXhQQ0NXRQ?oc=5",
+      "title": "Chevron ENGINE Seeks a Senior Machine Learning Engineer in Bengaluru - Global South Opportunities",
+      "description": "Chevron ENGINE Seeks a Senior Machine Learning Engineer in Bengaluru&nbsp;&nbsp;Global South Opportunities",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1jYkJDU05qSExKbVdwTkdWN29qbHJ2TjVxQVdKRFdleVh2MW1Bd1BzSklnM082QTVaTWZBOW1hQVBBTTRGVnY3aEpWc1NqUzZST1Z0V29xWDh0aG96VTRKaHdQM0tnalBoVXhQQ0NXRQ?oc=5",
+      "source": "Google News",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T08:19:35.000Z",
+      "tldr": "Chevron ENGINE is hiring a Senior Machine Learning Engineer for its operations in Bengaluru, India."
+    },
+    {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMiygFBVV95cUxQNEpxVVA4M1N4Y3VwazNmR1lFS3lCMU1tMEFzSTltT1cwT1hLWnJQNGtBMTBrTThnWEZCREpBMG8tc01VSER2UU5qNDN0TlF1Yjl0a29UeEY4NE0ycFJvXzJ5R2xqbXI4MHkzdGcwU1FMdEZSLXhaaS1Zd2xTWTliRERDTGN0VUZ6eFRyZVIweWpGbmd1MVJaYVh2SWRTcDg0TjJyZFNDaDE3UGw4aFd4OV9HcjBEU3ZVQlQ5cXdNZnFUU0xKcm9jOWVR0gHPAUFVX3lxTE5UQ0FQNU04RlhrMzcxcTdSVEdKeWx0UEpXdFN3aHZZTjVIQ25zN2RPLVNjN0V0S1Z2bmhmb2ltXzktYlBuRzFYaVRKLUdSNE1Bd3pUUXpIN2Q0UTlnMHJmYndzTExVd1g0MUNhZkJSRUEweEMxM1JxWURoZHhNdnZERVYwNmxURzVmNW90T2FXQUpUeWRuVkZFWjZlLTNvQ28wR1QtcnJLMk1QNjQwWEcwNm45U2RwcFE0SkJlQno4Mkx3Rm9DOUcwbkViT2pubw?oc=5",
+      "title": "Putin Uses Deadly Nuclear-Capable Oreshnik Missile on Ukraine | Vantage on Firstpost | 4K - Firstpost",
+      "description": "Putin Uses Deadly Nuclear-Capable Oreshnik Missile on Ukraine | Vantage on Firstpost | 4K&nbsp;&nbsp;Firstpost",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQNEpxVVA4M1N4Y3VwazNmR1lFS3lCMU1tMEFzSTltT1cwT1hLWnJQNGtBMTBrTThnWEZCREpBMG8tc01VSER2UU5qNDN0TlF1Yjl0a29UeEY4NE0ycFJvXzJ5R2xqbXI4MHkzdGcwU1FMdEZSLXhaaS1Zd2xTWTliRERDTGN0VUZ6eFRyZVIweWpGbmd1MVJaYVh2SWRTcDg0TjJyZFNDaDE3UGw4aFd4OV9HcjBEU3ZVQlQ5cXdNZnFUU0xKcm9jOWVR0gHPAUFVX3lxTE5UQ0FQNU04RlhrMzcxcTdSVEdKeWx0UEpXdFN3aHZZTjVIQ25zN2RPLVNjN0V0S1Z2bmhmb2ltXzktYlBuRzFYaVRKLUdSNE1Bd3pUUXpIN2Q0UTlnMHJmYndzTExVd1g0MUNhZkJSRUEweEMxM1JxWURoZHhNdnZERVYwNmxURzVmNW90T2FXQUpUeWRuVkZFWjZlLTNvQ28wR1QtcnJLMk1QNjQwWEcwNm45U2RwcFE0SkJlQno4Mkx3Rm9DOUcwbkViT2pubw?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T08:04:47.000Z",
+      "tldr": "Russian President Vladimir Putin has deployed the deadly, nuclear-capable Oreshnik missile against Ukraine."
+    },
+    {
+      "id": "ai-https://news.google.com/rss/articles/CBMi-gFBVV95cUxNWnItYUpZamhCM19QZDBsNmFJSlh1d29kaUxEYlNNamRWaHJ0V09lbVZMQUIxT3FuSXQtLWJtajdzazNGSnotNE5pdFZJUU9GTmp1S2tsSFl4eFRmdGtEUVhwNU0tYlI0aVBWQzUyRHNNQXAyVGNlaXZmTnpIbWNEMENmdXhOZ0JBQmhsaHRTMC1ha182enFjcTVFVnJ3bmx3S1Yta1M3bGg5dEFCT1htc29XejI0YVNTN2htM2RGai1MZTNVcklueHlENlZQRGFOaVNvZjh4NE02dHo3X1N4YWZyRmlUUW5OYzk1ei1ady1MVjZRY19XNU5B?oc=5",
+      "title": "A Study to Assess the Awareness and Attitudes Towards Artificial Intelligence (AI) Tools Among Medical Trainees and Practitioners - The Cureus Journal of Medical Science",
+      "description": "A Study to Assess the Awareness and Attitudes Towards Artificial Intelligence (AI) Tools Among Medical Trainees and Practitioners&nbsp;&nbsp;The Cureus Journal of Medical Science",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNWnItYUpZamhCM19QZDBsNmFJSlh1d29kaUxEYlNNamRWaHJ0V09lbVZMQUIxT3FuSXQtLWJtajdzazNGSnotNE5pdFZJUU9GTmp1S2tsSFl4eFRmdGtEUVhwNU0tYlI0aVBWQzUyRHNNQXAyVGNlaXZmTnpIbWNEMENmdXhOZ0JBQmhsaHRTMC1ha182enFjcTVFVnJ3bmx3S1Yta1M3bGg5dEFCT1htc29XejI0YVNTN2htM2RGai1MZTNVcklueHlENlZQRGFOaVNvZjh4NE02dHo3X1N4YWZyRmlUUW5OYzk1ei1ady1MVjZRY19XNU5B?oc=5",
+      "source": "Google News",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T07:45:13.000Z",
+      "tldr": "A study evaluates the awareness and attitudes of medical trainees and practitioners toward artificial intelligence tools in healthcare."
+    },
+    {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZkVVbU9nX1NJdW53TTJYZjJDQjNHUEJFWnpEaG1VaXhwX0F1WXNkeEc0ZWhMQlRYeTFJOWNJOFJEOGpLX2F0NFl1MkNTcEFCWDJyb3pSeVc4Y2ZyeHR1QlVEaHlPYjU2N3AzYjJwcmZCVHFrbVVUM1FiaWViajJnYjMzdWx2X2ljSnI1UlZMRUgxVEloelpkQ05keHJUcEFET0tCWFM5V2gxY1oxelRUbE9NZjRyQmNHZFhwZF9TOVRNZFZxSkJMdlJKWW44dVYwdzlWeFBKZndSUlVmMlRtUGk2MVplUF9UdV9UaDB2MUZ2UdIB8gFBVV95cUxOZkVVbU9nX1NJdW53TTJYZjJDQjNHUEJFWnpEaG1VaXhwX0F1WXNkeEc0ZWhMQlRYeTFJOWNJOFJEOGpLX2F0NFl1MkNTcEFCWDJyb3pSeVc4Y2ZyeHR1QlVEaHlPYjU2N3AzYjJwcmZCVHFrbVVUM1FiaWViajJnYjMzdWx2X2ljSnI1UlZMRUgxVEloelpkQ05keHJUcEFET0tCWFM5V2gxY1oxelRUbE9NZjRyQmNHZFhwZF9TOVRNZFZxSkJMdlJKWW44dVYwdzlWeFBKZndSUlVmMlRtUGk2MVplUF9UdV9UaDB2MUZ2UQ?oc=5",
+      "title": "UPSC Issue at a Glance | Decoding India’s 3F Challenge: Fuel, Fertiliser and Foreign Exchange - The Indian Express",
+      "description": "UPSC Issue at a Glance | Decoding India’s 3F Challenge: Fuel, Fertiliser and Foreign Exchange&nbsp;&nbsp;The Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZkVVbU9nX1NJdW53TTJYZjJDQjNHUEJFWnpEaG1VaXhwX0F1WXNkeEc0ZWhMQlRYeTFJOWNJOFJEOGpLX2F0NFl1MkNTcEFCWDJyb3pSeVc4Y2ZyeHR1QlVEaHlPYjU2N3AzYjJwcmZCVHFrbVVUM1FiaWViajJnYjMzdWx2X2ljSnI1UlZMRUgxVEloelpkQ05keHJUcEFET0tCWFM5V2gxY1oxelRUbE9NZjRyQmNHZFhwZF9TOVRNZFZxSkJMdlJKWW44dVYwdzlWeFBKZndSUlVmMlRtUGk2MVplUF9UdV9UaDB2MUZ2UdIB8gFBVV95cUxOZkVVbU9nX1NJdW53TTJYZjJDQjNHUEJFWnpEaG1VaXhwX0F1WXNkeEc0ZWhMQlRYeTFJOWNJOFJEOGpLX2F0NFl1MkNTcEFCWDJyb3pSeVc4Y2ZyeHR1QlVEaHlPYjU2N3AzYjJwcmZCVHFrbVVUM1FiaWViajJnYjMzdWx2X2ljSnI1UlZMRUgxVEloelpkQ05keHJUcEFET0tCWFM5V2gxY1oxelRUbE9NZjRyQmNHZFhwZF9TOVRNZFZxSkJMdlJKWW44dVYwdzlWeFBKZndSUlVmMlRtUGk2MVplUF9UdV9UaDB2MUZ2UQ?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T07:19:53.000Z",
+      "tldr": "An analysis of India's \"3F Challenge\" focusing on the critical economic issues of fuel, fertilizer, and foreign exchange."
+    },
+    {
+      "id": "ai-https://news.google.com/rss/articles/CBMivAFBVV95cUxPOEwyUEpua2pwZllQaGthaEgwSFNaSktoWVprMnp0azN1REZ6WUprTUE0OVc0eXRSOHhsR2Rxc2x4U1EtSGpCQU9TRGx5VHQ0ZjFRMFY0WTRIbERlZjRmaXJYSU9HNm9paGNDZFZ2dWZrQ0swdkI0SEZrVDAwa1pQY1A5NHlFQThweEZWd0kySmt5NXgtZVhQallYTFIzbGQ1ZzJUaGR3Rm9FcU1XN24xZDRoR3I0Q1dQZ0tDUw?oc=5",
+      "title": "Marquis Who's Who Honors Ajit Munjuluru for Expertise in Technology - 24-7 Press Release Newswire",
+      "description": "Marquis Who's Who Honors Ajit Munjuluru for Expertise in Technology&nbsp;&nbsp;24-7 Press Release Newswire",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPOEwyUEpua2pwZllQaGthaEgwSFNaSktoWVprMnp0azN1REZ6WUprTUE0OVc0eXRSOHhsR2Rxc2x4U1EtSGpCQU9TRGx5VHQ0ZjFRMFY0WTRIbERlZjRmaXJYSU9HNm9paGNDZFZ2dWZrQ0swdkI0SEZrVDAwa1pQY1A5NHlFQThweEZWd0kySmt5NXgtZVhQallYTFIzbGQ1ZzJUaGR3Rm9FcU1XN24xZDRoR3I0Q1dQZ0tDUw?oc=5",
+      "source": "Google News",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T07:01:43.000Z"
+    },
+    {
+      "id": "ai-https://techcrunch.com/2026/05/28/vertu-wants-ceos-to-run-companies-from-an-ai-foldable-starting-at-6880/",
+      "title": "Vertu wants CEOs to run companies from an AI foldable starting at $6,880",
+      "description": "Built on top of the open-source Hermes project, Vertu's new foldable combines AI-agent workflows, enterprise integrations, and ultra-premium luxury finishes.",
+      "url": "https://techcrunch.com/2026/05/28/vertu-wants-ceos-to-run-companies-from-an-ai-foldable-starting-at-6880/",
+      "source": "TechCrunch AI",
+      "topic": "ai",
+      "topicLabel": "AI",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T07:00:00.000Z",
+      "tldr": "Vertu has launched a luxury AI-powered foldable phone starting at $6,880, designed for executives to manage companies."
+    },
+    {
+      "id": "tech-https://www.wired.com/story/vertu-alphafold-folding-phone-powered-by-hermes-agent-ai/",
+      "title": "Vertu Is Back With a Folding Phone Powered by—Surprise—an AI Agent",
+      "description": "The beleaguered luxury phone maker is pushing the AlphaFold, which has decent specs and comes with Vertu’s new Hermes Agent on board, to wealthy would-be buyers.",
+      "url": "https://www.wired.com/story/vertu-alphafold-folding-phone-powered-by-hermes-agent-ai/",
+      "source": "Wired",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T07:00:00.000Z",
+      "tldr": "Luxury phone brand Vertu is releasing the AlphaFold, a high-end folding smartphone powered by its new Hermes AI agent."
+    },
+    {
+      "id": "tech-https://iisc.ac.in/a-eureka-machine-that-thinks-like-nature-and-explores-what-ai-cannot/",
+      "title": "A Eureka machine that thinks like nature and explores what AI cannot",
+      "description": "Article URL: https://iisc.ac.in/a-eureka-machine-that-thinks-like-nature-and-explores-what-ai-cannot/\nComments URL: https://news.ycombinator.com/item?id=48305446\nPoints: 67\n# Comments: 24",
+      "url": "https://iisc.ac.in/a-eureka-machine-that-thinks-like-nature-and-explores-what-ai-cannot/",
+      "source": "Hacker News",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T06:40:31.000Z",
+      "tldr": "Researchers have developed a \"Eureka machine\" that mimics natural processes to explore complex problems beyond current AI capabilities."
+    },
     {
       "id": "tech-https://www.theverge.com/games/938451/steam-deck-price-hike-end-of-handheld-gaming-era",
       "title": "The golden age of handheld gaming is already over",
@@ -15,21 +157,33 @@
       "tldr": "Rising prices and changing markets signal the end of the affordable golden age of handheld PC gaming."
     },
     {
-      "id": "ai-https://news.google.com/rss/articles/CBMiU0FVX3lxTE9KRDNmX1ZnMXAydl9yVmM5Sm5QUWNSTmtJVlN0eldjWWF6UWZKci1LTThKV1NvOUVqYWhKN0QtdnhqN1BhNFUwbFhxd1k4cWNfbTdZ?oc=5",
-      "title": "Yungu, a Place Where Jack Ma Rarely Appears, Launches Hangzhou's First High School AI Specialty Class - eu.36kr.com",
-      "description": "Yungu, a Place Where Jack Ma Rarely Appears, Launches Hangzhou's First High School AI Specialty Class&nbsp;&nbsp;eu.36kr.com",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9KRDNmX1ZnMXAydl9yVmM5Sm5QUWNSTmtJVlN0eldjWWF6UWZKci1LTThKV1NvOUVqYWhKN0QtdnhqN1BhNFUwbFhxd1k4cWNfbTdZ?oc=5",
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMihwFBVV95cUxPRTBpaXVIdjgyOTVfa29LNkZUUl9rODM5aUlrZGtkRGE2ZnFCampqMmNpMFpJSXlJNmtiMmxKTWU2Ri1MX1lheEU3ZGY1bnBWRTNFOFQ1bF92c0lJWVFFMkEyV2NJNDVMZXIzQWdYZTBsdm1oMmx2Q3BRNVAzWE9zWmUwYWZhaTA?oc=5",
+      "title": "Daily Editorial Analysis 28 May 2026 - Vajiram & Ravi",
+      "description": "Daily Editorial Analysis 28 May 2026&nbsp;&nbsp;Vajiram & Ravi",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRTBpaXVIdjgyOTVfa29LNkZUUl9rODM5aUlrZGtkRGE2ZnFCampqMmNpMFpJSXlJNmtiMmxKTWU2Ri1MX1lheEU3ZGY1bnBWRTNFOFQ1bF92c0lJWVFFMkEyV2NJNDVMZXIzQWdYZTBsdm1oMmx2Q3BRNVAzWE9zWmUwYWZhaTA?oc=5",
       "source": "Google News",
-      "topic": "ai",
-      "topicLabel": "AI",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
       "channel": "rss",
-      "publishedAt": "2026-05-28T04:10:20.000Z",
-      "tldr": "Yungu School in Hangzhou has launched the city's first high school specialty class focused on artificial intelligence."
+      "publishedAt": "2026-05-28T05:30:20.000Z",
+      "tldr": "Vajiram & Ravi provides a daily editorial analysis for May 28, 2026, to assist civil services aspirants."
+    },
+    {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMiywFBVV95cUxNR3VuV1BVczNyNFhOYXZZMWJSQThNdDFjdWRUclE2SkpieUdFUlRhMFBQTUNmakkxR2xXbmtfTWhXVm1nZWo2LTNMQkx0TG1pMU9RRDJwbXpMa3lQektaek5TMjhKekdVS2JXZWFwbHdPWUtaQlh5SEpJNVRoTWN0Vi1hYzBqWmdPM0RrRFp2eTZSQk1SUlpnV1NSNEZPN1Z3WVhUQnFWbTBMaUtsWUxkd1hUMWJNQzBQYm9VbjQySmh0bW5lbVlzS0xMWdIBywFBVV95cUxNR3VuV1BVczNyNFhOYXZZMWJSQThNdDFjdWRUclE2SkpieUdFUlRhMFBQTUNmakkxR2xXbmtfTWhXVm1nZWo2LTNMQkx0TG1pMU9RRDJwbXpMa3lQektaek5TMjhKekdVS2JXZWFwbHdPWUtaQlh5SEpJNVRoTWN0Vi1hYzBqWmdPM0RrRFp2eTZSQk1SUlpnV1NSNEZPN1Z3WVhUQnFWbTBMaUtsWUxkd1hUMWJNQzBQYm9VbjQySmh0bW5lbVlzS0xMWQ?oc=5",
+      "title": "In A First, UPSC Releases Provisional Answer Key For Civil Services Prelims 2026 - Swarajyamag",
+      "description": "In A First, UPSC Releases Provisional Answer Key For Civil Services Prelims 2026&nbsp;&nbsp;Swarajyamag",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNR3VuV1BVczNyNFhOYXZZMWJSQThNdDFjdWRUclE2SkpieUdFUlRhMFBQTUNmakkxR2xXbmtfTWhXVm1nZWo2LTNMQkx0TG1pMU9RRDJwbXpMa3lQektaek5TMjhKekdVS2JXZWFwbHdPWUtaQlh5SEpJNVRoTWN0Vi1hYzBqWmdPM0RrRFp2eTZSQk1SUlpnV1NSNEZPN1Z3WVhUQnFWbTBMaUtsWUxkd1hUMWJNQzBQYm9VbjQySmh0bW5lbVlzS0xMWdIBywFBVV95cUxNR3VuV1BVczNyNFhOYXZZMWJSQThNdDFjdWRUclE2SkpieUdFUlRhMFBQTUNmakkxR2xXbmtfTWhXVm1nZWo2LTNMQkx0TG1pMU9RRDJwbXpMa3lQektaek5TMjhKekdVS2JXZWFwbHdPWUtaQlh5SEpJNVRoTWN0Vi1hYzBqWmdPM0RrRFp2eTZSQk1SUlpnV1NSNEZPN1Z3WVhUQnFWbTBMaUtsWUxkd1hUMWJNQzBQYm9VbjQySmh0bW5lbVlzS0xMWQ?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T04:12:28.000Z",
+      "tldr": "For the first time, the UPSC has released a provisional answer key for the Civil Services Prelims 2026."
     },
     {
       "id": "tech-https://hallucinate.site",
       "title": "Hallucinate – Massively Multiplayer Online Rave",
-      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 113\n# Comments: 44",
+      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 194\n# Comments: 77",
       "url": "https://hallucinate.site",
       "source": "Hacker News",
       "topic": "tech",
@@ -37,6 +191,18 @@
       "channel": "rss",
       "publishedAt": "2026-05-28T03:50:01.000Z",
       "tldr": "Hallucinate is a massively multiplayer online rave platform."
+    },
+    {
+      "id": "tech-https://github.com/BurntSushi/biff",
+      "title": "Biff is a command line datetime Swiss army knife",
+      "description": "Article URL: https://github.com/BurntSushi/biff\nComments URL: https://news.ycombinator.com/item?id=48303881\nPoints: 21\n# Comments: 8",
+      "url": "https://github.com/BurntSushi/biff",
+      "source": "Hacker News",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T02:58:44.000Z",
+      "tldr": "Biff is a versatile command-line utility designed to simplify date and time operations for developers."
     },
     {
       "id": "tech-https://www.ycombinator.com/companies/ramain/jobs/hqvmyKN-founding-gtm-engineer",
@@ -63,18 +229,6 @@
       "tldr": "Current affairs updates include the addition of Yogasan to the 2030 Commonwealth Games and India's new battery project."
     },
     {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMihgJBVV95cUxQU1FxbTZDVmN0RHo5cWYwYXgxMW05azBabXp1RnJSb3Z2LVBmTjB1MVM4aFJfTDlURl9YYm5ZSHhic2dlS1hidHgxUllHd05lZFdBWnJaZHZIaHhPN2dWTDRldmFqSk5laXR0SHZFZ09UV1VsWEdmd3lKc2ItRndzbV96ZHgxTXJHVzVKRjN4d0EtM1dERVZrWkZ6ZHlLWGRFcVI2REZMbEMyVEJmX200YmwtV0ctYzFMa3dUa25nVkVjZkJvaFdqRzEySlJVRTNTWll6RjBPRDNtNV9xN3NhWWdPLTBGZW5LOFpUTHd1by0yYmc2bnNKMzdGVl9RWkJ3eHVRWWh30gGGAkFVX3lxTFBTUXFtNkNWY3REejlxZjBheDExbTlrMFptenVGclJvdnYtUGZOMHUxUzhoUl9MOVRGX1hibllIeGJzZ2VLWGJ0eDFSWUd3TmVkV0FaclpkdkhoeE83Z1ZMNGV2YWpKTmVpdHRIdkVnT1RXVWxYR2Z3eUpzYi1Gd3NtX3pkeDFNckdXNUpGM3h3QS0zV0RFVmtaRnpkeUtYZEVxUjZERkxsQzJUQmZfbTRibC1XRy1jMUxrd1RrbmdWRWNmQm9oV2pHMTJKUlVFM1NaWXpGME9EM201X3E3c2FZZ08tMEZlbks4WlRMd3VvLTJiZzZuc0ozN0ZWX1FaQnd4dVFZaHc?oc=5",
-      "title": "Quote of the day by Bill Gates: It's fine to celebrate success but it is more important... - India Today",
-      "description": "Quote of the day by Bill Gates: It's fine to celebrate success but it is more important...&nbsp;&nbsp;India Today",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQU1FxbTZDVmN0RHo5cWYwYXgxMW05azBabXp1RnJSb3Z2LVBmTjB1MVM4aFJfTDlURl9YYm5ZSHhic2dlS1hidHgxUllHd05lZFdBWnJaZHZIaHhPN2dWTDRldmFqSk5laXR0SHZFZ09UV1VsWEdmd3lKc2ItRndzbV96ZHgxTXJHVzVKRjN4d0EtM1dERVZrWkZ6ZHlLWGRFcVI2REZMbEMyVEJmX200YmwtV0ctYzFMa3dUa25nVkVjZkJvaFdqRzEySlJVRTNTWll6RjBPRDNtNV9xN3NhWWdPLTBGZW5LOFpUTHd1by0yYmc2bnNKMzdGVl9RWkJ3eHVRWWh30gGGAkFVX3lxTFBTUXFtNkNWY3REejlxZjBheDExbTlrMFptenVGclJvdnYtUGZOMHUxUzhoUl9MOVRGX1hibllIeGJzZ2VLWGJ0eDFSWUd3TmVkV0FaclpkdkhoeE83Z1ZMNGV2YWpKTmVpdHRIdkVnT1RXVWxYR2Z3eUpzYi1Gd3NtX3pkeDFNckdXNUpGM3h3QS0zV0RFVmtaRnpkeUtYZEVxUjZERkxsQzJUQmZfbTRibC1XRy1jMUxrd1RrbmdWRWNmQm9oV2pHMTJKUlVFM1NaWXpGME9EM201X3E3c2FZZ08tMEZlbks4WlRMd3VvLTJiZzZuc0ozN0ZWX1FaQnd4dVFZaHc?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-28T01:30:00.000Z",
-      "tldr": "Bill Gates highlights that learning from failure is more important than celebrating success."
-    },
-    {
       "id": "ai-https://news.google.com/rss/articles/CBMiowFBVV95cUxQdzYzVHVwQVRJSmlnTVNKOEpBeERkM3lDTTUtdE9KWWJPNlFUaEdSeVRzaHhKOXktNl83Ym8zcVVhRzlub0VBMVZpWU92YjU0NDA2Vk5LSWhhcmdHblp3eFBqOWYyclVoMWJBVE9kS1hPckhPVzVDZ0h4R1g1Y2xMUDZPR0FtdnZsZ2ZfWUk3d2ZUMVdSWGY4N09jWHVna05kelJR?oc=5",
       "title": "The Bitter Lesson: AI's Protein Problem - StartupHub.ai",
       "description": "The Bitter Lesson: AI's Protein Problem&nbsp;&nbsp;StartupHub.ai",
@@ -89,7 +243,7 @@
     {
       "id": "tech-https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "title": "Google employee charged with $1M Polymarket insider trading bet on search term",
-      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 136\n# Comments: 66",
+      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 171\n# Comments: 105",
       "url": "https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "source": "Hacker News",
       "topic": "tech",
@@ -101,7 +255,7 @@
     {
       "id": "tech-https://mlsu.io/posts/day-off/",
       "title": "Can we have the day off?",
-      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 914\n# Comments: 546",
+      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 1044\n# Comments: 613",
       "url": "https://mlsu.io/posts/day-off/",
       "source": "Hacker News",
       "topic": "tech",
@@ -135,42 +289,6 @@
       "tldr": "Illinois lawmakers passed a strict AI safety bill requiring third-party audits of major tech companies like OpenAI and Google."
     },
     {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uSUw5MEdISnlIbUI1Y2FfY3k0ZGZiRE1FOWhjMUdqYlpMaWswWWpmV0R1VW9hVThJN2FHVURZMUZlenp4Tm82SnVJUU5rc3dYMl9GRy1OWDVhejQ?oc=5",
-      "title": "IMD Issues Alerts: Thunderstorms In Delhi, Heatwave In Rajasthan & Gujarat Lewandowski (58h0fX6TxB) - Mshale",
-      "description": "IMD Issues Alerts: Thunderstorms In Delhi, Heatwave In Rajasthan & Gujarat Lewandowski (58h0fX6TxB)&nbsp;&nbsp;Mshale",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uSUw5MEdISnlIbUI1Y2FfY3k0ZGZiRE1FOWhjMUdqYlpMaWswWWpmV0R1VW9hVThJN2FHVURZMUZlenp4Tm82SnVJUU5rc3dYMl9GRy1OWDVhejQ?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T23:55:26.000Z",
-      "tldr": "The IMD has issued alerts for thunderstorms in Delhi and heatwaves in Rajasthan and Gujarat."
-    },
-    {
-      "id": "tech-https://drobinin.com/posts/am-i-a-bad-friend/",
-      "title": "I analysed 20 years of my chats",
-      "description": "Article URL: https://drobinin.com/posts/am-i-a-bad-friend/\nComments URL: https://news.ycombinator.com/item?id=48302220\nPoints: 44\n# Comments: 7",
-      "url": "https://drobinin.com/posts/am-i-a-bad-friend/",
-      "source": "Hacker News",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T23:31:13.000Z",
-      "tldr": "An individual analyzed two decades of personal chat logs to reflect on their friendships and communication habits."
-    },
-    {
-      "id": "tech-https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
-      "title": "FBI Arrests CIA Official with $40M in Gold Bars in His Home",
-      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 259\n# Comments: 149",
-      "url": "https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
-      "source": "Hacker News",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T23:23:29.000Z",
-      "tldr": "The FBI arrested a CIA official after discovering forty million dollars worth of gold bars in his home."
-    },
-    {
       "id": "tech-https://www.theverge.com/tech/938635/google-polymarket-insider-trading-prediction-market-bets",
       "title": "A Google employee allegedly used inside information to win $1.2 million on Polymarket",
       "description": "Federal prosecutors charged a Google employee with fraud after he allegedly made $1.2 million on Polymarket bets related to Search-related trends in 2025, as reported earlier by ABC News. In their now-unsealed complaint, prosecutors allege that Michele Spagnuolo \"knew the outcome of these wagers before the trading public did because he had accessed Google's confidential, [&#8230;]",
@@ -181,18 +299,6 @@
       "channel": "rss",
       "publishedAt": "2026-05-27T22:30:02.000Z",
       "tldr": "A Google employee faces fraud charges for allegedly using confidential search data to win over one million dollars on Polymarket."
-    },
-    {
-      "id": "tech-https://www.wired.com/story/google-employee-accused-of-polymarket-one-million/",
-      "title": "Google Security Engineer Arrested in Million-Dollar Polymarket Trading Scheme",
-      "description": "According to federal prosecutors, Michele Spagnuolo made more than $1 million on the prediction market platform using confidential information about Google Search traffic.",
-      "url": "https://www.wired.com/story/google-employee-accused-of-polymarket-one-million/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T22:22:23.000Z",
-      "tldr": "A Google security engineer was arrested for allegedly using confidential search traffic data to make illicit Polymarket bets."
     },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSUxzNEdFUWVjcWJFNmE0d1pwNzdIVHJLUUxuVHpJZTBaZm5uV3E4ellQcUpWZjRyVDJxRUl4bk5oczNqLTlSQmdnSWl2M3prU2lydUpDWGc5RzEtQ080YnB0bEo1UUItclY0X1p3dEVqRVFtMEY2QlJmby1vS3BjWl9ZZ3ZwMGd1SW9IUXBwLXlIMGNyaTdqMUg1Skt4cEdPb3RPWFpUZmVKUGR6RW92TVdILVZTWlJsWjZYVnJ4SkM2S2tPemhhNzM2OFAwRXpIWnlNVlZaQXlhNFh6a0E?oc=5",
@@ -303,18 +409,6 @@
       "tldr": "Lux Optics has released Halide Mark III, featuring a new film simulation engine and an upgraded photo editor."
     },
     {
-      "id": "tech-https://www.theverge.com/tech/938500/facebook-whatsapp-instagram-meta-ai-subscriptions",
-      "title": "Facebook launches a ‘Plus’ subscription that gives you extra features",
-      "description": "After announcing tests of premium subscriptions for Facebook, Instagram, WhatsApp earlier this year, TechCrunch and Bloomberg report that Meta is launching a global rollout over the next few weeks and is also starting to test subscriptions for Meta AI. With the new offerings, Meta joins many other tech companies in changing up its subscription plans [&#8230;]",
-      "url": "https://www.theverge.com/tech/938500/facebook-whatsapp-instagram-meta-ai-subscriptions",
-      "source": "The Verge",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T20:03:42.000Z",
-      "tldr": "Meta is rolling out global paid subscriptions for Facebook, Instagram, and WhatsApp, while testing premium tiers for Meta AI."
-    },
-    {
       "id": "tech-https://arstechnica.com/tech-policy/2026/05/nvidia-ceo-wants-taiwan-to-be-center-of-ai-revolution-not-us/",
       "title": "Nvidia bets $150B on Taiwan as Trump's plan to make US an AI hub backfires",
       "description": "Nvidia will invest $150 billion a year to make Taiwan an AI “epicenter.”",
@@ -363,16 +457,16 @@
       "tldr": "Traditional SEO strategies are becoming obsolete as Google shifts its search engine to prioritize AI-generated answers."
     },
     {
-      "id": "ai-https://news.google.com/rss/articles/CBMisAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZ9IBsAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZw?oc=5",
-      "title": "Machine Learning helps scientists study Martian dust devils - Labroots",
-      "description": "Machine Learning helps scientists study Martian dust devils&nbsp;&nbsp;Labroots",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZ9IBsAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZw?oc=5",
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
+      "title": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026) - Drishti IAS",
+      "description": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026)&nbsp;&nbsp;Drishti IAS",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
       "source": "Google News",
-      "topic": "ai",
-      "topicLabel": "AI",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
       "channel": "rss",
-      "publishedAt": "2026-05-27T18:15:00.000Z",
-      "tldr": "Scientists are using machine learning technology to better analyze and study dust devils on Mars."
+      "publishedAt": "2026-05-27T18:31:20.000Z",
+      "tldr": "Drishti IAS releases daily current affairs updates for Jammu and Kashmir, tailored for the JKAS exam preparation."
     },
     {
       "id": "ai-https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
@@ -387,30 +481,6 @@
       "tldr": "Meta has launched global paid subscriptions for its major platforms and is testing new AI-focused subscription tiers."
     },
     {
-      "id": "tech-https://www.wired.com/story/huawei-chip-queen-moores-law-tau/",
-      "title": "Huawei's ‘Chip Queen’ Throws Down the Gauntlet",
-      "description": "The Chinese company is adapting to the demise of Moore’s Law, which guides chip production. It could complicate US chip dominance.",
-      "url": "https://www.wired.com/story/huawei-chip-queen-moores-law-tau/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T18:00:00.000Z",
-      "tldr": "Huawei is adapting to the end of Moore's Law, potentially challenging United States dominance in the global semiconductor industry."
-    },
-    {
-      "id": "tech-https://www.wired.com/story/dating-app-blk-is-giving-away-free-gas-to-convince-people-to-get-out-of-the-house/",
-      "title": "A Dating App Is Giving Away Free Gas to Convince People to Get Out of the House",
-      "description": "Amid ongoing economic anxieties, BLK and other companies are giving away basic essentials to appeal to the public.",
-      "url": "https://www.wired.com/story/dating-app-blk-is-giving-away-free-gas-to-convince-people-to-get-out-of-the-house/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T17:52:46.000Z",
-      "tldr": "Dating app BLK is offering free gas to encourage users to go on dates despite current economic anxieties."
-    },
-    {
       "id": "ai-https://huggingface.co/blog/ibm-research/itbench-aa",
       "title": "ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analysis and IBM",
       "description": "",
@@ -423,66 +493,6 @@
       "tldr": "A new benchmark reveals that top AI models score below fifty percent on complex, agentic enterprise IT tasks."
     },
     {
-      "id": "ai-https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
-      "title": "AI coding startup Cognition raises $1B at $25B pre-money valuation",
-      "description": "As Cognition reaches $492 million in annualized revenue run rate, it more than doubled its valuation in eight months, it says.",
-      "url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
-      "source": "TechCrunch AI",
-      "topic": "ai",
-      "topicLabel": "AI",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T16:00:00.000Z",
-      "tldr": "AI coding startup Cognition has raised one billion dollars, valuing the company at twenty-five billion dollars."
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE02c2R0TEQyaUpRU1dQYmxNaDNVNmtvclhDREpIYmhPanhYRElUd0tSYlBlYm41dHhEMk52Rl9oeHhTcmxXWkNQaWd6dHFtUmtRY0VOS2Q2dWpKLWt4bjJaenhNNmlsVU53UGZ4blNTNA?oc=5",
-      "title": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (13-11-2000) - Drishti IAS",
-      "description": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (13-11-2000)&nbsp;&nbsp;Drishti IAS",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE02c2R0TEQyaUpRU1dQYmxNaDNVNmtvclhDREpIYmhPanhYRElUd0tSYlBlYm41dHhEMk52Rl9oeHhTcmxXWkNQaWd6dHFtUmtRY0VOS2Q2dWpKLWt4bjJaenhNNmlsVU53UGZ4blNTNA?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T15:46:26.000Z",
-      "tldr": "Drishti IAS provides daily current affairs updates for Jammu and Kashmir to help candidates prepare for the JKAS exam."
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMibkFVX3lxTFA3SFd4MWNUNTFPdFVyYlp6Mlk0N3ZVOXJGZTFHelk0TkRfT0lUZEtmV1NWSldUenI5NU4weXd5UjNtenpIbkF3MmxrVGh0WTNjQ1BOODVTUGp4TVJBT0doRXh0T0otN2ZjdVhEUVl3?oc=5",
-      "title": "Current Affairs for 27 May 2026 - Sanskriti IAS",
-      "description": "Current Affairs for 27 May 2026&nbsp;&nbsp;Sanskriti IAS",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA3SFd4MWNUNTFPdFVyYlp6Mlk0N3ZVOXJGZTFHelk0TkRfT0lUZEtmV1NWSldUenI5NU4weXd5UjNtenpIbkF3MmxrVGh0WTNjQ1BOODVTUGp4TVJBT0doRXh0T0otN2ZjdVhEUVl3?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T14:14:37.000Z",
-      "tldr": "A daily roundup of important current affairs for May 27, 2026, curated by Sanskriti IAS."
-    },
-    {
-      "id": "ai-https://news.google.com/rss/articles/CBMixwFBVV95cUxPMDRsUUVNTFkxNFExQkZKZW04Wjc2R05ZX2pwUUZZVndZSnJYdVpVYTVmWVQwQ3V6ZENheEtIamZXVTloWDctVlRKRWRkM3BpdjNZSTZwUTEzMDVXSXQyVm54c0V2UHZnUmRkMWZjU3BobUQyZTVVS2VfMHNaSFQ0REp6Ylhld2g4Wmh4MElMTVZuR2kxb0pfSmk4aVlEMFl0N0d4SmFQalNCcHF2YWpIcjZVMVlwdXpWT1pzRWdXOWdDTWQ3aDFF?oc=5",
-      "title": "Reflecting on Spring SciX: Advancements in Raman Spectroscopy and Artificial Intelligence - Spectroscopy Online",
-      "description": "Reflecting on Spring SciX: Advancements in Raman Spectroscopy and Artificial Intelligence&nbsp;&nbsp;Spectroscopy Online",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMDRsUUVNTFkxNFExQkZKZW04Wjc2R05ZX2pwUUZZVndZSnJYdVpVYTVmWVQwQ3V6ZENheEtIamZXVTloWDctVlRKRWRkM3BpdjNZSTZwUTEzMDVXSXQyVm54c0V2UHZnUmRkMWZjU3BobUQyZTVVS2VfMHNaSFQ0REp6Ylhld2g4Wmh4MElMTVZuR2kxb0pfSmk4aVlEMFl0N0d4SmFQalNCcHF2YWpIcjZVMVlwdXpWT1pzRWdXOWdDTWQ3aDFF?oc=5",
-      "source": "Google News",
-      "topic": "ai",
-      "topicLabel": "AI",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T13:39:41.000Z",
-      "tldr": "A reflection on the Spring SciX conference, highlighting recent advancements combining Raman spectroscopy with artificial intelligence."
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYWJpMFZKZkV3TUNTczZKeGJzNGE4aWRYTkR5QW9YaUdsOVgxUUcyYlNMMDZ3emczbThNU1FQNkJXMXlYRXBnRE8tSnItdEZUTjJ0M0g0OHotQkRQczJkcXp0VjZBaDZpY1NfNVVaNVd5NEdlQkRhOE41TjFIT09zWDZOX1Npd2owa0NwdkNiQmxKeEd5N2d6RDJNR2hSVVF5ZFhMckRfR0VLWlNKQUU0aXJNRDRLTFRjYVFoR181YlAxdm9HVG5qZnUwTnVaWHZiTWsycnFKNmd6a045bnE5UlhjOEk0S05idGfSAeoBQVVfeXFMT2FiaTBWSmZFd01DU3M2SnhiczRhOGlkWE5EeUFvWGlHbDlYMVFHMmJTTDA2d3pnM204TVNRUDZCVzF5WEVwZ0RPLUpyLXRGVE4ydDNINDh6LUJEUHMyZHF6dFY2QWg2aWNTXzVVWjVXeTRHZUJEYThONU4xSE9Pc1g2Tl9TaXdqMGtDcHZDYkJsSnhHeTdnekQyTUdoUlVReWRYTHJEX0dFS1pTSkFFNGlyTUQ0S0xUY2FRaEdfNWJQMXZvR1RuamZ1ME51Wlh2Yk1rMnJxSjZnemtOOW5xOVJYYzhJNEtOYnRn?oc=5",
-      "title": "Why defence, security dimensions become increasingly central to India-UAE ties - The Indian Express",
-      "description": "Why defence, security dimensions become increasingly central to India-UAE ties&nbsp;&nbsp;The Indian Express",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYWJpMFZKZkV3TUNTczZKeGJzNGE4aWRYTkR5QW9YaUdsOVgxUUcyYlNMMDZ3emczbThNU1FQNkJXMXlYRXBnRE8tSnItdEZUTjJ0M0g0OHotQkRQczJkcXp0VjZBaDZpY1NfNVVaNVd5NEdlQkRhOE41TjFIT09zWDZOX1Npd2owa0NwdkNiQmxKeEd5N2d6RDJNR2hSVVF5ZFhMckRfR0VLWlNKQUU0aXJNRDRLTFRjYVFoR181YlAxdm9HVG5qZnUwTnVaWHZiTWsycnFKNmd6a045bnE5UlhjOEk0S05idGfSAeoBQVVfeXFMT2FiaTBWSmZFd01DU3M2SnhiczRhOGlkWE5EeUFvWGlHbDlYMVFHMmJTTDA2d3pnM204TVNRUDZCVzF5WEVwZ0RPLUpyLXRGVE4ydDNINDh6LUJEUHMyZHF6dFY2QWg2aWNTXzVVWjVXeTRHZUJEYThONU4xSE9Pc1g2Tl9TaXdqMGtDcHZDYkJsSnhHeTdnekQyTUdoUlVReWRYTHJEX0dFS1pTSkFFNGlyTUQ0S0xUY2FRaEdfNWJQMXZvR1RuamZ1ME51Wlh2Yk1rMnJxSjZnemtOOW5xOVJYYzhJNEtOYnRn?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T13:35:22.000Z",
-      "tldr": "Defence and security cooperation have become increasingly vital components of the bilateral relationship between India and the UAE."
-    },
-    {
       "id": "ai-https://www.technologyreview.com/2026/05/27/1138048/the-download-ai-future-ivf-technology/",
       "title": "The Download: keeping up with AI, and the future of IVF",
       "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Stay on top of what’s going on in AI this summer Here at MIT Technology Review, we understand exactly how relentless the pace of news from the world of artificial intelligence&#8230;",
@@ -493,18 +503,6 @@
       "channel": "rss",
       "publishedAt": "2026-05-27T12:10:00.000Z",
       "tldr": "MIT Technology Review's daily newsletter covers the rapid pace of AI developments and the future of IVF technology."
-    },
-    {
-      "id": "ai-https://news.google.com/rss/articles/CBMiyAFBVV95cUxPOUhSRDNDZmpVWEpoX0JGUDRfX3h4bV9mSmpYQzBsOGEzWWNER0VVaTktVTFHZ3VZYkxWOXFNOFJoM0luQzgwcGIzeWpDNW9FQzI0d2pRb0dyekdfbXc4NTA4WnhNZ0VvOXVZY0NFSFVJdmRZV0tXNFd3VnYtazU0ZGxZNW5vZlJWOE80YnlFSVcwYUo0aWFpUmJ5WldKNFI5TVJSZWdVQnl3UW1faV95LWI2LXkzVk9FajNhYXFsRmdZcDkyZDhWTw?oc=5",
-      "title": "MIT Sloan Executive Education Expands Portfolio of AI Courses and Certifications - HRTech Series",
-      "description": "MIT Sloan Executive Education Expands Portfolio of AI Courses and Certifications&nbsp;&nbsp;HRTech Series",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPOUhSRDNDZmpVWEpoX0JGUDRfX3h4bV9mSmpYQzBsOGEzWWNER0VVaTktVTFHZ3VZYkxWOXFNOFJoM0luQzgwcGIzeWpDNW9FQzI0d2pRb0dyekdfbXc4NTA4WnhNZ0VvOXVZY0NFSFVJdmRZV0tXNFd3VnYtazU0ZGxZNW5vZlJWOE80YnlFSVcwYUo0aWFpUmJ5WldKNFI5TVJSZWdVQnl3UW1faV95LWI2LXkzVk9FajNhYXFsRmdZcDkyZDhWTw?oc=5",
-      "source": "Google News",
-      "topic": "ai",
-      "topicLabel": "AI",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T12:04:26.000Z",
-      "tldr": "MIT Sloan Executive Education is expanding its offerings with new courses and professional certifications focused on artificial intelligence."
     },
     {
       "id": "linkedin-19801",
@@ -806,12 +804,12 @@
   ],
   "execSummary": {
     "bullets": [
-      "A Google security engineer was arrested for allegedly using confidential search data to win over one million dollars on Polymarket.",
-      "Illinois lawmakers passed a strict AI safety bill requiring third-party audits of major tech companies like OpenAI and Google.",
-      "The FBI arrested a CIA official after discovering forty million dollars worth of gold bars in his home.",
-      "California blocked Tesla's attempt to dismiss a major racial discrimination lawsuit, clearing the way for a trial in July.",
-      "Researchers discovered that websites can track user activity by analyzing SSD write patterns through simple browser-based JavaScript."
+      "Russian President Vladimir Putin deployed a nuclear-capable Oreshnik missile against Ukraine, escalating regional tensions.",
+      "Authorities seized ballots across four US states, sparking expert warnings of potential chaos in upcoming midterm elections.",
+      "YouTube announced AI-generated custom video feeds, while luxury brand Vertu launched a six-thousand-dollar AI-powered folding phone.",
+      "Artificial intelligence is uncovering medieval secrets, while researchers developed a nature-inspired machine to solve problems beyond AI.",
+      "French Open players face extreme heatwaves, while rising prices signal the end of affordable handheld PC gaming."
     ],
-    "generatedAt": "2026-05-28T06:49:23.305Z"
+    "generatedAt": "2026-05-28T09:51:10.208Z"
   }
 }
