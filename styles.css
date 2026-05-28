@@ -490,6 +490,13 @@ h2 {
   cursor: pointer;
 }
 
+.archive-select:focus,
+.archive-select:focus-visible {
+  outline: 0;
+  outline-offset: 0;
+  border-color: var(--accent);
+}
+
 .trend-panel {
   display: flex;
   flex-direction: column;
