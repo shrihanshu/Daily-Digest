@@ -433,12 +433,18 @@ function openPreview(article) {
   } else {
     previewLink.style.display = "none";
   }
+  previewModal.style.display = "flex";
   previewModal.classList.add("is-open");
 }
 
 function closePreview() {
-  if (previewModal) previewModal.classList.remove("is-open");
+  if (!previewModal) return;
+  previewModal.style.display = "none";
+  previewModal.classList.remove("is-open");
 }
+
+// Defensive: ensure modal is hidden on every page load, regardless of cached CSS state.
+if (previewModal) previewModal.style.display = "none";
 
 articleList.addEventListener("click", (event) => {
   if (event.target.closest("a, button, input")) return;
@@ -569,8 +575,28 @@ loadArchiveIndex();
 loadArticles();
 
 // Register PWA service worker (silent if unsupported / blocked).
+// Auto-reload once when a new SW takes over, so users always get the latest shell.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+    navigator.serviceWorker
+      .register("sw.js")
+      .then((reg) => {
+        reg.addEventListener("updatefound", () => {
+          const incoming = reg.installing;
+          if (!incoming) return;
+          incoming.addEventListener("statechange", () => {
+            if (incoming.state === "installed" && navigator.serviceWorker.controller) {
+              // New SW installed alongside an existing controller — refresh once on activation.
+              let reloaded = false;
+              navigator.serviceWorker.addEventListener("controllerchange", () => {
+                if (reloaded) return;
+                reloaded = true;
+                window.location.reload();
+              });
+            }
+          });
+        });
+      })
+      .catch(() => {});
   });
 }
