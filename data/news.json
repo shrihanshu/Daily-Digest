@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T05:06:18.355Z",
+  "updatedAt": "2026-05-28T05:13:14.619Z",
   "articles": [
     {
       "id": "ai-https://news.google.com/rss/articles/CBMiU0FVX3lxTE9KRDNmX1ZnMXAydl9yVmM5Sm5QUWNSTmtJVlN0eldjWWF6UWZKci1LTThKV1NvOUVqYWhKN0QtdnhqN1BhNFUwbFhxd1k4cWNfbTdZ?oc=5",
@@ -10,18 +10,20 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-28T04:10:20.000Z"
+      "publishedAt": "2026-05-28T04:10:20.000Z",
+      "tldr": "Yungu School in Hangzhou has launched the city's first high school specialty class focused on artificial intelligence."
     },
     {
       "id": "tech-https://hallucinate.site",
       "title": "Hallucinate – Massively Multiplayer Online Rave",
-      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 36\n# Comments: 7",
+      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 53\n# Comments: 18",
       "url": "https://hallucinate.site",
       "source": "Hacker News",
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-28T03:50:01.000Z"
+      "publishedAt": "2026-05-28T03:50:01.000Z",
+      "tldr": "Hallucinate is a massively multiplayer online rave platform."
     },
     {
       "id": "tech-https://www.ycombinator.com/companies/ramain/jobs/hqvmyKN-founding-gtm-engineer",
@@ -32,7 +34,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-28T02:21:11.000Z"
+      "publishedAt": "2026-05-28T02:21:11.000Z",
+      "tldr": "Y Combinator startup RamAIn is hiring a founding go-to-market engineer."
     },
     {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbFhIbTEwQlVoYVpJYzAyNUhWZlZGWUFVSklWRU5fOG9OWndaZVVNQ1N3TG5CWFRUQVBYYWNkaURlVUhCRnVWVUE0dktCWkF5OWJqMWF2ODYyQ052Nm5zUndxei1sb3NPanhPb28zVGgxMi1SVENXQmRqYm1BY04zckdYdGJvQUJ0TnoyU0JVSnVNbTRraE9FNlBfT2RlS1dvdXN6TlBqSTUyUG5Pb0UwR25qVnFNRkFQUy1V0gG7AUFVX3lxTFBsWEhtMTBCVWhhWkljMDI1SFZmVkZZQVVKSVZFTl84b05ad1plVU1DU3dMbkJYVFRBUFhhY2RpRGVVSEJGdVZVQTR2S0JaQXk5YmoxYXY4NjJDTnY2bnNSd3F6LWxvc09qeE9vbzNUaDEyLVJUQ1dCZGpibUFjTjNyR1h0Ym9BQnROejJTQlVKdU1tNGtoT0U2UF9PZGVLV291c3pOUGpJNTJQbk9vRTBHbmpWcU1GQVBTLVU?oc=5",
@@ -43,7 +46,8 @@
       "topic": "current-affairs",
       "topicLabel": "Current Affairs",
       "channel": "rss",
-      "publishedAt": "2026-05-28T01:31:46.000Z"
+      "publishedAt": "2026-05-28T01:31:46.000Z",
+      "tldr": "Current affairs updates include the addition of Yogasan to the 2030 Commonwealth Games and India's new battery project."
     },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMiowFBVV95cUxQdzYzVHVwQVRJSmlnTVNKOEpBeERkM3lDTTUtdE9KWWJPNlFUaEdSeVRzaHhKOXktNl83Ym8zcVVhRzlub0VBMVZpWU92YjU0NDA2Vk5LSWhhcmdHblp3eFBqOWYyclVoMWJBVE9kS1hPckhPVzVDZ0h4R1g1Y2xMUDZPR0FtdnZsZ2ZfWUk3d2ZUMVdSWGY4N09jWHVna05kelJR?oc=5",
@@ -54,29 +58,32 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-28T01:24:18.000Z"
+      "publishedAt": "2026-05-28T01:24:18.000Z",
+      "tldr": "This article explores the challenges and limitations artificial intelligence faces in solving complex protein biology problems."
     },
     {
       "id": "tech-https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "title": "Google employee charged with $1M Polymarket insider trading bet on search term",
-      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 85\n# Comments: 41",
+      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 92\n# Comments: 43",
       "url": "https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "source": "Hacker News",
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-28T00:49:58.000Z"
+      "publishedAt": "2026-05-28T00:49:58.000Z",
+      "tldr": "A Google employee has been charged with insider trading for betting over one million dollars on Polymarket using search data."
     },
     {
       "id": "tech-https://mlsu.io/posts/day-off/",
       "title": "Can we have the day off?",
-      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 789\n# Comments: 457",
+      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 811\n# Comments: 473",
       "url": "https://mlsu.io/posts/day-off/",
       "source": "Hacker News",
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-28T00:40:26.000Z"
+      "publishedAt": "2026-05-28T00:40:26.000Z",
+      "tldr": "An essay exploring the cultural and professional dynamics of asking for and taking a day off from work."
     },
     {
       "id": "ai-https://techcrunch.com/2026/05/27/why-googles-ai-cant-spell-google-or-anything-else/",
@@ -87,7 +94,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-28T00:17:41.000Z"
+      "publishedAt": "2026-05-28T00:17:41.000Z",
+      "tldr": "Google's AI models struggle with basic spelling tasks, highlighting ongoing limitations in image generation and text processing."
     },
     {
       "id": "tech-https://www.wired.com/story/illinois-pass-major-ai-safety-law-pritzker/",
@@ -98,7 +106,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-28T00:10:42.000Z"
+      "publishedAt": "2026-05-28T00:10:42.000Z",
+      "tldr": "Illinois lawmakers passed a strict AI safety bill requiring third-party audits of major tech companies like OpenAI and Google."
     },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMib0FVX3lxTFBCOEdSNkFoSndkOE5EVElYRmxwUVhYeC1uQ2g3UFdCODhUcjUwWnA2NkFMZncwS2ktRU9SUl9kOHV2SXE1eGFTMS1XMFNMSUU2M1djVFhCRlgyZEt3UDN1c19xak9DS0JWMlN1UnRrQQ?oc=5",
@@ -109,29 +118,32 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T23:40:32.000Z"
+      "publishedAt": "2026-05-27T23:40:32.000Z",
+      "tldr": "An educational overview explaining the fundamental mechanics and principles behind how deep learning algorithms function."
+    },
+    {
+      "id": "tech-https://drobinin.com/posts/am-i-a-bad-friend/",
+      "title": "I analysed 20 years of my chats",
+      "description": "Article URL: https://drobinin.com/posts/am-i-a-bad-friend/\nComments URL: https://news.ycombinator.com/item?id=48302220\nPoints: 6\n# Comments: 0",
+      "url": "https://drobinin.com/posts/am-i-a-bad-friend/",
+      "source": "Hacker News",
+      "topic": "tech",
+      "topicLabel": "Tech",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T23:31:13.000Z",
+      "tldr": "An individual analyzed two decades of personal chat logs to reflect on their friendships and communication habits."
     },
     {
       "id": "tech-https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "title": "FBI Arrests CIA Official with $40M in Gold Bars in His Home",
-      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 195\n# Comments: 111",
+      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 206\n# Comments: 115",
       "url": "https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "source": "Hacker News",
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T23:23:29.000Z"
-    },
-    {
-      "id": "tech-https://www.ycombinator.com/companies/pelica/jobs/MDeC49o-machine-learning-engineer",
-      "title": "Pelica (YC P25) Is Hiring",
-      "description": "Article URL: https://www.ycombinator.com/companies/pelica/jobs/MDeC49o-machine-learning-engineer\nComments URL: https://news.ycombinator.com/item?id=48301851\nPoints: 0\n# Comments: 0",
-      "url": "https://www.ycombinator.com/companies/pelica/jobs/MDeC49o-machine-learning-engineer",
-      "source": "Hacker News",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T22:52:15.000Z"
+      "publishedAt": "2026-05-27T23:23:29.000Z",
+      "tldr": "The FBI arrested a CIA official after discovering forty million dollars worth of gold bars in his home."
     },
     {
       "id": "tech-https://www.theverge.com/tech/938635/google-polymarket-insider-trading-prediction-market-bets",
@@ -142,7 +154,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T22:30:02.000Z"
+      "publishedAt": "2026-05-27T22:30:02.000Z",
+      "tldr": "A Google employee faces fraud charges for allegedly using confidential search data to win over one million dollars on Polymarket."
     },
     {
       "id": "tech-https://www.wired.com/story/google-employee-accused-of-polymarket-one-million/",
@@ -153,7 +166,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T22:22:23.000Z"
+      "publishedAt": "2026-05-27T22:22:23.000Z",
+      "tldr": "A Google security engineer was arrested for allegedly using confidential search traffic data to make illicit Polymarket bets."
     },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSUxzNEdFUWVjcWJFNmE0d1pwNzdIVHJLUUxuVHpJZTBaZm5uV3E4ellQcUpWZjRyVDJxRUl4bk5oczNqLTlSQmdnSWl2M3prU2lydUpDWGc5RzEtQ080YnB0bEo1UUItclY0X1p3dEVqRVFtMEY2QlJmby1vS3BjWl9ZZ3ZwMGd1SW9IUXBwLXlIMGNyaTdqMUg1Skt4cEdPb3RPWFpUZmVKUGR6RW92TVdILVZTWlJsWjZYVnJ4SkM2S2tPemhhNzM2OFAwRXpIWnlNVlZaQXlhNFh6a0E?oc=5",
@@ -164,7 +178,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T21:12:50.000Z"
+      "publishedAt": "2026-05-27T21:12:50.000Z",
+      "tldr": "Union Minister Dr. Jitendra Singh emphasized the growing role of AI and machine learning in transforming healthcare delivery."
     },
     {
       "id": "tech-https://arstechnica.com/tech-policy/2026/05/california-defeats-teslas-attempt-to-throw-out-racial-discrimination-lawsuit/",
@@ -175,7 +190,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T21:08:51.000Z"
+      "publishedAt": "2026-05-27T21:08:51.000Z",
+      "tldr": "California has blocked Tesla's attempt to dismiss a major racial discrimination lawsuit, clearing the way for a July trial."
     },
     {
       "id": "tech-https://www.theverge.com/gadgets/938519/apple-ipad-air-m4-deal-sale",
@@ -186,7 +202,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T21:08:41.000Z"
+      "publishedAt": "2026-05-27T21:08:41.000Z",
+      "tldr": "Apple's latest M4 iPad Air is currently discounted by up to one hundred dollars for the first time."
     },
     {
       "id": "tech-https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/",
@@ -197,7 +214,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T20:56:03.000Z"
+      "publishedAt": "2026-05-27T20:56:03.000Z",
+      "tldr": "Researchers discovered that websites can track user activity by analyzing SSD write patterns through simple browser-based JavaScript."
     },
     {
       "id": "tech-https://arstechnica.com/gadgets/2026/05/nasa-satellites-can-spot-gps-jammers-on-earth/",
@@ -208,7 +226,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T20:43:54.000Z"
+      "publishedAt": "2026-05-27T20:43:54.000Z",
+      "tldr": "NASA science satellites are being used to successfully locate and track sources of GPS jamming on Earth."
     },
     {
       "id": "tech-https://www.theverge.com/transportation/938513/ferrari-luce-ev",
@@ -219,7 +238,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T20:22:57.000Z"
+      "publishedAt": "2026-05-27T20:22:57.000Z",
+      "tldr": "Ferrari's new Luce EV, designed with Jony Ive's firm LoveFrom, has received a polarizing response from traditional fans."
     },
     {
       "id": "tech-https://arstechnica.com/gaming/2026/05/mina-the-hollower-is-the-best-old-school-action-adventure-ive-played-in-a-while/",
@@ -230,7 +250,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T20:22:04.000Z"
+      "publishedAt": "2026-05-27T20:22:04.000Z",
+      "tldr": "Mina the Hollower is praised as an exceptional old-school action-adventure game with smooth mechanics and deep secrets."
     },
     {
       "id": "ai-https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/",
@@ -241,7 +262,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T20:10:00.000Z"
+      "publishedAt": "2026-05-27T20:10:00.000Z",
+      "tldr": "Snowflake signed a six billion dollar deal with Amazon Web Services to secure AI chips, challenging Nvidia's dominance."
     },
     {
       "id": "tech-https://www.theverge.com/tech/938339/lux-optics-halide-mark-iii-ios-iphone-camera-app-looks-editor-raw-files-now-available",
@@ -252,7 +274,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T20:06:12.000Z"
+      "publishedAt": "2026-05-27T20:06:12.000Z",
+      "tldr": "Lux Optics has released Halide Mark III, featuring a new film simulation engine and an upgraded photo editor."
     },
     {
       "id": "tech-https://www.theverge.com/tech/938500/facebook-whatsapp-instagram-meta-ai-subscriptions",
@@ -263,7 +286,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T20:03:42.000Z"
+      "publishedAt": "2026-05-27T20:03:42.000Z",
+      "tldr": "Meta is rolling out global paid subscriptions for Facebook, Instagram, and WhatsApp, while testing premium tiers for Meta AI."
     },
     {
       "id": "tech-https://arstechnica.com/tech-policy/2026/05/nvidia-ceo-wants-taiwan-to-be-center-of-ai-revolution-not-us/",
@@ -274,7 +298,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T19:59:40.000Z"
+      "publishedAt": "2026-05-27T19:59:40.000Z",
+      "tldr": "Nvidia plans to invest one hundred fifty billion dollars annually to establish Taiwan as the global epicenter of AI."
     },
     {
       "id": "ai-https://techcrunch.com/2026/05/27/payroll-startup-remote-says-it-grew-revenue-50-per-employee-without-adding-headcount/",
@@ -285,7 +310,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T19:39:45.000Z"
+      "publishedAt": "2026-05-27T19:39:45.000Z",
+      "tldr": "Payroll startup Remote boosted its revenue per employee by fifty percent and reached profitability through the adoption of AI."
     },
     {
       "id": "tech-https://arstechnica.com/gadgets/2026/05/roku-oss-home-screen-now-features-a-large-permanent-ad/",
@@ -296,7 +322,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T19:12:59.000Z"
+      "publishedAt": "2026-05-27T19:12:59.000Z",
+      "tldr": "Roku has updated its smart TV operating system to include a large, permanent advertisement on the home screen."
     },
     {
       "id": "tech-https://www.theverge.com/features/937620/enhanced-games-performance-enhancing-drugs-science-health-sports",
@@ -307,7 +334,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T19:08:31.000Z"
+      "publishedAt": "2026-05-27T19:08:31.000Z",
+      "tldr": "The Enhanced Games in Las Vegas showcased athletes openly using performance-enhancing drugs in a controversial alternative to the Olympics."
     },
     {
       "id": "ai-https://techcrunch.com/podcast/your-seo-strategy-is-optimized-for-a-search-engine-that-no-longer-exists/",
@@ -318,7 +346,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T18:39:17.000Z"
+      "publishedAt": "2026-05-27T18:39:17.000Z",
+      "tldr": "Traditional SEO strategies are becoming obsolete as Google shifts its search engine to prioritize AI-generated answers."
     },
     {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
@@ -340,7 +369,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T18:00:00.000Z"
+      "publishedAt": "2026-05-27T18:00:00.000Z",
+      "tldr": "Meta has launched global paid subscriptions for its major platforms and is testing new AI-focused subscription tiers."
     },
     {
       "id": "tech-https://www.wired.com/story/huawei-chip-queen-moores-law-tau/",
@@ -351,7 +381,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T18:00:00.000Z"
+      "publishedAt": "2026-05-27T18:00:00.000Z",
+      "tldr": "Huawei is adapting to the end of Moore's Law, potentially challenging United States dominance in the global semiconductor industry."
     },
     {
       "id": "tech-https://www.wired.com/story/dating-app-blk-is-giving-away-free-gas-to-convince-people-to-get-out-of-the-house/",
@@ -362,7 +393,8 @@
       "topic": "tech",
       "topicLabel": "Tech",
       "channel": "rss",
-      "publishedAt": "2026-05-27T17:52:46.000Z"
+      "publishedAt": "2026-05-27T17:52:46.000Z",
+      "tldr": "Dating app BLK is offering free gas to encourage users to go on dates despite current economic anxieties."
     },
     {
       "id": "ai-https://huggingface.co/blog/ibm-research/itbench-aa",
@@ -373,7 +405,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T17:20:29.000Z"
+      "publishedAt": "2026-05-27T17:20:29.000Z",
+      "tldr": "A new benchmark reveals that top AI models score below fifty percent on complex, agentic enterprise IT tasks."
     },
     {
       "id": "ai-https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
@@ -384,7 +417,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T16:00:00.000Z"
+      "publishedAt": "2026-05-27T16:00:00.000Z",
+      "tldr": "AI coding startup Cognition has raised one billion dollars, valuing the company at twenty-five billion dollars."
     },
     {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMibkFVX3lxTFA3SFd4MWNUNTFPdFVyYlp6Mlk0N3ZVOXJGZTFHelk0TkRfT0lUZEtmV1NWSldUenI5NU4weXd5UjNtenpIbkF3MmxrVGh0WTNjQ1BOODVTUGp4TVJBT0doRXh0T0otN2ZjdVhEUVl3?oc=5",
@@ -395,7 +429,8 @@
       "topic": "current-affairs",
       "topicLabel": "Current Affairs",
       "channel": "rss",
-      "publishedAt": "2026-05-27T14:14:37.000Z"
+      "publishedAt": "2026-05-27T14:14:37.000Z",
+      "tldr": "A daily roundup of important current affairs for May 27, 2026, curated by Sanskriti IAS."
     },
     {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcDJyTHZya0N1dWN3Mk54ZnphdGUzUTZPbjNWeWMzRFh2bDlpeWdzY3kxQnJyZzE5OXVya3JiS2NSNTZWX0NuMmUwWW55N3ZXem05TlByZkNYUDVJY05FZGFIUHRXdUZJYUxELXVsa2R6dHQ4dUc2SFI3M19XY1FaZmZ5SlI0LW9Vdy1SeGtwdWQyX1hnd0cxOXV3eEdsd3dWQWQ2aWtvNWJyNHdoeEhiSVR0M3ZNcTFYS01ZMUdMWWx1THFEYk5KUFlucHZGSnJGWWFmTjRaR2lFOXhzWWRZ?oc=5",
@@ -406,7 +441,8 @@
       "topic": "current-affairs",
       "topicLabel": "Current Affairs",
       "channel": "rss",
-      "publishedAt": "2026-05-27T14:12:37.000Z"
+      "publishedAt": "2026-05-27T14:12:37.000Z",
+      "tldr": "A curated list of top national, sports, and world news headlines for school assemblies on May 28."
     },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMixwFBVV95cUxPMDRsUUVNTFkxNFExQkZKZW04Wjc2R05ZX2pwUUZZVndZSnJYdVpVYTVmWVQwQ3V6ZENheEtIamZXVTloWDctVlRKRWRkM3BpdjNZSTZwUTEzMDVXSXQyVm54c0V2UHZnUmRkMWZjU3BobUQyZTVVS2VfMHNaSFQ0REp6Ylhld2g4Wmh4MElMTVZuR2kxb0pfSmk4aVlEMFl0N0d4SmFQalNCcHF2YWpIcjZVMVlwdXpWT1pzRWdXOWdDTWQ3aDFF?oc=5",
@@ -417,7 +453,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T13:39:41.000Z"
+      "publishedAt": "2026-05-27T13:39:41.000Z",
+      "tldr": "A reflection on the Spring SciX conference, highlighting recent advancements combining Raman spectroscopy with artificial intelligence."
     },
     {
       "id": "ai-https://www.technologyreview.com/2026/05/27/1138048/the-download-ai-future-ivf-technology/",
@@ -428,7 +465,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T12:10:00.000Z"
+      "publishedAt": "2026-05-27T12:10:00.000Z",
+      "tldr": "MIT Technology Review's daily newsletter covers the rapid pace of AI developments and the future of IVF technology."
     },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMiyAFBVV95cUxPOUhSRDNDZmpVWEpoX0JGUDRfX3h4bV9mSmpYQzBsOGEzWWNER0VVaTktVTFHZ3VZYkxWOXFNOFJoM0luQzgwcGIzeWpDNW9FQzI0d2pRb0dyekdfbXc4NTA4WnhNZ0VvOXVZY0NFSFVJdmRZV0tXNFd3VnYtazU0ZGxZNW5vZlJWOE80YnlFSVcwYUo0aWFpUmJ5WldKNFI5TVJSZWdVQnl3UW1faV95LWI2LXkzVk9FajNhYXFsRmdZcDkyZDhWTw?oc=5",
@@ -439,7 +477,8 @@
       "topic": "ai",
       "topicLabel": "AI",
       "channel": "rss",
-      "publishedAt": "2026-05-27T12:04:26.000Z"
+      "publishedAt": "2026-05-27T12:04:26.000Z",
+      "tldr": "MIT Sloan Executive Education is expanding its offerings with new courses and professional certifications focused on artificial intelligence."
     },
     {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMi4AFBVV95cUxObjZEV0VxNXk4YkE1Qk9TcWJha1ZUSzFSWmxhWVhuY2U0NmF6WFd6SUVVY2lIYUF6LUFXSnNuS09YNTlHNDNWYXF3QUhmdjgtTW81cHBDTV9Bbk40VXBJRjRyTFpqY3h4R0Q2T2otY3pjbVNVN3NJUFAwV1ZiRERINVZmdFp1azlZZkJMWlNnYm9RdDZEZXlFcDNuUTRjR1dmNlliYXFaZE5YT1VvR05HMzFSMHdxWElraGI2OEhPckhKZFRnRFpWSTlLTmJ5M09PN3J2bjdqMVFSejFOWFladNIB5wFBVV95cUxNUjcyUDVQd2xCQjI5RXdLSmU2eTVfd0JYMHlmcFBiQ2p0N3VaZ1hBN3FObWRNcnhKVGdLYkpwWXQyaHo3ellILXg2dlduV2E0WXRUczRONTJXOFFZTlhDTldFZm9NRjlQVnNUX05Lc2VGeXhPZkdTZlIyVWsxUzZLd0cwTTJtSm1MUXdrNlNQeklZMWRCa21reG1mbHZ3TXpLaHV2RjIxUkxtVlVhY1F5R1BLZkVHOVlTUDdjaDVVZ0s5bVhNemw0YWRSeUNDZ0lhUFBmcFhxWTQxc3M2TUQyRXloRGdMVnM?oc=5",
