@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T04:55:33.919Z",
+  "updatedAt": "2026-05-28T05:06:18.355Z",
   "articles": [
     {
       "id": "ai-https://news.google.com/rss/articles/CBMiU0FVX3lxTE9KRDNmX1ZnMXAydl9yVmM5Sm5QUWNSTmtJVlN0eldjWWF6UWZKci1LTThKV1NvOUVqYWhKN0QtdnhqN1BhNFUwbFhxd1k4cWNfbTdZ?oc=5",
@@ -15,7 +15,7 @@
     {
       "id": "tech-https://hallucinate.site",
       "title": "Hallucinate – Massively Multiplayer Online Rave",
-      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 19\n# Comments: 0",
+      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 36\n# Comments: 7",
       "url": "https://hallucinate.site",
       "source": "Hacker News",
       "topic": "tech",
@@ -59,7 +59,7 @@
     {
       "id": "tech-https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "title": "Google employee charged with $1M Polymarket insider trading bet on search term",
-      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 80\n# Comments: 35",
+      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 85\n# Comments: 41",
       "url": "https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "source": "Hacker News",
       "topic": "tech",
@@ -70,7 +70,7 @@
     {
       "id": "tech-https://mlsu.io/posts/day-off/",
       "title": "Can we have the day off?",
-      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 760\n# Comments: 434",
+      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 789\n# Comments: 457",
       "url": "https://mlsu.io/posts/day-off/",
       "source": "Hacker News",
       "topic": "tech",
@@ -114,7 +114,7 @@
     {
       "id": "tech-https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "title": "FBI Arrests CIA Official with $40M in Gold Bars in His Home",
-      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 183\n# Comments: 106",
+      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 195\n# Comments: 111",
       "url": "https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "source": "Hacker News",
       "topic": "tech",
@@ -321,6 +321,17 @@
       "publishedAt": "2026-05-27T18:39:17.000Z"
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
+      "title": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026) - Drishti IAS",
+      "description": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026)&nbsp;&nbsp;Drishti IAS",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T18:31:20.000Z"
+    },
+    {
       "id": "ai-https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
       "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to come, including AI plans",
       "description": "Meta is rolling out paid subscription plans for Instagram, Facebook, and WhatsApp worldwide, while also testing new AI, creator, and business-focused offerings under its broader “Meta One” subscription brand.",
@@ -365,17 +376,6 @@
       "publishedAt": "2026-05-27T17:20:29.000Z"
     },
     {
-      "id": "tech-https://www.wired.com/gallery/best-computer-speakers/",
-      "title": "8 Best Computer Speakers (2026) After Testing 25+ Pairs",
-      "description": "These WIRED-tested computer speakers, from stereo speakers to surround sound, will suit any budget.",
-      "url": "https://www.wired.com/gallery/best-computer-speakers/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T16:30:00.000Z"
-    },
-    {
       "id": "ai-https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
       "title": "AI coding startup Cognition raises $1B at $25B pre-money valuation",
       "description": "As Cognition reaches $492 million in annualized revenue run rate, it more than doubled its valuation in eight months, it says.",
@@ -385,17 +385,6 @@
       "topicLabel": "AI",
       "channel": "rss",
       "publishedAt": "2026-05-27T16:00:00.000Z"
-    },
-    {
-      "id": "tech-https://www.wired.com/story/i-like-ferrari-luce-ev-but-this-is-why-its-heartbreaking/",
-      "title": "I Like Ferrari's Luce EV. But This Is Why It's Heartbreaking",
-      "description": "Designed by Jony Ive and a host of ex-Cupertino colleagues, the Luce shows us what might have been had Apple made good on its $10 billion bet.",
-      "url": "https://www.wired.com/story/i-like-ferrari-luce-ev-but-this-is-why-its-heartbreaking/",
-      "source": "Wired",
-      "topic": "tech",
-      "topicLabel": "Tech",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T15:07:48.000Z"
     },
     {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMibkFVX3lxTFA3SFd4MWNUNTFPdFVyYlp6Mlk0N3ZVOXJGZTFHelk0TkRfT0lUZEtmV1NWSldUenI5NU4weXd5UjNtenpIbkF3MmxrVGh0WTNjQ1BOODVTUGp4TVJBT0doRXh0T0otN2ZjdVhEUVl3?oc=5",
@@ -473,17 +462,6 @@
       "topicLabel": "AI",
       "channel": "linkedin",
       "publishedAt": "2026-05-27T06:59:50.000Z"
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
-      "title": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise - Goa Chronicle",
-      "description": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise&nbsp;&nbsp;Goa Chronicle",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T06:48:13.000Z"
     },
     {
       "id": "email-19800",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T04:55:33.935Z",
+  "updatedAt": "2026-05-28T05:06:18.372Z",
   "windowDays": 7,
   "days": [
     {
@@ -13,9 +13,9 @@
     },
     {
       "date": "2026-05-28",
-      "total": 71,
+      "total": 69,
       "ai": 38,
-      "tech": 27,
+      "tech": 25,
       "current-affairs": 6,
       "email": 8,
       "linkedin": 3
@@ -79,12 +79,6 @@
       "daysSilent": 0
     },
     {
-      "name": "Wired",
-      "count": 12,
-      "lastSeen": "2026-05-28",
-      "daysSilent": 0
-    },
-    {
       "name": "Hacker News",
       "count": 12,
       "lastSeen": "2026-05-28",
@@ -123,6 +117,12 @@
     {
       "name": "VentureBeat AI",
       "count": 12,
+      "lastSeen": "2026-05-28",
+      "daysSilent": 0
+    },
+    {
+      "name": "Wired",
+      "count": 10,
       "lastSeen": "2026-05-28",
       "daysSilent": 0
     },
