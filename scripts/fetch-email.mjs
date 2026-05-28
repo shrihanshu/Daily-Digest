@@ -1,5 +1,6 @@
 import { ImapFlow } from "imapflow";
 import { simpleParser } from "mailparser";
+import { createHash } from "node:crypto";
 
 const AI_HINTS = [
   /\bai\b/i,
@@ -92,9 +93,17 @@ function isJunk(subject = "", fromName = "", body = "") {
   return false;
 }
 
+// Tracking pixels, beacons, and unsubscribe links are usually the FIRST URL in
+// a marketing email body — picking them gives the user a broken article link.
+// Walk URLs in order and skip the known offenders.
+const TRACKING_HOSTS = /(?:^|\/\/)(?:[\w-]+\.)?(?:list-manage|mailchimp|sendgrid|sparkpost|mandrill|mailgun|amazonses|customeriomail|customer\.io|hubspotlinks|hubspot|salesforceiq|substackcdn|click|tracking|trk|email|notifications|mail|t)\.[a-z]/i;
+const TRACKING_PATH = /(unsubscribe|tracking|open\.gif|pixel|beacon|click\?)/i;
+
 function firstLink(text = "") {
-  const match = text.match(/https?:\/\/[^\s"'<>)]+/i);
-  return match ? match[0] : "";
+  const all = [...text.matchAll(/https?:\/\/[^\s"'<>)]+/gi)].map((m) => m[0]);
+  if (!all.length) return "";
+  const clean = all.find((url) => !TRACKING_HOSTS.test(url) && !TRACKING_PATH.test(url));
+  return clean || all[0];
 }
 
 function snippet(text = "", limit = 220) {
@@ -169,8 +178,17 @@ export async function fetchEmailArticles() {
         const topic = classify(`${subject} ${textBody} ${htmlText}`);
         const channel = isLinkedIn ? "linkedin" : "email";
 
+        // Stable ID survives mailbox reorganizations (IMAP UIDs are session-
+        // local and reassigned after EXPUNGE / UIDVALIDITY changes). Hashing
+        // (date, sender, subject) keeps the same article identifiable across
+        // moves so read state + cached TL;DRs persist.
+        const dateKey = parsed.date ? parsed.date.toISOString().slice(0, 10) : "";
+        const stable = createHash("md5")
+          .update(`${dateKey}|${fromAddr}|${subject}`)
+          .digest("hex")
+          .slice(0, 16);
         out.push({
-          id: `${channel}-${msg.uid}`,
+          id: `${channel}-${stable}`,
           title: subject,
           description,
           url,
@@ -178,7 +196,7 @@ export async function fetchEmailArticles() {
           topic,
           topicLabel: topic === "ai" ? "AI" : "Tech",
           channel,
-          publishedAt: parsed.date ? parsed.date.toISOString() : new Date().toISOString(),
+          publishedAt: parsed.date ? parsed.date.toISOString() : null,
         });
       }
 

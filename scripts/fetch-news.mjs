@@ -68,6 +68,18 @@ const SOURCES = [
     source: "Google News",
     url: "https://news.google.com/rss/search?q=current%20affairs%20India%20world%20when:1d&hl=en-IN&gl=IN&ceid=IN:en",
   },
+  {
+    topic: "current-affairs",
+    topicLabel: "Current Affairs",
+    source: "BBC World",
+    url: "https://feeds.bbci.co.uk/news/world/rss.xml",
+  },
+  {
+    topic: "current-affairs",
+    topicLabel: "Current Affairs",
+    source: "The Hindu",
+    url: "https://www.thehindu.com/news/national/feeder/default.rss",
+  },
 ];
 
 const MAX_PER_SOURCE = 6;
@@ -102,8 +114,32 @@ function decodeEntities(text = "") {
     .replaceAll("&quot;", '"')
     .replaceAll("&#39;", "'")
     .replaceAll("&#x27;", "'")
+    .replaceAll("&nbsp;", " ")
+    .replaceAll("&hellip;", "…")
+    .replaceAll("&mdash;", "—")
+    .replaceAll("&ndash;", "–")
+    .replaceAll("&rsquo;", "'")
+    .replaceAll("&lsquo;", "'")
+    .replaceAll("&rdquo;", '"')
+    .replaceAll("&ldquo;", '"')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
     .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
     .trim();
+}
+
+// Some feeds (VentureBeat, etc.) dump the entire article body into <description>
+// or <content:encoded>. A news-card description should be a teaser, not the
+// full article — cap it so cards stay scannable and JSON stays small.
+const DESC_MAX = 320;
+function truncateDescription(text = "") {
+  if (text.length <= DESC_MAX) return text;
+  const cut = text.slice(0, DESC_MAX);
+  // Prefer cutting at the last sentence/word boundary so the truncation reads naturally.
+  const sentenceEnd = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("? "), cut.lastIndexOf("! "));
+  if (sentenceEnd > DESC_MAX * 0.6) return `${cut.slice(0, sentenceEnd + 1).trim()}…`;
+  const wordEnd = cut.lastIndexOf(" ");
+  return `${(wordEnd > 0 ? cut.slice(0, wordEnd) : cut).trim()}…`;
 }
 
 function getTag(item, tag) {
@@ -121,6 +157,23 @@ function getLink(item) {
   return any?.[1] ? decodeEntities(any[1]) : "";
 }
 
+// Google News RSS hands out opaque redirect URLs that change on every fetch
+// (e.g. https://news.google.com/rss/articles/CBMi...). Using them as the article
+// ID breaks TL;DR carry-forward and makes the same story look "new" every day.
+// For those (and any other source) we fall back to a stable hash of the
+// normalized title when the URL looks unstable.
+function isUnstableUrl(url = "") {
+  return /news\.google\.com\/rss\/articles\//i.test(url);
+}
+function stableId(topic, url, title) {
+  const norm = normalizeTitle(title);
+  if (isUnstableUrl(url) && norm.length > 8) {
+    const hash = createHash("md5").update(norm).digest("hex").slice(0, 12);
+    return `${topic}-t-${hash}`;
+  }
+  return `${topic}-${url || title}`;
+}
+
 function parseFeed(xml, sourceConfig) {
   const blocks = [...xml.matchAll(/<(item|entry)[\s\S]*?<\/\1>/gi)].map((match) => match[0]);
 
@@ -133,11 +186,13 @@ function parseFeed(xml, sourceConfig) {
       getTag(item, "published") ||
       getTag(item, "updated") ||
       getTag(item, "dc:date");
-    const description =
+    const rawDescription =
       getTag(item, "description") || getTag(item, "summary") || getTag(item, "content");
+    // Cap feed-supplied descriptions — VentureBeat & co. dump the whole article body.
+    const description = truncateDescription(rawDescription);
 
     return {
-      id: `${sourceConfig.topic}-${url || title}`,
+      id: stableId(sourceConfig.topic, url, title),
       title,
       description,
       url,
@@ -145,26 +200,38 @@ function parseFeed(xml, sourceConfig) {
       topic: sourceConfig.topic,
       topicLabel: sourceConfig.topicLabel,
       channel: "rss",
-      publishedAt: publishedAt ? new Date(publishedAt).toISOString() : new Date().toISOString(),
+      // Keep null when the source provides no date — sorter pushes nulls last
+      // so undated articles do NOT bubble to the top of the feed.
+      publishedAt: publishedAt ? new Date(publishedAt).toISOString() : null,
     };
   })
     .filter((article) => article.title && !isPromoTitle(article.title))
     .slice(0, MAX_PER_SOURCE);
 }
 
-async function fetchSource(sourceConfig) {
-  const response = await fetch(sourceConfig.url, {
-    headers: {
-      "user-agent": "DailySignalPersonalDashboard/1.0",
-    },
-  });
+async function fetchSource(sourceConfig, attempt = 0) {
+  try {
+    const response = await fetch(sourceConfig.url, {
+      headers: {
+        "user-agent": "DailySignalPersonalDashboard/1.0",
+      },
+    });
 
-  if (!response.ok) {
-    throw new Error(`${sourceConfig.source} returned ${response.status}`);
+    if (!response.ok) {
+      throw new Error(`${sourceConfig.source} returned ${response.status}`);
+    }
+
+    const xml = await response.text();
+    return parseFeed(xml, sourceConfig);
+  } catch (error) {
+    // One retry with backoff — transient 5xx/network blips should not drop a
+    // whole source's daily contribution.
+    if (attempt < 1) {
+      await new Promise((r) => setTimeout(r, 1500));
+      return fetchSource(sourceConfig, attempt + 1);
+    }
+    throw error;
   }
-
-  const xml = await response.text();
-  return parseFeed(xml, sourceConfig);
 }
 
 // Normalize a headline so the same story from different feeds collides:
@@ -253,9 +320,12 @@ try {
   console.warn(`Email fetch skipped: ${error.message}`);
 }
 
-const articles = dedupe([...rssArticles, ...emailArticles]).sort(
-  (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt),
-);
+// Nulls (undated articles) sort last so they don't bubble to the top.
+const articles = dedupe([...rssArticles, ...emailArticles]).sort((a, b) => {
+  const av = a.publishedAt ? new Date(a.publishedAt).getTime() : -Infinity;
+  const bv = b.publishedAt ? new Date(b.publishedAt).getTime() : -Infinity;
+  return bv - av;
+});
 
 if (articles.length === 0) {
   throw new Error("No articles fetched. Check sources.");

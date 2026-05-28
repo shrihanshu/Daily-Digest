@@ -63,6 +63,34 @@ function articleId(article) {
   return article.id || article.url || article.title;
 }
 
+// Defensive: cards are teasers, not full articles. Even after the server-side
+// fix in fetch-news.mjs, archived JSON from earlier runs (and the preview modal)
+// can carry multi-kilobyte descriptions from feeds like VentureBeat. Truncate
+// at render time so a layout regression can't escape into the UI.
+const CARD_DESC_MAX = 280;
+function teaser(text = "", limit = CARD_DESC_MAX) {
+  if (!text) return "";
+  const flat = text.replace(/\s+/g, " ").trim();
+  if (flat.length <= limit) return flat;
+  const cut = flat.slice(0, limit);
+  const sentence = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("? "), cut.lastIndexOf("! "));
+  if (sentence > limit * 0.6) return `${cut.slice(0, sentence + 1).trim()}…`;
+  const word = cut.lastIndexOf(" ");
+  return `${(word > 0 ? cut.slice(0, word) : cut).trim()}…`;
+}
+
+// Minimal HTML escaper for text we splice into innerHTML. Without this, an
+// article title containing `<` would render as a broken tag (and a malicious
+// feed could inject script). Used only for fields that should be plain text.
+function escapeHtml(s = "") {
+  return String(s)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
 function formatDate(value) {
   if (!value) return "recent";
   return new Intl.DateTimeFormat("en-IN", {
@@ -162,20 +190,30 @@ function render() {
     const card = document.createElement("article");
     card.className = `article-card${isRead ? " read" : ""}`;
     card.dataset.aid = id;
+    // Keyboard navigability — without tabindex the card can't be focused via Tab.
+    card.tabIndex = 0;
     renderedById.set(id, article);
+    // Escape every user-visible string and truncate description so feeds that
+    // dump full article bodies (VentureBeat etc.) can't blow up the layout.
+    const safeTitle = escapeHtml(article.title || "");
+    const safeTopic = escapeHtml(article.topicLabel || article.topic || "");
+    const safeSource = escapeHtml(article.source || "Source");
+    const safeUrl = article.url ? encodeURI(article.url) : "";
+    const blurb = teaser(article.tldr || article.description || "");
+    const safeBlurb = blurb ? escapeHtml(blurb) : "Open the story for the full details.";
     card.innerHTML = `
       <input class="read-check" type="checkbox" aria-label="Mark as read" ${isRead ? "checked" : ""} />
       <div>
-        <span class="article-topic">${article.topicLabel || article.topic}</span>${
+        <span class="article-topic">${safeTopic}</span>${
           article.__isNew && !isRead ? '<span class="article-new">New</span>' : ""
         }
         <h3>${
-          article.url
-            ? `<a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a>`
-            : article.title
+          safeUrl
+            ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${safeTitle}</a>`
+            : safeTitle
         }</h3>
-        <p class="article-meta">${article.source || "Source"} &middot; ${formatDate(article.publishedAt)}</p>
-        <p class="article-description">${article.tldr || article.description || "Open the story for the full details."}</p>
+        <p class="article-meta">${safeSource} &middot; ${formatDate(article.publishedAt)}</p>
+        <p class="article-description">${safeBlurb}</p>
       </div>
       <button class="save-button${isSaved ? " saved" : ""}" type="button" aria-label="Save article">${
         isSaved ? "&starf;" : "&star;"
@@ -189,13 +227,28 @@ function render() {
         delete state.read[id];
       }
       saveState();
-      render();
+      // Patch in-place — full re-render resets scroll position and drops focus.
+      card.classList.toggle("read", event.target.checked);
+      const newBadge = card.querySelector(".article-new");
+      if (newBadge && event.target.checked) newBadge.remove();
+      // If we're filtering by Unread, mark-as-read should remove the card.
+      if (activeTopic === "unread" && event.target.checked) card.remove();
+      updateSummary();
     });
 
     card.querySelector(".save-button").addEventListener("click", () => {
-      state.saved[id] = !state.saved[id];
+      // Toggle: delete on unsave (don't leave `false` debris in localStorage).
+      if (state.saved[id]) delete state.saved[id];
+      else state.saved[id] = true;
       saveState();
-      render();
+      // Patch the card in-place — full re-render drops scroll/focus.
+      const btn = card.querySelector(".save-button");
+      const nowSaved = Boolean(state.saved[id]);
+      btn.classList.toggle("saved", nowSaved);
+      btn.innerHTML = nowSaved ? "&starf;" : "&star;";
+      // If we're filtering by Saved, the card may need to disappear.
+      if (activeTopic === "saved" && !nowSaved) card.remove();
+      updateSummary();
     });
 
     articleList.appendChild(card);
@@ -226,11 +279,13 @@ function computeReadStats() {
     if (day >= sevenAgo && day <= today) weekCount += n;
   }
   // Streak — walk back from today while each day has ≥1 read.
+  // Today is allowed to be empty (user may not have read yet) — start
+  // counting from yesterday in that case so the streak survives a quiet morning.
   let streak = 0;
   for (let i = 0; i < 90; i += 1) {
     const day = new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
     if (byDay[day]) streak += 1;
-    else if (i > 0) break; // today may be 0 — still count yesterday's streak
+    else if (i === 0) continue; // today not read yet — check yesterday
     else break;
   }
   return { weekCount, streak };
@@ -374,37 +429,66 @@ async function loadArchiveDay(date) {
   articles.forEach((article) => {
     article.__isNew = false;
   });
-  articles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+  // Nulls last so undated articles don't bubble to the top.
+  articles.sort((a, b) => {
+    const av = a.publishedAt ? new Date(a.publishedAt).getTime() : -Infinity;
+    const bv = b.publishedAt ? new Date(b.publishedAt).getTime() : -Infinity;
+    return bv - av;
+  });
   updatedAt.textContent = formatDate(date);
   render();
 }
 
 async function loadArticles() {
+  let loadError = null;
   try {
     const response = await fetch("data/news.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
     articles = payload.articles || [];
     payloadExec = payload.execSummary || null;
     updatedAt.textContent = payload.updatedAt ? formatDate(payload.updatedAt) : "Today";
-  } catch {
+  } catch (err) {
     articles = [];
     payloadExec = null;
     updatedAt.textContent = "Not yet";
+    loadError = err?.message || "Failed to load data/news.json";
   }
+
+  // Sort by publishedAt with nulls last — undated articles should not float to top.
+  const sortByDate = (a, b) => {
+    const av = a.publishedAt ? new Date(a.publishedAt).getTime() : -Infinity;
+    const bv = b.publishedAt ? new Date(b.publishedAt).getTime() : -Infinity;
+    return bv - av;
+  };
 
   // Mark items unseen since last visit, then rank: new first, then newest.
   const prevSeen = loadSeen();
   articles.forEach((article) => {
     article.__isNew = !prevSeen.has(articleId(article));
   });
-  articles.sort(
-    (a, b) =>
-      Number(Boolean(b.__isNew)) - Number(Boolean(a.__isNew)) ||
-      new Date(b.publishedAt) - new Date(a.publishedAt),
-  );
-  const union = new Set(prevSeen);
-  articles.forEach((article) => union.add(articleId(article)));
-  saveSeen(union);
+  articles.sort((a, b) => Number(Boolean(b.__isNew)) - Number(Boolean(a.__isNew)) || sortByDate(a, b));
+
+  // Prune SEEN_KEY: keep only IDs from the current feed (plus latest seen-set,
+  // bounded). Without pruning the set grows unboundedly over months.
+  const currentIds = articles.map(articleId);
+  const trimmed = new Set(currentIds);
+  // Carry forward up to 500 prior IDs so a missing-from-feed article still
+  // looks "seen" if it reappears soon.
+  let carry = 0;
+  for (const id of prevSeen) {
+    if (carry >= 500) break;
+    trimmed.add(id);
+    carry += 1;
+  }
+  saveSeen(trimmed);
+
+  if (loadError && !articles.length) {
+    articleList.innerHTML = `<p class="empty-state">⚠ Could not load <code>data/news.json</code> (${loadError}). Run <code>npm run fetch</code> to populate it.</p>`;
+    emptyState.hidden = true;
+    updateSummary();
+    return;
+  }
 
   maybeNotifyOnNew(articles);
   render();
@@ -427,7 +511,9 @@ function openPreview(article) {
   previewTopic.textContent = article.topicLabel || article.topic || "";
   previewTitle.textContent = article.title || "";
   previewMeta.textContent = `${article.source || "Source"} · ${formatDate(article.publishedAt)}`;
-  previewBody.textContent = article.tldr || article.description || "";
+  // Modal has more room than a card, but still cap at ~700 chars so a feed
+  // that ships the full article body doesn't turn the preview into a wall.
+  previewBody.textContent = teaser(article.tldr || article.description || "", 700);
   if (article.url) {
     previewLink.href = article.url;
     previewLink.style.display = "";
@@ -451,6 +537,17 @@ articleList.addEventListener("click", (event) => {
   if (event.target.closest("a, button, input")) return;
   const card = event.target.closest(".article-card");
   if (!card || !card.dataset.aid) return;
+  const article = renderedById.get(card.dataset.aid);
+  if (article) openPreview(article);
+});
+
+// Keyboard activation — cards are tabbable, so Enter/Space should open them.
+articleList.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  if (event.target.closest("a, button, input")) return;
+  const card = event.target.closest(".article-card");
+  if (!card || !card.dataset.aid) return;
+  event.preventDefault();
   const article = renderedById.get(card.dataset.aid);
   if (article) openPreview(article);
 });

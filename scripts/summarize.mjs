@@ -100,7 +100,9 @@ async function dayWithClaude(prompt) {
 }
 
 async function dayWithGemini(prompt) {
-  const model = process.env.GEMINI_MODEL || "gemini-flash-latest";
+  // `gemini-flash-latest` is not a real model ID and 404s. Use a known-good
+  // default; users can still override via GEMINI_MODEL.
+  const model = process.env.GEMINI_MODEL || "gemini-2.0-flash";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(process.env.GEMINI_API_KEY)}`;
   const res = await fetch(url, {
     method: "POST",
@@ -147,7 +149,9 @@ async function summarizeWithClaude(todo) {
 }
 
 async function summarizeWithGemini(todo) {
-  const model = process.env.GEMINI_MODEL || "gemini-flash-latest";
+  // `gemini-flash-latest` is not a real model ID and 404s. Use a known-good
+  // default; users can still override via GEMINI_MODEL.
+  const model = process.env.GEMINI_MODEL || "gemini-2.0-flash";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(process.env.GEMINI_API_KEY)}`;
   const prompt =
     "Summarise each article into a one-line TL;DR (≤22 words, plain prose, no preamble, no markdown, no emojis). " +

@@ -15,16 +15,27 @@ const ENTITIES = [
   "iOS", "Windows", "Bitcoin", "Ethereum", "Quantum", "Robotics",
 ];
 
+// Stamp the archive in IST (the user's local timezone). Plain `toISOString` is
+// UTC, so a run at 11pm IST gets the previous UTC day — wrong filename.
+// `en-CA` formatted in `Asia/Kolkata` reliably yields YYYY-MM-DD.
 function todayStamp() {
-  return new Date().toISOString().slice(0, 10);
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
 }
 
+// Topic buckets and channel buckets are MUTUALLY EXCLUSIVE here so the trends
+// chart adds up. An email article with topic:"ai" used to land in BOTH `ai`
+// and `email`, inflating the daily totals. Now `email`/`linkedin` claim the
+// item first; only RSS articles count toward `ai`/`tech`/`current-affairs`.
 function countTopics(articles) {
   const bucket = { total: articles.length, ai: 0, tech: 0, "current-affairs": 0, email: 0, linkedin: 0 };
   for (const a of articles) {
-    if (bucket[a.topic] !== undefined) bucket[a.topic] += 1;
-    if (a.channel === "email") bucket.email += 1;
-    if (a.channel === "linkedin") bucket.linkedin += 1;
+    if (a.channel === "linkedin") {
+      bucket.linkedin += 1;
+    } else if (a.channel === "email") {
+      bucket.email += 1;
+    } else if (bucket[a.topic] !== undefined) {
+      bucket[a.topic] += 1;
+    }
   }
   return bucket;
 }
