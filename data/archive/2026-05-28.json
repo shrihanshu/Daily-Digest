@@ -1,6 +1,6 @@
 {
   "date": "2026-05-28",
-  "updatedAt": "2026-05-28T04:48:17.192Z",
+  "updatedAt": "2026-05-28T04:55:33.921Z",
   "articles": [
     {
       "id": "ai-https://news.google.com/rss/articles/CBMiU0FVX3lxTE9KRDNmX1ZnMXAydl9yVmM5Sm5QUWNSTmtJVlN0eldjWWF6UWZKci1LTThKV1NvOUVqYWhKN0QtdnhqN1BhNFUwbFhxd1k4cWNfbTdZ?oc=5",
@@ -322,17 +322,6 @@
       "publishedAt": "2026-05-27T18:39:17.000Z"
     },
     {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
-      "title": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026) - Drishti IAS",
-      "description": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026)&nbsp;&nbsp;Drishti IAS",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T18:31:20.000Z"
-    },
-    {
       "id": "ai-https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
       "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to come, including AI plans",
       "description": "Meta is rolling out paid subscription plans for Instagram, Facebook, and WhatsApp worldwide, while also testing new AI, creator, and business-focused offerings under its broader “Meta One” subscription brand.",
@@ -465,6 +454,17 @@
       "publishedAt": "2026-05-27T12:04:26.000Z"
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMi4AFBVV95cUxObjZEV0VxNXk4YkE1Qk9TcWJha1ZUSzFSWmxhWVhuY2U0NmF6WFd6SUVVY2lIYUF6LUFXSnNuS09YNTlHNDNWYXF3QUhmdjgtTW81cHBDTV9Bbk40VXBJRjRyTFpqY3h4R0Q2T2otY3pjbVNVN3NJUFAwV1ZiRERINVZmdFp1azlZZkJMWlNnYm9RdDZEZXlFcDNuUTRjR1dmNlliYXFaZE5YT1VvR05HMzFSMHdxWElraGI2OEhPckhKZFRnRFpWSTlLTmJ5M09PN3J2bjdqMVFSejFOWFladNIB5wFBVV95cUxNUjcyUDVQd2xCQjI5RXdLSmU2eTVfd0JYMHlmcFBiQ2p0N3VaZ1hBN3FObWRNcnhKVGdLYkpwWXQyaHo3ellILXg2dlduV2E0WXRUczRONTJXOFFZTlhDTldFZm9NRjlQVnNUX05Lc2VGeXhPZkdTZlIyVWsxUzZLd0cwTTJtSm1MUXdrNlNQeklZMWRCa21reG1mbHZ3TXpLaHV2RjIxUkxtVlVhY1F5R1BLZkVHOVlTUDdjaDVVZ0s5bVhNemw0YWRSeUNDZ0lhUFBmcFhxWTQxc3M2TUQyRXloRGdMVnM?oc=5",
+      "title": "Reproductive rights in India: Inequality, access, and bodily autonomy - The Indian Express",
+      "description": "Reproductive rights in India: Inequality, access, and bodily autonomy&nbsp;&nbsp;The Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObjZEV0VxNXk4YkE1Qk9TcWJha1ZUSzFSWmxhWVhuY2U0NmF6WFd6SUVVY2lIYUF6LUFXSnNuS09YNTlHNDNWYXF3QUhmdjgtTW81cHBDTV9Bbk40VXBJRjRyTFpqY3h4R0Q2T2otY3pjbVNVN3NJUFAwV1ZiRERINVZmdFp1azlZZkJMWlNnYm9RdDZEZXlFcDNuUTRjR1dmNlliYXFaZE5YT1VvR05HMzFSMHdxWElraGI2OEhPckhKZFRnRFpWSTlLTmJ5M09PN3J2bjdqMVFSejFOWFladNIB5wFBVV95cUxNUjcyUDVQd2xCQjI5RXdLSmU2eTVfd0JYMHlmcFBiQ2p0N3VaZ1hBN3FObWRNcnhKVGdLYkpwWXQyaHo3ellILXg2dlduV2E0WXRUczRONTJXOFFZTlhDTldFZm9NRjlQVnNUX05Lc2VGeXhPZkdTZlIyVWsxUzZLd0cwTTJtSm1MUXdrNlNQeklZMWRCa21reG1mbHZ3TXpLaHV2RjIxUkxtVlVhY1F5R1BLZkVHOVlTUDdjaDVVZ0s5bVhNemw0YWRSeUNDZ0lhUFBmcFhxWTQxc3M2TUQyRXloRGdMVnM?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T07:04:00.000Z"
+    },
+    {
       "id": "linkedin-19801",
       "title": "Your feed is not lying. Appinventiv really is everywhere right now!",
       "description": "Appinventiv Weekly By Appinventiv By Appinventiv Read this article on LinkedIn to join the conversation Read on LinkedIn https://www.linkedin.com/comm/pulse/your-feed-lying-appinventiv-really-everywhere-right-now-appinve…",
@@ -474,6 +474,17 @@
       "topicLabel": "AI",
       "channel": "linkedin",
       "publishedAt": "2026-05-27T06:59:50.000Z"
+    },
+    {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
+      "title": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise - Goa Chronicle",
+      "description": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise&nbsp;&nbsp;Goa Chronicle",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T06:48:13.000Z"
     },
     {
       "id": "email-19800",
@@ -496,17 +507,6 @@
       "topicLabel": "Current Affairs",
       "channel": "rss",
       "publishedAt": "2026-05-27T05:50:02.000Z"
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUFVTcHJHY3BNY3ExbkRSbkJUczZfcTM3SWdYN1FBcEtleWFuTjJ0alFLdG9PQTdwYWF4NUI2VjVIU0x4STF0dmpIZmZhaWo3eGRhWjk0RUlMeEVYb0RQWTF2eGl0Q1Bnb0RIY0RzSElIOHl5cDhna05OdHd1ZjczblVfZk9BSjBxbzBBM01uTENHZDlFVWJFT2VHY0tqMTZkNUw4Tndsd3E0WURUMUlwSW9PbkRDcTFoT1VZUG54ZmNIMmVGdGdRXzVyTE5UMUtSMXYxUXI2RdIB3gFBVV95cUxNU21uWFpUUDVxZzRoTmYzSTBrX2p6cENnLWdpeFhmZ252X2lrTTFEa2N1RGk0ZGFMZV9iWDY3Ml8xaFpoVDdVS1pyVVJwRDNOUHlKaTM0U2NoU3ozMC15Z011ZjE5MTdHWDNoWVVSNnQtVUtxNUFjclJNblhOUmlCNXFoRHlsUENHcUExNnNyM21MdW1aOHVrUEdqVUhBRm51MUR2RkNDRHZUUF9aaE5qQ0lPaFdtT2JGTF9EeWRMMEFzdjhCMm13UWVReElQV1hDMTk1bENmcFhoZUtSSVE?oc=5",
-      "title": "Top 20 UPSC Current Affairs Pointers of the past week | May 18 to May 24, 2026 - The Indian Express",
-      "description": "Top 20 UPSC Current Affairs Pointers of the past week | May 18 to May 24, 2026&nbsp;&nbsp;The Indian Express",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQUFVTcHJHY3BNY3ExbkRSbkJUczZfcTM3SWdYN1FBcEtleWFuTjJ0alFLdG9PQTdwYWF4NUI2VjVIU0x4STF0dmpIZmZhaWo3eGRhWjk0RUlMeEVYb0RQWTF2eGl0Q1Bnb0RIY0RzSElIOHl5cDhna05OdHd1ZjczblVfZk9BSjBxbzBBM01uTENHZDlFVWJFT2VHY0tqMTZkNUw4Tndsd3E0WURUMUlwSW9PbkRDcTFoT1VZUG54ZmNIMmVGdGdRXzVyTE5UMUtSMXYxUXI2RdIB3gFBVV95cUxNU21uWFpUUDVxZzRoTmYzSTBrX2p6cENnLWdpeFhmZ252X2lrTTFEa2N1RGk0ZGFMZV9iWDY3Ml8xaFpoVDdVS1pyVVJwRDNOUHlKaTM0U2NoU3ozMC15Z011ZjE5MTdHWDNoWVVSNnQtVUtxNUFjclJNblhOUmlCNXFoRHlsUENHcUExNnNyM21MdW1aOHVrUEdqVUhBRm51MUR2RkNDRHZUUF9aaE5qQ0lPaFdtT2JGTF9EeWRMMEFzdjhCMm13UWVReElQV1hDMTk1bENmcFhoZUtSSVE?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T04:50:00.000Z"
     },
     {
       "id": "linkedin-19795",
