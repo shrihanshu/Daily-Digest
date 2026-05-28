@@ -1,6 +1,6 @@
 {
   "date": "2026-05-28",
-  "updatedAt": "2026-05-28T04:42:52.118Z",
+  "updatedAt": "2026-05-28T04:48:17.192Z",
   "articles": [
     {
       "id": "ai-https://news.google.com/rss/articles/CBMiU0FVX3lxTE9KRDNmX1ZnMXAydl9yVmM5Sm5QUWNSTmtJVlN0eldjWWF6UWZKci1LTThKV1NvOUVqYWhKN0QtdnhqN1BhNFUwbFhxd1k4cWNfbTdZ?oc=5",
@@ -322,6 +322,17 @@
       "publishedAt": "2026-05-27T18:39:17.000Z"
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
+      "title": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026) - Drishti IAS",
+      "description": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026)&nbsp;&nbsp;Drishti IAS",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T18:31:20.000Z"
+    },
+    {
       "id": "ai-https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
       "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to come, including AI plans",
       "description": "Meta is rolling out paid subscription plans for Instagram, Facebook, and WhatsApp worldwide, while also testing new AI, creator, and business-focused offerings under its broader “Meta One” subscription brand.",
@@ -463,17 +474,6 @@
       "topicLabel": "AI",
       "channel": "linkedin",
       "publishedAt": "2026-05-27T06:59:50.000Z"
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
-      "title": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise - Goa Chronicle",
-      "description": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise&nbsp;&nbsp;Goa Chronicle",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T06:48:13.000Z"
     },
     {
       "id": "email-19800",
