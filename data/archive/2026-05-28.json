@@ -1,6 +1,6 @@
 {
   "date": "2026-05-28",
-  "updatedAt": "2026-05-28T06:32:20.812Z",
+  "updatedAt": "2026-05-28T06:49:23.308Z",
   "articles": [
     {
       "id": "tech-https://www.theverge.com/games/938451/steam-deck-price-hike-end-of-handheld-gaming-era",
@@ -29,7 +29,7 @@
     {
       "id": "tech-https://hallucinate.site",
       "title": "Hallucinate – Massively Multiplayer Online Rave",
-      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 102\n# Comments: 40",
+      "description": "Article URL: https://hallucinate.site\nComments URL: https://news.ycombinator.com/item?id=48304260\nPoints: 113\n# Comments: 44",
       "url": "https://hallucinate.site",
       "source": "Hacker News",
       "topic": "tech",
@@ -63,6 +63,18 @@
       "tldr": "Current affairs updates include the addition of Yogasan to the 2030 Commonwealth Games and India's new battery project."
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMihgJBVV95cUxQU1FxbTZDVmN0RHo5cWYwYXgxMW05azBabXp1RnJSb3Z2LVBmTjB1MVM4aFJfTDlURl9YYm5ZSHhic2dlS1hidHgxUllHd05lZFdBWnJaZHZIaHhPN2dWTDRldmFqSk5laXR0SHZFZ09UV1VsWEdmd3lKc2ItRndzbV96ZHgxTXJHVzVKRjN4d0EtM1dERVZrWkZ6ZHlLWGRFcVI2REZMbEMyVEJmX200YmwtV0ctYzFMa3dUa25nVkVjZkJvaFdqRzEySlJVRTNTWll6RjBPRDNtNV9xN3NhWWdPLTBGZW5LOFpUTHd1by0yYmc2bnNKMzdGVl9RWkJ3eHVRWWh30gGGAkFVX3lxTFBTUXFtNkNWY3REejlxZjBheDExbTlrMFptenVGclJvdnYtUGZOMHUxUzhoUl9MOVRGX1hibllIeGJzZ2VLWGJ0eDFSWUd3TmVkV0FaclpkdkhoeE83Z1ZMNGV2YWpKTmVpdHRIdkVnT1RXVWxYR2Z3eUpzYi1Gd3NtX3pkeDFNckdXNUpGM3h3QS0zV0RFVmtaRnpkeUtYZEVxUjZERkxsQzJUQmZfbTRibC1XRy1jMUxrd1RrbmdWRWNmQm9oV2pHMTJKUlVFM1NaWXpGME9EM201X3E3c2FZZ08tMEZlbks4WlRMd3VvLTJiZzZuc0ozN0ZWX1FaQnd4dVFZaHc?oc=5",
+      "title": "Quote of the day by Bill Gates: It's fine to celebrate success but it is more important... - India Today",
+      "description": "Quote of the day by Bill Gates: It's fine to celebrate success but it is more important...&nbsp;&nbsp;India Today",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQU1FxbTZDVmN0RHo5cWYwYXgxMW05azBabXp1RnJSb3Z2LVBmTjB1MVM4aFJfTDlURl9YYm5ZSHhic2dlS1hidHgxUllHd05lZFdBWnJaZHZIaHhPN2dWTDRldmFqSk5laXR0SHZFZ09UV1VsWEdmd3lKc2ItRndzbV96ZHgxTXJHVzVKRjN4d0EtM1dERVZrWkZ6ZHlLWGRFcVI2REZMbEMyVEJmX200YmwtV0ctYzFMa3dUa25nVkVjZkJvaFdqRzEySlJVRTNTWll6RjBPRDNtNV9xN3NhWWdPLTBGZW5LOFpUTHd1by0yYmc2bnNKMzdGVl9RWkJ3eHVRWWh30gGGAkFVX3lxTFBTUXFtNkNWY3REejlxZjBheDExbTlrMFptenVGclJvdnYtUGZOMHUxUzhoUl9MOVRGX1hibllIeGJzZ2VLWGJ0eDFSWUd3TmVkV0FaclpkdkhoeE83Z1ZMNGV2YWpKTmVpdHRIdkVnT1RXVWxYR2Z3eUpzYi1Gd3NtX3pkeDFNckdXNUpGM3h3QS0zV0RFVmtaRnpkeUtYZEVxUjZERkxsQzJUQmZfbTRibC1XRy1jMUxrd1RrbmdWRWNmQm9oV2pHMTJKUlVFM1NaWXpGME9EM201X3E3c2FZZ08tMEZlbks4WlRMd3VvLTJiZzZuc0ozN0ZWX1FaQnd4dVFZaHc?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-28T01:30:00.000Z",
+      "tldr": "Bill Gates highlights that learning from failure is more important than celebrating success."
+    },
+    {
       "id": "ai-https://news.google.com/rss/articles/CBMiowFBVV95cUxQdzYzVHVwQVRJSmlnTVNKOEpBeERkM3lDTTUtdE9KWWJPNlFUaEdSeVRzaHhKOXktNl83Ym8zcVVhRzlub0VBMVZpWU92YjU0NDA2Vk5LSWhhcmdHblp3eFBqOWYyclVoMWJBVE9kS1hPckhPVzVDZ0h4R1g1Y2xMUDZPR0FtdnZsZ2ZfWUk3d2ZUMVdSWGY4N09jWHVna05kelJR?oc=5",
       "title": "The Bitter Lesson: AI's Protein Problem - StartupHub.ai",
       "description": "The Bitter Lesson: AI's Protein Problem&nbsp;&nbsp;StartupHub.ai",
@@ -77,7 +89,7 @@
     {
       "id": "tech-https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "title": "Google employee charged with $1M Polymarket insider trading bet on search term",
-      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 129\n# Comments: 66",
+      "description": "Article URL: https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html\nComments URL: https://news.ycombinator.com/item?id=48302822\nPoints: 136\n# Comments: 66",
       "url": "https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
       "source": "Hacker News",
       "topic": "tech",
@@ -89,7 +101,7 @@
     {
       "id": "tech-https://mlsu.io/posts/day-off/",
       "title": "Can we have the day off?",
-      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 900\n# Comments: 534",
+      "description": "Article URL: https://mlsu.io/posts/day-off/\nComments URL: https://news.ycombinator.com/item?id=48302745\nPoints: 914\n# Comments: 546",
       "url": "https://mlsu.io/posts/day-off/",
       "source": "Hacker News",
       "topic": "tech",
@@ -123,9 +135,21 @@
       "tldr": "Illinois lawmakers passed a strict AI safety bill requiring third-party audits of major tech companies like OpenAI and Google."
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uSUw5MEdISnlIbUI1Y2FfY3k0ZGZiRE1FOWhjMUdqYlpMaWswWWpmV0R1VW9hVThJN2FHVURZMUZlenp4Tm82SnVJUU5rc3dYMl9GRy1OWDVhejQ?oc=5",
+      "title": "IMD Issues Alerts: Thunderstorms In Delhi, Heatwave In Rajasthan & Gujarat Lewandowski (58h0fX6TxB) - Mshale",
+      "description": "IMD Issues Alerts: Thunderstorms In Delhi, Heatwave In Rajasthan & Gujarat Lewandowski (58h0fX6TxB)&nbsp;&nbsp;Mshale",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uSUw5MEdISnlIbUI1Y2FfY3k0ZGZiRE1FOWhjMUdqYlpMaWswWWpmV0R1VW9hVThJN2FHVURZMUZlenp4Tm82SnVJUU5rc3dYMl9GRy1OWDVhejQ?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T23:55:26.000Z",
+      "tldr": "The IMD has issued alerts for thunderstorms in Delhi and heatwaves in Rajasthan and Gujarat."
+    },
+    {
       "id": "tech-https://drobinin.com/posts/am-i-a-bad-friend/",
       "title": "I analysed 20 years of my chats",
-      "description": "Article URL: https://drobinin.com/posts/am-i-a-bad-friend/\nComments URL: https://news.ycombinator.com/item?id=48302220\nPoints: 36\n# Comments: 6",
+      "description": "Article URL: https://drobinin.com/posts/am-i-a-bad-friend/\nComments URL: https://news.ycombinator.com/item?id=48302220\nPoints: 44\n# Comments: 7",
       "url": "https://drobinin.com/posts/am-i-a-bad-friend/",
       "source": "Hacker News",
       "topic": "tech",
@@ -137,7 +161,7 @@
     {
       "id": "tech-https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "title": "FBI Arrests CIA Official with $40M in Gold Bars in His Home",
-      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 255\n# Comments: 140",
+      "description": "Article URL: https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html\nComments URL: https://news.ycombinator.com/item?id=48302151\nPoints: 259\n# Comments: 149",
       "url": "https://www.nytimes.com/2026/05/27/us/politics/fbi-arrest-cia-official-gold-bars.html",
       "source": "Hacker News",
       "topic": "tech",
@@ -339,18 +363,6 @@
       "tldr": "Traditional SEO strategies are becoming obsolete as Google shifts its search engine to prioritize AI-generated answers."
     },
     {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
-      "title": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026) - Drishti IAS",
-      "description": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (28-05-2026)&nbsp;&nbsp;Drishti IAS",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5fQTU5QXJ0WWNvQktNRGtERmdwTFd5OXBZd3htdkg2V2pWYy1NbjAyRl9xODJ4ZnNuZzdMMi0wbUM3b1h6UEd2cVUzZGhpZ3BXclZ3YW9zZ2dLRUEtXzcyaVdRZThKR0ZXQzZBdlVzWQ?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T18:31:20.000Z",
-      "tldr": "Drishti IAS provides daily current affairs updates for the Jammu and Kashmir Administrative Service exam on May 28, 2026."
-    },
-    {
       "id": "ai-https://news.google.com/rss/articles/CBMisAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZ9IBsAFBVV95cUxPb2dBUzVTWVhsenI0UlFfQVRjMVRZYnFhT3U5OE5wcUFZcmctdTM5UGhOTlhoN2VkNkZ3QjR1aHMwTnJKZllSb3NJT1dnZklGVkViQ0tTZERsdXlzQjctbng1Y21EUGRPMlZ3d19EaFNxaW1JRnprOVluNzd0Q19FNDIyMGc4QmFkelUzdXFoSTdtLWJrdWsxbk5XWW5faHBRdDNiUC1reUtUR3Jvem5UZw?oc=5",
       "title": "Machine Learning helps scientists study Martian dust devils - Labroots",
       "description": "Machine Learning helps scientists study Martian dust devils&nbsp;&nbsp;Labroots",
@@ -423,6 +435,18 @@
       "tldr": "AI coding startup Cognition has raised one billion dollars, valuing the company at twenty-five billion dollars."
     },
     {
+      "id": "current-affairs-https://news.google.com/rss/articles/CBMib0FVX3lxTE02c2R0TEQyaUpRU1dQYmxNaDNVNmtvclhDREpIYmhPanhYRElUd0tSYlBlYm41dHhEMk52Rl9oeHhTcmxXWkNQaWd6dHFtUmtRY0VOS2Q2dWpKLWt4bjJaenhNNmlsVU53UGZ4blNTNA?oc=5",
+      "title": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (13-11-2000) - Drishti IAS",
+      "description": "Daily JAMMU & KASHMIR Current Affairs for JKAS Exam (13-11-2000)&nbsp;&nbsp;Drishti IAS",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE02c2R0TEQyaUpRU1dQYmxNaDNVNmtvclhDREpIYmhPanhYRElUd0tSYlBlYm41dHhEMk52Rl9oeHhTcmxXWkNQaWd6dHFtUmtRY0VOS2Q2dWpKLWt4bjJaenhNNmlsVU53UGZ4blNTNA?oc=5",
+      "source": "Google News",
+      "topic": "current-affairs",
+      "topicLabel": "Current Affairs",
+      "channel": "rss",
+      "publishedAt": "2026-05-27T15:46:26.000Z",
+      "tldr": "Drishti IAS provides daily current affairs updates for Jammu and Kashmir to help candidates prepare for the JKAS exam."
+    },
+    {
       "id": "current-affairs-https://news.google.com/rss/articles/CBMibkFVX3lxTFA3SFd4MWNUNTFPdFVyYlp6Mlk0N3ZVOXJGZTFHelk0TkRfT0lUZEtmV1NWSldUenI5NU4weXd5UjNtenpIbkF3MmxrVGh0WTNjQ1BOODVTUGp4TVJBT0doRXh0T0otN2ZjdVhEUVl3?oc=5",
       "title": "Current Affairs for 27 May 2026 - Sanskriti IAS",
       "description": "Current Affairs for 27 May 2026&nbsp;&nbsp;Sanskriti IAS",
@@ -433,18 +457,6 @@
       "channel": "rss",
       "publishedAt": "2026-05-27T14:14:37.000Z",
       "tldr": "A daily roundup of important current affairs for May 27, 2026, curated by Sanskriti IAS."
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcDJyTHZya0N1dWN3Mk54ZnphdGUzUTZPbjNWeWMzRFh2bDlpeWdzY3kxQnJyZzE5OXVya3JiS2NSNTZWX0NuMmUwWW55N3ZXem05TlByZkNYUDVJY05FZGFIUHRXdUZJYUxELXVsa2R6dHQ4dUc2SFI3M19XY1FaZmZ5SlI0LW9Vdy1SeGtwdWQyX1hnd0cxOXV3eEdsd3dWQWQ2aWtvNWJyNHdoeEhiSVR0M3ZNcTFYS01ZMUdMWWx1THFEYk5KUFlucHZGSnJGWWFmTjRaR2lFOXhzWWRZ?oc=5",
-      "title": "School assembly news headlines today- May 28: Top national, sports and world news curated for you - India Today",
-      "description": "School assembly news headlines today- May 28: Top national, sports and world news curated for you&nbsp;&nbsp;India Today",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcDJyTHZya0N1dWN3Mk54ZnphdGUzUTZPbjNWeWMzRFh2bDlpeWdzY3kxQnJyZzE5OXVya3JiS2NSNTZWX0NuMmUwWW55N3ZXem05TlByZkNYUDVJY05FZGFIUHRXdUZJYUxELXVsa2R6dHQ4dUc2SFI3M19XY1FaZmZ5SlI0LW9Vdy1SeGtwdWQyX1hnd0cxOXV3eEdsd3dWQWQ2aWtvNWJyNHdoeEhiSVR0M3ZNcTFYS01ZMUdMWWx1THFEYk5KUFlucHZGSnJGWWFmTjRaR2lFOXhzWWRZ?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T14:12:37.000Z",
-      "tldr": "A curated list of top national, sports, and world news headlines for school assemblies on May 28."
     },
     {
       "id": "ai-https://news.google.com/rss/articles/CBMixwFBVV95cUxPMDRsUUVNTFkxNFExQkZKZW04Wjc2R05ZX2pwUUZZVndZSnJYdVpVYTVmWVQwQ3V6ZENheEtIamZXVTloWDctVlRKRWRkM3BpdjNZSTZwUTEzMDVXSXQyVm54c0V2UHZnUmRkMWZjU3BobUQyZTVVS2VfMHNaSFQ0REp6Ylhld2g4Wmh4MElMTVZuR2kxb0pfSmk4aVlEMFl0N0d4SmFQalNCcHF2YWpIcjZVMVlwdXpWT1pzRWdXOWdDTWQ3aDFF?oc=5",
@@ -504,17 +516,6 @@
       "topicLabel": "AI",
       "channel": "linkedin",
       "publishedAt": "2026-05-27T06:59:50.000Z"
-    },
-    {
-      "id": "current-affairs-https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
-      "title": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise - Goa Chronicle",
-      "description": "Why India Needs Narendra Modi for Another Decade to Complete Its Civilisational Rise&nbsp;&nbsp;Goa Chronicle",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSDZrdXVRLTB6WDBZeUJOaDhxamdsWUR5SUNwcE1ZakxvN3NUeENrS0phNEZnUmtMUThnWXhZSERPVC1WbVBERU51b19WbC1wSnpOZkx0MEE0WFVwNVNiWFZfbXJCc2RybmRuQzRGTHJ5R2JYaElzOHpwMVVlZnFpYVRHVktmUkJ1b3ZUbVNhb1FRWE04YXZrSjBOVldoZG1oQWNoM1NtR2Y5NXZiRDJJ?oc=5",
-      "source": "Google News",
-      "topic": "current-affairs",
-      "topicLabel": "Current Affairs",
-      "channel": "rss",
-      "publishedAt": "2026-05-27T06:48:13.000Z"
     },
     {
       "id": "email-19800",
@@ -807,10 +808,10 @@
     "bullets": [
       "A Google security engineer was arrested for allegedly using confidential search data to win over one million dollars on Polymarket.",
       "Illinois lawmakers passed a strict AI safety bill requiring third-party audits of major tech companies like OpenAI and Google.",
-      "Researchers discovered that websites can track user activity by analyzing SSD write patterns through simple browser-based JavaScript.",
       "The FBI arrested a CIA official after discovering forty million dollars worth of gold bars in his home.",
-      "California blocked Tesla's attempt to dismiss a major racial discrimination lawsuit, clearing the way for a July trial."
+      "California blocked Tesla's attempt to dismiss a major racial discrimination lawsuit, clearing the way for a trial in July.",
+      "Researchers discovered that websites can track user activity by analyzing SSD write patterns through simple browser-based JavaScript."
     ],
-    "generatedAt": "2026-05-28T06:32:20.810Z"
+    "generatedAt": "2026-05-28T06:49:23.305Z"
   }
 }
