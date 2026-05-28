@@ -252,6 +252,7 @@ function updateSummary() {
     const parts = [];
     if (stats.streak > 0) parts.push(`🔥 ${stats.streak}-day streak`);
     if (stats.weekCount > 0) parts.push(`${stats.weekCount} read this week`);
+    if (!parts.length) parts.push("Tap a story's circle to start your streak");
     readStreak.textContent = parts.join(" · ");
   }
 }
