@@ -22,6 +22,10 @@
         <h1 id="brandTitle" role="button" tabindex="0" aria-label="Daily Signal — go to today's feed" title="Go to today's feed">Daily Signal</h1>
         <div class="header-actions">
           <time id="todayDate" class="today-date">Today</time>
+          <button id="refreshBtn" class="theme-toggle" type="button" aria-label="Refresh feed" title="Refresh feed">
+            <span class="theme-icon" aria-hidden="true">⟳</span>
+            <span class="theme-text">Refresh</span>
+          </button>
           <button id="notifyToggle" class="theme-toggle" type="button" aria-label="Toggle notifications" title="Notify on new items">
             <span class="theme-icon" aria-hidden="true">🔕</span>
             <span class="theme-text">Notify</span>
@@ -64,6 +68,10 @@
         <div class="toolbar-inputs">
           <select id="archiveDate" class="search-input archive-select" aria-label="View a past day"></select>
           <input id="searchInput" class="search-input" type="search" placeholder="Search today or archive…" />
+          <button id="markAllReadBtn" class="theme-toggle markall-btn" type="button" aria-label="Mark all currently visible as read" title="Mark all visible as read (Shift+R)">
+            <span class="theme-icon" aria-hidden="true">✓</span>
+            <span class="theme-text">All read</span>
+          </button>
         </div>
       </section>
 
@@ -91,6 +99,24 @@
         <p id="emptyState" class="empty-state" hidden>No stories match this view.</p>
       </section>
     </main>
+
+    <div id="helpOverlay" class="help-overlay" style="display:none" role="dialog" aria-modal="true" aria-labelledby="helpOverlayTitle">
+      <div class="help-card" role="document">
+        <button class="preview-close" type="button" aria-label="Close help">×</button>
+        <h3 id="helpOverlayTitle">Keyboard shortcuts</h3>
+        <dl class="kbd-list">
+          <dt><kbd>j</kbd> / <kbd>↓</kbd></dt><dd>Focus next article</dd>
+          <dt><kbd>k</kbd> / <kbd>↑</kbd></dt><dd>Focus previous article</dd>
+          <dt><kbd>r</kbd></dt><dd>Toggle read on focused article</dd>
+          <dt><kbd>s</kbd></dt><dd>Toggle saved on focused article</dd>
+          <dt><kbd>Shift</kbd> + <kbd>R</kbd></dt><dd>Mark all visible as read</dd>
+          <dt><kbd>/</kbd></dt><dd>Jump to search</dd>
+          <dt><kbd>Enter</kbd></dt><dd>Open preview of focused article</dd>
+          <dt><kbd>Esc</kbd></dt><dd>Close preview / help</dd>
+          <dt><kbd>?</kbd></dt><dd>Show / hide this help</dd>
+        </dl>
+      </div>
+    </div>
 
     <div id="previewModal" class="preview-modal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
       <div class="preview-card" role="document">

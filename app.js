@@ -16,6 +16,9 @@ const archiveDate = document.querySelector("#archiveDate");
 const readStreak = document.querySelector("#readStreak");
 const notifyToggle = document.querySelector("#notifyToggle");
 const brandTitle = document.querySelector("#brandTitle");
+const refreshBtn = document.querySelector("#refreshBtn");
+const markAllReadBtn = document.querySelector("#markAllReadBtn");
+const helpOverlay = document.querySelector("#helpOverlay");
 const previewModal = document.querySelector("#previewModal");
 const previewTopic = document.querySelector("#previewTopic");
 const previewTitle = document.querySelector("#previewTitle");
@@ -78,6 +81,19 @@ function teaser(text = "", limit = CARD_DESC_MAX) {
   if (sentence > limit * 0.6) return `${cut.slice(0, sentence + 1).trim()}…`;
   const word = cut.lastIndexOf(" ");
   return `${(word > 0 ? cut.slice(0, word) : cut).trim()}…`;
+}
+
+// Estimate reading time. Uses tldr+description+title — we don't have the
+// article body, so this is a *card-level* estimate of how long the user
+// spends scanning the teaser, not the full article. Min 1 min so the badge
+// never reads "0 min".
+function readMinutes(article) {
+  const words = `${article.title || ""} ${article.tldr || ""} ${article.description || ""}`
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+  // 200 wpm is a sane average for scanning prose.
+  return Math.max(1, Math.round(words / 200));
 }
 
 // Minimal HTML escaper for text we splice into innerHTML. Without this, an
@@ -202,6 +218,7 @@ function render() {
     const safeUrl = article.url ? encodeURI(article.url) : "";
     const blurb = teaser(article.tldr || article.description || "");
     const safeBlurb = blurb ? escapeHtml(blurb) : "Open the story for the full details.";
+    const minutes = readMinutes(article);
     card.innerHTML = `
       <input class="read-check" type="checkbox" aria-label="Mark as read" ${isRead ? "checked" : ""} />
       <div>
@@ -213,7 +230,7 @@ function render() {
             ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${safeTitle}</a>`
             : safeTitle
         }</h3>
-        <p class="article-meta">${safeSource} &middot; ${formatDate(article.publishedAt)}</p>
+        <p class="article-meta">${safeSource} &middot; ${formatDate(article.publishedAt)} &middot; <span class="read-time">${minutes} min read</span></p>
         <p class="article-description">${safeBlurb}</p>
       </div>
       <button class="save-button${isSaved ? " saved" : ""}" type="button" aria-label="Save article">${
@@ -440,7 +457,30 @@ async function loadArchiveDay(date) {
   render();
 }
 
+// Render ghost cards while news.json is loading so the page isn't blank.
+// Only used on the very first fetch — once articles exist, manual refresh
+// reuses the existing list and updates updatedAt instead of flashing skeleton.
+function renderSkeleton(count = 6) {
+  articleList.innerHTML = Array.from({ length: count })
+    .map(
+      () => `<article class="article-card skeleton" aria-hidden="true">
+        <span class="skeleton-bar skeleton-check"></span>
+        <div>
+          <span class="skeleton-bar skeleton-topic"></span>
+          <span class="skeleton-bar skeleton-title"></span>
+          <span class="skeleton-bar skeleton-title narrow"></span>
+          <span class="skeleton-bar skeleton-meta"></span>
+          <span class="skeleton-bar skeleton-desc"></span>
+        </div>
+        <span class="skeleton-bar skeleton-star"></span>
+      </article>`,
+    )
+    .join("");
+  emptyState.hidden = true;
+}
+
 async function loadArticles() {
+  if (!articles.length) renderSkeleton();
   let loadError = null;
   try {
     const response = await fetch("data/news.json", { cache: "no-store" });
@@ -541,6 +581,158 @@ brandTitle?.addEventListener("keydown", (event) => {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
     goHome();
+  }
+});
+
+// ── Manual refresh ────────────────────────────────────────────────────────
+// Re-fetch news.json on demand. Guarded so users can't double-click into a
+// race. Spinner is just a CSS class on the button.
+let refreshing = false;
+async function manualRefresh() {
+  if (refreshing) return;
+  refreshing = true;
+  refreshBtn?.classList.add("is-refreshing");
+  refreshBtn?.setAttribute("aria-busy", "true");
+  try {
+    // If we're on an archive day, refresh re-loads that day; otherwise today.
+    if (archiveDate.value && archiveDate.value !== latestDate) {
+      await loadArchiveDay(archiveDate.value);
+    } else {
+      await loadArticles();
+    }
+  } finally {
+    refreshing = false;
+    refreshBtn?.classList.remove("is-refreshing");
+    refreshBtn?.removeAttribute("aria-busy");
+  }
+}
+refreshBtn?.addEventListener("click", manualRefresh);
+
+// ── Mark all visible as read ──────────────────────────────────────────────
+// Walks the filtered cards on screen and marks each as read. We patch the
+// DOM in place to avoid a full re-render of the whole feed.
+function markAllVisibleAsRead() {
+  const cards = [...articleList.querySelectorAll(".article-card")];
+  if (!cards.length) return;
+  const now = new Date().toISOString();
+  let touched = 0;
+  for (const card of cards) {
+    const id = card.dataset.aid;
+    if (!id || state.read[id]) continue;
+    state.read[id] = now;
+    card.classList.add("read");
+    const checkbox = card.querySelector(".read-check");
+    if (checkbox) checkbox.checked = true;
+    const newBadge = card.querySelector(".article-new");
+    if (newBadge) newBadge.remove();
+    touched += 1;
+  }
+  if (touched) {
+    saveState();
+    // If we're in "unread" view, remove the now-read cards entirely.
+    if (activeTopic === "unread") {
+      cards.forEach((c) => c.remove());
+    }
+    updateSummary();
+  }
+}
+markAllReadBtn?.addEventListener("click", () => {
+  if (confirm("Mark all visible articles as read?")) markAllVisibleAsRead();
+});
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────
+// j/k = next/prev card focus; r = toggle read; s = toggle save; / = search;
+// ? = toggle help overlay; Shift+R = mark-all-read; Esc closes modals.
+// Shortcuts are disabled while an <input>, <textarea>, or <select> has focus,
+// so typing into the search box never hijacks single-key presses.
+function focusedCard() {
+  return document.activeElement?.closest?.(".article-card") || null;
+}
+function focusCard(card) {
+  if (!card) return;
+  card.focus({ preventScroll: false });
+  card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+}
+function moveFocus(delta) {
+  const cards = [...articleList.querySelectorAll(".article-card")];
+  if (!cards.length) return;
+  const current = focusedCard();
+  const idx = current ? cards.indexOf(current) : -1;
+  const next = idx < 0 ? (delta > 0 ? 0 : cards.length - 1) : Math.max(0, Math.min(cards.length - 1, idx + delta));
+  focusCard(cards[next]);
+}
+function toggleHelp(force) {
+  if (!helpOverlay) return;
+  const willOpen = typeof force === "boolean" ? force : !helpOverlay.classList.contains("is-open");
+  helpOverlay.style.display = willOpen ? "flex" : "none";
+  helpOverlay.classList.toggle("is-open", willOpen);
+}
+helpOverlay?.querySelector(".preview-close")?.addEventListener("click", () => toggleHelp(false));
+helpOverlay?.addEventListener("click", (event) => {
+  if (event.target === helpOverlay) toggleHelp(false);
+});
+
+window.addEventListener("keydown", (event) => {
+  // Don't hijack typing in form fields.
+  const tag = (event.target?.tagName || "").toLowerCase();
+  const isField = tag === "input" || tag === "textarea" || tag === "select" || event.target?.isContentEditable;
+  if (event.ctrlKey || event.metaKey || event.altKey) return;
+
+  if (event.key === "Escape") {
+    if (helpOverlay?.classList.contains("is-open")) { toggleHelp(false); return; }
+    if (previewModal?.classList.contains("is-open")) { closePreview(); return; }
+  }
+  if (isField) return;
+
+  switch (event.key) {
+    case "j":
+    case "ArrowDown":
+      if (event.target === document.body || focusedCard()) {
+        event.preventDefault();
+        moveFocus(+1);
+      }
+      break;
+    case "k":
+    case "ArrowUp":
+      if (event.target === document.body || focusedCard()) {
+        event.preventDefault();
+        moveFocus(-1);
+      }
+      break;
+    case "r": {
+      const card = focusedCard();
+      if (card) {
+        event.preventDefault();
+        const cb = card.querySelector(".read-check");
+        if (cb) { cb.checked = !cb.checked; cb.dispatchEvent(new Event("change", { bubbles: true })); }
+      }
+      break;
+    }
+    case "R": {
+      if (event.shiftKey) {
+        event.preventDefault();
+        markAllVisibleAsRead();
+      }
+      break;
+    }
+    case "s": {
+      const card = focusedCard();
+      if (card) {
+        event.preventDefault();
+        card.querySelector(".save-button")?.click();
+      }
+      break;
+    }
+    case "/":
+      event.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+      break;
+    case "?":
+      event.preventDefault();
+      toggleHelp();
+      break;
+    default:
   }
 });
 

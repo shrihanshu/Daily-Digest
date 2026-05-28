@@ -855,3 +855,97 @@ button.trend-chip:hover {
     width: 28px;
   }
 }
+
+/* ============================================================================
+   Quick-win additions: refresh spinner, mark-all-read, reading time, skeleton,
+   help overlay.
+   ============================================================================ */
+
+/* Refresh button — spinning icon while busy, dimmed during the fetch */
+#refreshBtn .theme-icon { display: inline-block; transition: transform 0.4s ease; }
+#refreshBtn:hover .theme-icon { transform: rotate(45deg); }
+#refreshBtn.is-refreshing { opacity: 0.7; cursor: progress; }
+#refreshBtn.is-refreshing .theme-icon { animation: ds-spin 0.9s linear infinite; }
+@keyframes ds-spin { to { transform: rotate(360deg); } }
+
+/* Mark-all-read button — same shape family as the other toolbar buttons */
+.markall-btn { white-space: nowrap; }
+
+/* Reading-time chip — muted so it doesn't compete with source/date */
+.read-time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Skeleton loader — pulses while news.json is loading.
+   Reuses .article-card layout so the swap doesn't jump. */
+.article-card.skeleton { animation: ds-skel 1.2s ease-in-out infinite alternate; opacity: 0.7; }
+.skeleton-bar {
+  display: block;
+  background: linear-gradient(90deg, var(--rule), color-mix(in srgb, var(--rule) 60%, var(--text) 5%), var(--rule));
+  background-size: 200% 100%;
+  border-radius: 4px;
+  height: 12px;
+  margin: 8px 0;
+}
+.skeleton-check { width: 18px; height: 18px; border-radius: 50%; margin: 4px 0 0; }
+.skeleton-topic { width: 60px; height: 10px; }
+.skeleton-title { width: 80%; height: 18px; margin-top: 10px; }
+.skeleton-title.narrow { width: 55%; }
+.skeleton-meta { width: 40%; height: 10px; margin-top: 12px; }
+.skeleton-desc { width: 92%; height: 12px; margin-top: 12px; }
+.skeleton-star { width: 22px; height: 22px; border-radius: 4px; }
+@keyframes ds-skel {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+/* Help overlay — modeled on .preview-modal so it matches visually */
+.help-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+}
+.help-overlay.is-open { display: flex; }
+.help-card {
+  background: var(--card-bg, var(--bg));
+  color: var(--text);
+  max-width: 460px;
+  width: 100%;
+  padding: 28px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+.help-card h3 {
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+.kbd-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 18px;
+  row-gap: 8px;
+  margin: 0;
+}
+.kbd-list dt { display: flex; gap: 4px; align-items: center; }
+.kbd-list dd { margin: 0; color: var(--muted); }
+kbd {
+  display: inline-block;
+  min-width: 22px;
+  padding: 2px 6px;
+  border: 1px solid var(--rule);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  text-align: center;
+  background: color-mix(in srgb, var(--bg) 90%, var(--text) 6%);
+}
