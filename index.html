@@ -22,6 +22,10 @@
         <h1>Daily Signal</h1>
         <div class="header-actions">
           <time id="todayDate" class="today-date">Today</time>
+          <button id="notifyToggle" class="theme-toggle" type="button" aria-label="Toggle notifications" title="Notify on new items">
+            <span class="theme-icon" aria-hidden="true">🔕</span>
+            <span class="theme-text">Notify</span>
+          </button>
           <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle theme">
             <span class="theme-icon" aria-hidden="true">☾</span>
             <span class="theme-text">Theme</span>
@@ -88,6 +92,16 @@
       </section>
     </main>
 
+    <div id="previewModal" class="preview-modal" hidden role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+      <div class="preview-card" role="document">
+        <button class="preview-close" type="button" aria-label="Close preview">×</button>
+        <span class="article-topic" id="previewTopic"></span>
+        <h3 id="previewTitle"></h3>
+        <p class="article-meta" id="previewMeta"></p>
+        <p class="article-description" id="previewBody"></p>
+        <a id="previewLink" class="preview-open" target="_blank" rel="noopener noreferrer">Open original ↗</a>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

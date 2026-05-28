@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>Daily Signal feeds</title>
+  </head>
+  <body>
+    <outline text="AI" title="AI">
+      <outline type="rss" text="Google News" xmlUrl="https://news.google.com/rss/search?q=artificial%20intelligence%20OR%20machine%20learning%20when:1d&amp;hl=en-IN&amp;gl=IN&amp;ceid=IN:en" />
+      <outline type="rss" text="TechCrunch AI" xmlUrl="https://techcrunch.com/category/artificial-intelligence/feed/" />
+      <outline type="rss" text="VentureBeat AI" xmlUrl="https://venturebeat.com/category/ai/feed/" />
+      <outline type="rss" text="MIT Technology Review" xmlUrl="https://www.technologyreview.com/feed/" />
+      <outline type="rss" text="Hugging Face" xmlUrl="https://huggingface.co/blog/feed.xml" />
+    </outline>
+    <outline text="Tech" title="Tech">
+      <outline type="rss" text="Hacker News" xmlUrl="https://hnrss.org/frontpage" />
+      <outline type="rss" text="The Verge" xmlUrl="https://www.theverge.com/rss/index.xml" />
+      <outline type="rss" text="Ars Technica" xmlUrl="https://feeds.arstechnica.com/arstechnica/index" />
+      <outline type="rss" text="Wired" xmlUrl="https://www.wired.com/feed/rss" />
+    </outline>
+    <outline text="Current Affairs" title="Current Affairs">
+      <outline type="rss" text="Google News" xmlUrl="https://news.google.com/rss/search?q=current%20affairs%20India%20world%20when:1d&amp;hl=en-IN&amp;gl=IN&amp;ceid=IN:en" />
+    </outline>
+  </body>
+</opml>

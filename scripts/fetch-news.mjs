@@ -178,6 +178,46 @@ function normalizeTitle(title = "") {
     .trim();
 }
 
+// Map free-form OPML category labels to internal topic keys.
+function topicFromLabel(label = "") {
+  const key = label.trim().toLowerCase();
+  if (key.startsWith("ai") || key.includes("artificial")) return ["ai", "AI"];
+  if (key.includes("current") || key.includes("affairs") || key.includes("world")) {
+    return ["current-affairs", "Current Affairs"];
+  }
+  return ["tech", "Tech"];
+}
+
+async function loadSourcesFromOpml(path) {
+  let xml;
+  try {
+    xml = await readFile(path, "utf8");
+  } catch {
+    return null;
+  }
+  const sources = [];
+  // Walk each top-level outline (category) and pick its xmlUrl children (feeds).
+  const groups = [...xml.matchAll(/<outline\b([^>]*)>([\s\S]*?)<\/outline>/gi)];
+  for (const group of groups) {
+    const attrs = group[1];
+    if (/xmlUrl=/i.test(attrs)) continue; // group header should not be a feed itself
+    const label =
+      attrs.match(/title="([^"]+)"/i)?.[1] || attrs.match(/text="([^"]+)"/i)?.[1] || "";
+    const [topic, topicLabel] = topicFromLabel(label);
+    const inner = group[2];
+    const feeds = [...inner.matchAll(/<outline\b([^>]*xmlUrl="[^"]+"[^>]*)\/?>/gi)];
+    for (const feed of feeds) {
+      const a = feed[1];
+      const url = a.match(/xmlUrl="([^"]+)"/i)?.[1];
+      if (!url) continue;
+      const source =
+        a.match(/title="([^"]+)"/i)?.[1] || a.match(/text="([^"]+)"/i)?.[1] || "Feed";
+      sources.push({ topic, topicLabel, source, url: url.replaceAll("&amp;", "&") });
+    }
+  }
+  return sources.length ? sources : null;
+}
+
 function dedupe(articles) {
   const seen = new Set();
   return articles.filter((article) => {
@@ -190,7 +230,11 @@ function dedupe(articles) {
   });
 }
 
-const rssResults = await Promise.allSettled(SOURCES.map(fetchSource));
+const opmlSources = await loadSourcesFromOpml("feeds.opml");
+const sources = opmlSources?.length ? opmlSources : SOURCES;
+if (opmlSources?.length) console.log(`Loaded ${opmlSources.length} feeds from feeds.opml`);
+
+const rssResults = await Promise.allSettled(sources.map(fetchSource));
 for (const result of rssResults) {
   if (result.status === "rejected") {
     console.warn(`Source failed: ${result.reason}`);

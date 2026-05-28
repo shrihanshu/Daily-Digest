@@ -15,6 +15,51 @@ self.addEventListener("activate", (event) => {
   );
 });
 
+// Best-effort: when periodic background sync is allowed, refetch news.json
+// and notify the user if new article ids have appeared since last check.
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag !== "news-poll") return;
+  event.waitUntil(checkForNewItems());
+});
+
+async function checkForNewItems() {
+  try {
+    const fresh = await fetch("data/news.json", { cache: "no-store" });
+    if (!fresh.ok) return;
+    const payload = await fresh.clone().json();
+    const cache = await caches.open(VERSION);
+    cache.put("data/news.json", fresh);
+    const ids = (payload.articles || []).map((a) => a.id);
+    const prevRes = await caches.match("notify-seen");
+    let prev = [];
+    if (prevRes) {
+      try {
+        prev = await prevRes.json();
+      } catch {
+        prev = [];
+      }
+    }
+    const prevSet = new Set(prev);
+    const newOnes = ids.filter((id) => !prevSet.has(id));
+    if (prev.length && newOnes.length) {
+      const sample = (payload.articles || []).find((a) => newOnes.includes(a.id));
+      await self.registration.showNotification(`Daily Signal · ${newOnes.length} new`, {
+        body: sample?.title?.slice(0, 120) || "Fresh stories are in.",
+        icon: "icon.svg",
+        tag: "daily-signal-new",
+      });
+    }
+    await cache.put("notify-seen", new Response(JSON.stringify(ids), { headers: { "content-type": "application/json" } }));
+  } catch {
+    // network or storage issue — best effort only
+  }
+}
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  event.waitUntil(self.clients.openWindow("./"));
+});
+
 self.addEventListener("fetch", (event) => {
   const req = event.request;
   if (req.method !== "GET") return;

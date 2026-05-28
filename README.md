@@ -2,6 +2,12 @@
 
 A free personal dashboard for daily AI, technology, and current-affairs reading.
 
+[![Daily refresh](https://img.shields.io/github/actions/workflow/status/shrihanshu/Daily-Digest/daily-news.yml?branch=main&label=daily%20refresh)](https://github.com/shrihanshu/Daily-Digest/actions/workflows/daily-news.yml)
+[![Pages](https://img.shields.io/github/deployments/shrihanshu/Daily-Digest/github-pages?label=pages)](https://shrihanshu.github.io/Daily-Digest/)
+[![Last commit](https://img.shields.io/github/last-commit/shrihanshu/Daily-Digest/main?label=last%20update)](https://github.com/shrihanshu/Daily-Digest/commits/main)
+[![Articles](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fshrihanshu%2FDaily-Digest%2Fmain%2Fdata%2Fnews.json&query=%24.articles.length&label=articles)](https://shrihanshu.github.io/Daily-Digest/)
+[![Live](https://img.shields.io/badge/site-live-7baf96)](https://shrihanshu.github.io/Daily-Digest/)
+
 ## Features
 
 - Daily article list from many AI/tech RSS sources

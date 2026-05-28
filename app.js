@@ -14,6 +14,17 @@ const searchInput = document.querySelector("#searchInput");
 const topicFilters = document.querySelector("#topicFilters");
 const archiveDate = document.querySelector("#archiveDate");
 const readStreak = document.querySelector("#readStreak");
+const notifyToggle = document.querySelector("#notifyToggle");
+const previewModal = document.querySelector("#previewModal");
+const previewTopic = document.querySelector("#previewTopic");
+const previewTitle = document.querySelector("#previewTitle");
+const previewMeta = document.querySelector("#previewMeta");
+const previewBody = document.querySelector("#previewBody");
+const previewLink = document.querySelector("#previewLink");
+const previewClose = document.querySelector(".preview-close");
+const renderedById = new Map();
+const NOTIFY_KEY = "daily-signal-notify";
+const NOTIFY_SEEN_KEY = "daily-signal-notify-seen-v1";
 
 let articles = [];
 let activeTopic = "all";
@@ -128,6 +139,7 @@ function render() {
 
   const filtered = dataset.filter(matchesFilters);
   articleList.innerHTML = "";
+  renderedById.clear();
 
   // Exec summary card — only when viewing the whole feed for a given day.
   if (activeTopic === "all" && !query && payloadExec?.bullets?.length) {
@@ -149,6 +161,8 @@ function render() {
 
     const card = document.createElement("article");
     card.className = `article-card${isRead ? " read" : ""}`;
+    card.dataset.aid = id;
+    renderedById.set(id, article);
     card.innerHTML = `
       <input class="read-check" type="checkbox" aria-label="Mark as read" ${isRead ? "checked" : ""} />
       <div>
@@ -391,6 +405,7 @@ async function loadArticles() {
   articles.forEach((article) => union.add(articleId(article)));
   saveSeen(union);
 
+  maybeNotifyOnNew(articles);
   render();
 }
 
@@ -406,6 +421,41 @@ topicFilters.addEventListener("click", (event) => {
 
 searchInput.addEventListener("input", render);
 
+function openPreview(article) {
+  if (!previewModal) return;
+  previewTopic.textContent = article.topicLabel || article.topic || "";
+  previewTitle.textContent = article.title || "";
+  previewMeta.textContent = `${article.source || "Source"} · ${formatDate(article.publishedAt)}`;
+  previewBody.textContent = article.tldr || article.description || "";
+  if (article.url) {
+    previewLink.href = article.url;
+    previewLink.hidden = false;
+  } else {
+    previewLink.hidden = true;
+  }
+  previewModal.hidden = false;
+}
+
+function closePreview() {
+  if (previewModal) previewModal.hidden = true;
+}
+
+articleList.addEventListener("click", (event) => {
+  if (event.target.closest("a, button, input")) return;
+  const card = event.target.closest(".article-card");
+  if (!card || !card.dataset.aid) return;
+  const article = renderedById.get(card.dataset.aid);
+  if (article) openPreview(article);
+});
+
+previewClose?.addEventListener("click", closePreview);
+previewModal?.addEventListener("click", (event) => {
+  if (event.target === previewModal) closePreview();
+});
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && previewModal && !previewModal.hidden) closePreview();
+});
+
 archiveDate.addEventListener("change", () => {
   const date = archiveDate.value;
   if (!date || date === latestDate) {
@@ -414,6 +464,81 @@ archiveDate.addEventListener("change", () => {
     loadArchiveDay(date);
   }
 });
+
+function notifyEnabled() {
+  return (
+    "Notification" in window &&
+    Notification.permission === "granted" &&
+    localStorage.getItem(NOTIFY_KEY) === "on"
+  );
+}
+
+function updateNotifyIcon() {
+  if (!notifyToggle) return;
+  const on = notifyEnabled();
+  const icon = notifyToggle.querySelector(".theme-icon");
+  if (icon) icon.textContent = on ? "🔔" : "🔕";
+  notifyToggle.setAttribute("aria-label", on ? "Disable notifications" : "Enable notifications");
+}
+
+async function toggleNotify() {
+  if (!("Notification" in window)) {
+    alert("Notifications are not supported in this browser.");
+    return;
+  }
+  const isOn = notifyEnabled();
+  if (isOn) {
+    localStorage.setItem(NOTIFY_KEY, "off");
+  } else {
+    if (Notification.permission !== "granted") {
+      const result = await Notification.requestPermission();
+      if (result !== "granted") {
+        updateNotifyIcon();
+        return;
+      }
+    }
+    localStorage.setItem(NOTIFY_KEY, "on");
+    // Best-effort: ask the service worker for periodic background polling.
+    try {
+      const reg = await navigator.serviceWorker?.ready;
+      if (reg && "periodicSync" in reg) {
+        const status = await navigator.permissions?.query({ name: "periodic-background-sync" });
+        if (!status || status.state === "granted") {
+          await reg.periodicSync.register("news-poll", { minInterval: 12 * 60 * 60 * 1000 });
+        }
+      }
+    } catch {
+      // periodicSync unsupported or denied — foreground only is fine.
+    }
+  }
+  updateNotifyIcon();
+}
+
+function maybeNotifyOnNew(allArticles) {
+  if (!notifyEnabled() || !allArticles.length) return;
+  let prev = [];
+  try {
+    prev = JSON.parse(localStorage.getItem(NOTIFY_SEEN_KEY)) || [];
+  } catch {
+    prev = [];
+  }
+  const prevSet = new Set(prev);
+  const fresh = allArticles.filter((article) => !prevSet.has(articleId(article)));
+  if (fresh.length && prev.length) {
+    const sample = fresh[0];
+    try {
+      new Notification(`Daily Signal · ${fresh.length} new`, {
+        body: sample.title.slice(0, 120),
+        icon: "icon.svg",
+        tag: "daily-signal-new",
+      });
+    } catch {
+      // ignore
+    }
+  }
+  const next = allArticles.map((article) => articleId(article));
+  localStorage.setItem(NOTIFY_SEEN_KEY, JSON.stringify(next));
+}
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
@@ -438,6 +563,8 @@ todayDate.textContent = new Intl.DateTimeFormat("en-IN", {
 }).format(new Date());
 
 applyTheme(currentTheme);
+updateNotifyIcon();
+notifyToggle?.addEventListener("click", toggleNotify);
 loadArchiveIndex();
 loadArticles();
 
