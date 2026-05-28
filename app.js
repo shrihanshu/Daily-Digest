@@ -20,6 +20,7 @@ let state = loadState();
 let currentTheme = localStorage.getItem("daily-signal-theme") || "dark";
 let latestDate = null; // value used by the date picker for "today"
 let trends = null; // lazy-loaded trends.json
+let archiveArticles = null; // lazy-loaded full archive (for cross-day search)
 
 function loadState() {
   try {
@@ -72,13 +73,58 @@ function matchesFilters(article) {
   return topicMatch && queryMatch;
 }
 
+function isTodayMode() {
+  return !archiveDate.value || archiveDate.value === latestDate;
+}
+
+async function ensureArchiveSuperset() {
+  if (archiveArticles !== null) return archiveArticles;
+  try {
+    const idx = await (await fetch("data/archive/index.json", { cache: "no-store" })).json();
+    const dates = idx.dates || [];
+    const payloads = await Promise.all(
+      dates.map((d) =>
+        fetch(`data/archive/${d}.json`, { cache: "no-store" })
+          .then((r) => r.json())
+          .catch(() => null),
+      ),
+    );
+    const merged = [];
+    const seen = new Set();
+    for (const payload of payloads) {
+      for (const article of payload?.articles || []) {
+        if (!article.id || seen.has(article.id)) continue;
+        seen.add(article.id);
+        merged.push(article);
+      }
+    }
+    merged.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    archiveArticles = merged;
+  } catch {
+    archiveArticles = [];
+  }
+  return archiveArticles;
+}
+
 function render() {
   if (activeTopic === "trends") {
     renderTrends();
     return;
   }
 
-  const filtered = articles.filter(matchesFilters);
+  // Cross-day search: when a query is active on today's view, search the whole archive.
+  const query = searchInput.value.trim();
+  if (query && isTodayMode()) {
+    if (archiveArticles === null) {
+      articleList.innerHTML = '<p class="empty-state">Searching archive…</p>';
+      emptyState.hidden = true;
+      ensureArchiveSuperset().then(() => render());
+      return;
+    }
+  }
+  const dataset = query && isTodayMode() && archiveArticles ? archiveArticles : articles;
+
+  const filtered = dataset.filter(matchesFilters);
   articleList.innerHTML = "";
 
   filtered.forEach((article) => {
@@ -100,7 +146,7 @@ function render() {
             : article.title
         }</h3>
         <p class="article-meta">${article.source || "Source"} &middot; ${formatDate(article.publishedAt)}</p>
-        <p class="article-description">${article.description || "Open the story for the full details."}</p>
+        <p class="article-description">${article.tldr || article.description || "Open the story for the full details."}</p>
       </div>
       <button class="save-button${isSaved ? " saved" : ""}" type="button" aria-label="Save article">${
         isSaved ? "&starf;" : "&star;"

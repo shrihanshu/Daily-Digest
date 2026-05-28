@@ -29,6 +29,9 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GMAIL_LABEL: ${{ secrets.GMAIL_LABEL }}
           GMAIL_FROM: ${{ secrets.GMAIL_FROM }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ secrets.CLAUDE_MODEL }}
+          TLDR_MAX: ${{ secrets.TLDR_MAX }}
         run: node scripts/fetch-news.mjs
 
       - name: Commit updated news

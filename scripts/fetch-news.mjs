@@ -1,6 +1,8 @@
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { fetchEmailArticles } from "./fetch-email.mjs";
 import { writeArchive } from "./archive.mjs";
+import { summarizeArticles } from "./summarize.mjs";
 
 const SOURCES = [
   // AI
@@ -215,25 +217,56 @@ if (articles.length === 0) {
   throw new Error("No articles fetched. Check sources.");
 }
 
-await mkdir("data", { recursive: true });
-await writeFile(
-  "data/news.json",
-  `${JSON.stringify(
-    {
-      updatedAt: new Date().toISOString(),
-      articles,
-    },
-    null,
-    2,
-  )}\n`,
-);
-
-console.log(`Saved ${articles.length} articles to data/news.json`);
-
-// Archive today + rebuild trends (history → trends).
+// Carry forward previously generated TL;DRs so we never re-pay for the same item.
+let priorPayload = null;
 try {
-  const result = await writeArchive(articles);
-  console.log(`Archived ${result.dates.length} day(s); trends over ${result.days} day(s).`);
-} catch (error) {
-  console.warn(`Archive/trends skipped: ${error.message}`);
+  priorPayload = JSON.parse(await readFile("data/news.json", "utf8"));
+} catch {
+  // No prior file — first run.
+}
+if (priorPayload?.articles?.length) {
+  const priorTldr = new Map(priorPayload.articles.filter((a) => a.tldr).map((a) => [a.id, a.tldr]));
+  for (const article of articles) {
+    if (!article.tldr && priorTldr.has(article.id)) article.tldr = priorTldr.get(article.id);
+  }
+}
+
+// Fill missing TL;DRs via Claude (no-op without ANTHROPIC_API_KEY).
+await summarizeArticles(articles);
+
+// Diff-aware write: hash article set; skip writes if identical to prior.
+function contentHash(list) {
+  const stable = list
+    .map((a) => `${a.id}|${a.title || ""}|${a.tldr || ""}`)
+    .sort()
+    .join("\n");
+  return createHash("sha256").update(stable).digest("hex");
+}
+const newHash = contentHash(articles);
+const priorHash = priorPayload?.articles ? contentHash(priorPayload.articles) : null;
+
+if (priorHash === newHash) {
+  console.log(`No content change (${articles.length} articles); skipping writes.`);
+} else {
+  await mkdir("data", { recursive: true });
+  await writeFile(
+    "data/news.json",
+    `${JSON.stringify(
+      {
+        updatedAt: new Date().toISOString(),
+        articles,
+      },
+      null,
+      2,
+    )}\n`,
+  );
+  console.log(`Saved ${articles.length} articles to data/news.json`);
+
+  // Archive today + rebuild trends (history → trends).
+  try {
+    const result = await writeArchive(articles);
+    console.log(`Archived ${result.dates.length} day(s); trends over ${result.days} day(s).`);
+  } catch (error) {
+    console.warn(`Archive/trends skipped: ${error.message}`);
+  }
 }

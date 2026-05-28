@@ -8,6 +8,7 @@
     "fetch": "node scripts/fetch-news.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0",
     "imapflow": "^1.0.171",
     "mailparser": "^3.7.1"
   }
