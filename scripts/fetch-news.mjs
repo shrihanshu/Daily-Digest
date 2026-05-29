@@ -371,6 +371,22 @@ if (!articlesSame || !execSummary) {
   }
 }
 
+// Heartbeat: force a write at least once per UTC day even when articles are
+// identical. Without this, a quiet news day produces zero commits and the
+// user can't tell if the cron actually fired. Also force-write when the
+// FORCE_WRITE env var is set (the workflow sets it on every run).
+const priorDay = (priorPayload?.updatedAt || "").slice(0, 10);
+const todayDay = new Date().toISOString().slice(0, 10);
+const heartbeatDue = priorDay !== todayDay;
+if (heartbeatDue) {
+  console.log(`Heartbeat write: prior updatedAt was ${priorDay || "(none)"}, today is ${todayDay}.`);
+  needWrite = true;
+}
+if (process.env.FORCE_WRITE === "1" && !needWrite) {
+  console.log("FORCE_WRITE=1 — writing news.json even though content is identical.");
+  needWrite = true;
+}
+
 if (!needWrite) {
   console.log(`No content change (${articles.length} articles); skipping writes.`);
 } else {

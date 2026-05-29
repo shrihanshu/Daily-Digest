@@ -1,16 +1,32 @@
 name: Daily news refresh
 
+# Why multiple schedules?
+# GitHub Actions explicitly warns that scheduled workflows can be delayed or
+# skipped during high-load periods, especially on round-number minutes
+# (e.g. :00 / :30) and at the top of the hour. We:
+#   1. avoid minute 0/30 by using :17 — sidesteps the rush.
+#   2. fire TWICE a day (00:17 UTC ≈ 05:47 IST, and 12:17 UTC ≈ 17:47 IST)
+#      so a single delayed/dropped run does NOT mean the user gets no update.
+# The diff-aware write in scripts/fetch-news.mjs prevents duplicate commits
+# when both runs land on the same article set.
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 0 * * *"
+    - cron: "17 0 * * *"   # 00:17 UTC daily — primary morning IST fetch
+    - cron: "17 12 * * *"  # 12:17 UTC daily — afternoon IST safety net
 
 permissions:
   contents: write
 
+# Avoid two crons piling on each other if the morning run runs long.
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
+
 jobs:
   refresh-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -19,11 +35,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
       - name: Fetch latest news
+        id: fetch
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
@@ -34,12 +52,42 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
           TLDR_MAX: ${{ secrets.TLDR_MAX }}
+          # Force a write each run so the user can confirm the cron actually
+          # fired, even when source feeds happen to have no new headlines.
+          FORCE_WRITE: "1"
         run: node scripts/fetch-news.mjs
+
+      # If the fetch step failed (network blip, source returned 503, etc.) sleep
+      # 90s and try once more. Avoids a 24-hour outage from a single transient.
+      - name: Retry on failure
+        if: failure() && steps.fetch.outcome == 'failure'
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_LABEL: ${{ secrets.GMAIL_LABEL }}
+          GMAIL_FROM: ${{ secrets.GMAIL_FROM }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ secrets.CLAUDE_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+          TLDR_MAX: ${{ secrets.TLDR_MAX }}
+          FORCE_WRITE: "1"
+        run: |
+          echo "First attempt failed, retrying in 90s..."
+          sleep 90
+          node scripts/fetch-news.mjs
 
       - name: Commit updated news
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/news.json data/trends.json data/archive
-          git diff --cached --quiet || git commit -m "Update daily news"
-          git push
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Update daily news ($(date -u +%Y-%m-%dT%H:%MZ))"
+            # Rebase before push in case the user pushed UI/code changes
+            # between the run start and now. Reduces "fetch first" rejects.
+            git pull --rebase origin main
+            git push
+          fi
